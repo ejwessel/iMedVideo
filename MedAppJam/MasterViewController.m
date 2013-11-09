@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 test. All rights reserved.
 //
 
+//Ethan Wessel
+
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
