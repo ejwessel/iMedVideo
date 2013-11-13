@@ -11,6 +11,7 @@
 @implementation UIWebViewPlayer
 
 @synthesize videoView = _videoView;
+@synthesize url = _url;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -20,7 +21,22 @@
     return self;
 }
 
-- (void)embedYouTube:(NSString*)url frame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame withURL:(NSString *)urlString{
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        self.url = [[NSURL alloc] initWithString:urlString];
+        self.videoView = [[MPMoviePlayerController alloc] initWithContentURL:self.url];
+ 
+        //NEEDS more setup
+        
+        [self addSubview:self.videoView.view];
+        
+    }
+    return self;
+}
+
+- (void)embedVideo:(NSString*)url frame:(CGRect)frame {
     NSString* embedHTML = @"\
     <html><head>\
     <style type=\"text/css\">\
@@ -45,6 +61,7 @@
     [_videoView.view setFrame: self.bounds];
     [self addSubview:_videoView.view];
     //[player play];
+    self.backgroundColor = [UIColor blackColor];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIWebViewPlayer.h"
 
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UIView *viewController;
+@property (strong, nonatomic) IBOutlet UIWebViewPlayer *player;
+@property (strong, nonatomic) IBOutlet UIScrollView *commentsScroller;
+
 @end
