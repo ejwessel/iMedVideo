@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     
-    _player.scrollView.scrollEnabled = false;
+    self.player.scrollView.scrollEnabled = false;
     
     [self configureView];
 }
