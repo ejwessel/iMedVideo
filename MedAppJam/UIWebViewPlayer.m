@@ -10,6 +10,8 @@
 
 @implementation UIWebViewPlayer
 
+@synthesize videoView = _videoView;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -18,7 +20,7 @@
     return self;
 }
 
-- (void)embedVideo:(NSString *)url{
+- (void)embedYouTube:(NSString*)url frame:(CGRect)frame {
     NSString* embedHTML = @"\
     <html><head>\
     <style type=\"text/css\">\
@@ -31,15 +33,19 @@
     <embed id=\"yt\" src=\"%@\" type=\"application/x-shockwave-flash\" \
     width=\"%0.0f\" height=\"%0.0f\"></embed>\
     </body></html>";
- 
-//    NSString* html = [NSString stringWithFormat:embedHTML, url, frame.size.width, frame.size.height];
-//    if(videoView == nil) {
-//        videoView = [[UIWebView alloc] initWithFrame:frame];
-//        [self.view addSubview:videoView];
+    NSURL *urlPath = [[NSURL alloc] initFileURLWithPath:url];
+//    if(_videoView == nil) {
+//        _videoView = [[UIWebView alloc] initWithFrame:frame];
+//        [self addSubview:_videoView];
 //    }
-//    [videoView loadHTMLString:html baseURL:nil];
+    //[_videoView loadHTMLString:html baseURL:nil];
+    
+    _videoView = [[MPMoviePlayerController alloc] initWithContentURL:urlPath];
+    [_videoView prepareToPlay];
+    [_videoView.view setFrame: self.bounds];
+    [self addSubview:_videoView.view];
+    //[player play];
 }
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
