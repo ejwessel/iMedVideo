@@ -46,7 +46,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Details" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="commentsScroller" destination="gzh-fc-8WD" id="m67-7H-TcI"/>
                         <outlet property="player" destination="AQs-nE-aBo" id="qkP-a0-JFe"/>
@@ -93,7 +93,7 @@
                         <sections>
                             <tableViewSection id="wr2-kU-Sc1">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Abdomen" id="SWF-ZZ-TEb">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="SWF-ZZ-TEb">
                                         <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SWF-ZZ-TEb" id="KFh-3G-4Ku">
