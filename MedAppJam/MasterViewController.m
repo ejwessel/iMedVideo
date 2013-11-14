@@ -131,10 +131,10 @@
 }
 */
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    NSDate *object = _objects[indexPath.row];
-//    self.detailViewController.detailItem = object;
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDate *object = _objects[indexPath.row];
+    self.detailViewController.detailItem = object;
+}
 
 @end
