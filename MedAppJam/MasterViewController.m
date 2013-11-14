@@ -61,7 +61,20 @@
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-   //NEED TO ADD SEARCHING HERE FROM SPOT
+   //need to searth through all the elements on this and lowe
+    //read data from database? or read data off tableview?
+
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    
+    UIView *cellView = [[cell subviews] objectAtIndex:0];
+    UILabel *cellLabel = [[cellView subviews] objectAtIndex:0];
+    NSLog(@"THE TEXT at INDEX 0: %@", cellLabel.text);
+    
+//    for (UITableViewCell *cell in self.tableView.visibleCells) {
+//        //should be able to get the
+//        
+//        NSLog(@"%@",[cell.subviews objectAtIndex:0]);
+//    }
 }
 
 
