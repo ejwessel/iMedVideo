@@ -60,6 +60,8 @@
     [self.tableView reloadData];
 }
 
+
+
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
    //need to searth through all the elements on this and lowe
     //read data from database? or read data off tableview?

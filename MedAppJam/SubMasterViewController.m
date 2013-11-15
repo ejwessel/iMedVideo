@@ -32,13 +32,14 @@
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     //setup the dictionary
-    [self.urlList setObject:@"url" forKey:@"Appendix Surgery"];
+    self.urlList = [[NSMutableDictionary alloc] init];
+    [self.urlList setObject:@"BALLA" forKey:@"Appendix Surgery"];
     [self.urlList setObject:@"url" forKey:@"Gall Bladder Surgery"];
     [self.urlList setObject:@"url" forKey:@"Hernia Repair"];
     [self.urlList setObject:@"url" forKey:@"Ileostomy Bag Care"];
     [self.urlList setObject:@"url" forKey:@"Check Blood Sugar"];
     [self.urlList setObject:@"url" forKey:@"Diet"];
-    [self.urlList setObject:@"url" forKey:@"Inject Insulin"];
+    [self.urlList setObject:@"PqgKFsK7f-Q" forKey:@"Inject Insulin"];
     [self.urlList setObject:@"url" forKey:@"Cast Care"];
     [self.urlList setObject:@"url" forKey:@"Hip Replacement"];
     [self.urlList setObject:@"url" forKey:@"Knee Replacement"];
@@ -74,7 +75,7 @@
     
     //search in hash here...
     
-    NSString *extension = @"";
+    NSString *extension = [self.urlList objectForKey:labelText];
     int height = self.detailViewController.player.bounds.size.height;
     int width = self.detailViewController.player.bounds.size.width;
     NSString *embedHTML =[NSString stringWithFormat:@"\
