@@ -36,7 +36,7 @@
 //    
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = addButton;
-//    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
 }
 
@@ -135,6 +135,9 @@
 {
     NSDate *object = _objects[indexPath.row];
     self.detailViewController.detailItem = object;
+
+    self.detailViewController.commentsScroller.hidden = true;
+    [self.detailViewController.commentsScroller setNeedsDisplay];
 }
 
 @end
