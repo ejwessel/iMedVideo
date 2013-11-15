@@ -7,15 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MediaPlayer/MediaPlayer.h>
 
-@interface UIWebViewPlayer : UIWebView
+@interface UIWebViewPlayer: UIWebView
+{
+}
 
-@property (strong, nonatomic) MPMoviePlayerController *videoView;
-@property (strong, nonatomic) NSURL *url;
-
-- (id)initWithFrame:(CGRect)frame withURL:(NSString*) urlString;
-
-- (void)embedVideo:(NSString*)url frame:(CGRect)frame;
+- (UIWebViewPlayer *)initWithStringAsURL:(NSString *)urlString frame:(CGRect)frame;
 
 @end

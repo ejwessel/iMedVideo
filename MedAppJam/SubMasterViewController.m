@@ -42,9 +42,24 @@
 {
 //    NSDate *object = _objects[indexPath.row];
 //    self.detailViewController.detailItem = object;
-//    
-    self.detailViewController.commentsScroller.hidden = false;
-    [self.detailViewController.commentsScroller setNeedsDisplay];
     
+    //Obtain text of video that we'll be searching
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    UILabel *l = [[cell.contentView subviews] objectAtIndex:0];
+    NSString *labelText = l.text;
+    NSLog(@"%@", labelText);
+    
+    
+    
+    self.detailViewController.player.hidden = true;
+    [self.detailViewController.player setNeedsDisplay];
+    
+    //LOAD VIDEO
+    UIWebViewPlayer *video = [[UIWebViewPlayer alloc] initWithStringAsURL:@"http://youtu.be/5xniR1GN69U" frame:CGRectMake(200, 270, 120, 120)];
+    
+    [self.detailViewController.viewContainer addSubview:video];
+    [self.detailViewController.viewContainer setNeedsDisplay];
+    
+    //LOAD COMMENTS
 }
 @end
