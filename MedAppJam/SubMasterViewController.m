@@ -55,13 +55,6 @@
     
     //search in hash here...
     
-    //LOAD VIDEO
-    //UIWebViewPlayer *video = [[UIWebViewPlayer alloc] initWithStringAsURL:@"http://youtu.be/5xniR1GN69U" frame:CGRectMake(200, 270, 120, 120)];
-    //video.backgroundColor = [UIColor blackColor];
-    
-    //self.detailViewController.player = video;
-    //[self.detailViewController.player setNeedsDisplay];
-    
     NSString *extension = @"";
     int height = self.detailViewController.player.bounds.size.height;
     int width = self.detailViewController.player.bounds.size.width;
@@ -81,5 +74,8 @@
     self.detailViewController.player.frame = CGRectMake(0, 0, self.detailViewController.player.bounds.size.height, self.detailViewController.player.bounds.size.width);
     [self.detailViewController.player sizeToFit];
     self.detailViewController.player.hidden = false;
+    
+    NSLog(@"size: %d, %d", height, width);
+
 }
 @end
