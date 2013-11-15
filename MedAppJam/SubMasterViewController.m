@@ -34,6 +34,25 @@
     //setup the dictionary
     [self.urlList setObject:@"url" forKey:@"Appendix Surgery"];
     [self.urlList setObject:@"url" forKey:@"Gall Bladder Surgery"];
+    [self.urlList setObject:@"url" forKey:@"Hernia Repair"];
+    [self.urlList setObject:@"url" forKey:@"Ileostomy Bag Care"];
+    [self.urlList setObject:@"url" forKey:@"Check Blood Sugar"];
+    [self.urlList setObject:@"url" forKey:@"Diet"];
+    [self.urlList setObject:@"url" forKey:@"Inject Insulin"];
+    [self.urlList setObject:@"url" forKey:@"Cast Care"];
+    [self.urlList setObject:@"url" forKey:@"Hip Replacement"];
+    [self.urlList setObject:@"url" forKey:@"Knee Replacement"];
+    [self.urlList setObject:@"url" forKey:@"Cataracts"];
+    [self.urlList setObject:@"url" forKey:@"Contacts"];
+    [self.urlList setObject:@"url" forKey:@"Eye Drops"];
+    [self.urlList setObject:@"url" forKey:@"Coronary Artery Bypass"];
+    [self.urlList setObject:@"url" forKey:@"Coronary Catheterization"];
+    [self.urlList setObject:@"url" forKey:@"Heart Failure"];
+    [self.urlList setObject:@"url" forKey:@"Lung Removal Surgery / Lobectomy"];
+    [self.urlList setObject:@"url" forKey:@"Pneumonia"];
+    [self.urlList setObject:@"url" forKey:@"Breast Feeding"];
+    [self.urlList setObject:@"url" forKey:@"Cesarian Section"];
+    [self.urlList setObject:@"url" forKey:@"Uterus Removal/Hysterectomy"];
 }
 
 - (void)didReceiveMemoryWarning
