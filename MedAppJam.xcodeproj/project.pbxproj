@@ -22,6 +22,8 @@
 		2361BFC4182DE45D00E4A9B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2361BFA3182DE45D00E4A9B3 /* UIKit.framework */; };
 		2361BFCC182DE45D00E4A9B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2361BFCA182DE45D00E4A9B3 /* InfoPlist.strings */; };
 		2361BFCE182DE45D00E4A9B3 /* MedAppJamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2361BFCD182DE45D00E4A9B3 /* MedAppJamTests.m */; };
+		BA7B01261835C7B000DAAAD5 /* SubMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7B01231835C7B000DAAAD5 /* SubMasterViewController.m */; };
+		BA7B01271835C7B000DAAAD5 /* UIWebViewPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7B01251835C7B000DAAAD5 /* UIWebViewPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		2361BFC9182DE45D00E4A9B3 /* MedAppJamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MedAppJamTests-Info.plist"; sourceTree = "<group>"; };
 		2361BFCB182DE45D00E4A9B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2361BFCD182DE45D00E4A9B3 /* MedAppJamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedAppJamTests.m; sourceTree = "<group>"; };
+		BA7B01221835C7B000DAAAD5 /* SubMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubMasterViewController.h; sourceTree = "<group>"; };
+		BA7B01231835C7B000DAAAD5 /* SubMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubMasterViewController.m; sourceTree = "<group>"; };
+		BA7B01241835C7B000DAAAD5 /* UIWebViewPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewPlayer.h; sourceTree = "<group>"; };
+		BA7B01251835C7B000DAAAD5 /* UIWebViewPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 		2361BFA5182DE45D00E4A9B3 /* MedAppJam */ = {
 			isa = PBXGroup;
 			children = (
+				BA7B01221835C7B000DAAAD5 /* SubMasterViewController.h */,
+				BA7B01231835C7B000DAAAD5 /* SubMasterViewController.m */,
+				BA7B01241835C7B000DAAAD5 /* UIWebViewPlayer.h */,
+				BA7B01251835C7B000DAAAD5 /* UIWebViewPlayer.m */,
 				2361BFAE182DE45D00E4A9B3 /* AppDelegate.h */,
 				2361BFAF182DE45D00E4A9B3 /* AppDelegate.m */,
 				2361BFB1182DE45D00E4A9B3 /* Main.storyboard */,
@@ -257,6 +267,8 @@
 				2361BFB0182DE45D00E4A9B3 /* AppDelegate.m in Sources */,
 				2361BFB6182DE45D00E4A9B3 /* MasterViewController.m in Sources */,
 				2361BFAC182DE45D00E4A9B3 /* main.m in Sources */,
+				BA7B01261835C7B000DAAAD5 /* SubMasterViewController.m in Sources */,
+				BA7B01271835C7B000DAAAD5 /* UIWebViewPlayer.m in Sources */,
 				2361BFB9182DE45D00E4A9B3 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +480,7 @@
 				2361BFD3182DE45D00E4A9B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2361BFD4182DE45D00E4A9B3 /* Build configuration list for PBXNativeTarget "MedAppJamTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +489,7 @@
 				2361BFD6182DE45D00E4A9B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
