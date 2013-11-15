@@ -138,6 +138,7 @@
 
     self.detailViewController.commentsScroller.hidden = true;
     [self.detailViewController.commentsScroller setNeedsDisplay];
+
 }
 
 @end
