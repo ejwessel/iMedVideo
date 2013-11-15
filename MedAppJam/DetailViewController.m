@@ -40,6 +40,7 @@
 {
     [super viewDidLoad];
     
+    self.player.hidden = true;
     self.player.scrollView.scrollEnabled = false;
     
     [self configureView];

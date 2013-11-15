@@ -30,6 +30,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    //setup the dictionary
+    [self.urlList setObject:@"url" forKey:@"Appendix Surgery"];
+    [self.urlList setObject:@"url" forKey:@"Gall Bladder Surgery"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,17 +53,33 @@
     NSString *labelText = l.text;
     NSLog(@"%@", labelText);
     
-    
-    
-    self.detailViewController.player.hidden = true;
-    [self.detailViewController.player setNeedsDisplay];
+    //search in hash here...
     
     //LOAD VIDEO
-    UIWebViewPlayer *video = [[UIWebViewPlayer alloc] initWithStringAsURL:@"http://youtu.be/5xniR1GN69U" frame:CGRectMake(200, 270, 120, 120)];
+    //UIWebViewPlayer *video = [[UIWebViewPlayer alloc] initWithStringAsURL:@"http://youtu.be/5xniR1GN69U" frame:CGRectMake(200, 270, 120, 120)];
+    //video.backgroundColor = [UIColor blackColor];
     
-    [self.detailViewController.viewContainer addSubview:video];
-    [self.detailViewController.viewContainer setNeedsDisplay];
+    //self.detailViewController.player = video;
+    //[self.detailViewController.player setNeedsDisplay];
     
-    //LOAD COMMENTS
+    NSString *extension = @"";
+    int height = self.detailViewController.player.bounds.size.height;
+    int width = self.detailViewController.player.bounds.size.width;
+    NSString *embedHTML =[NSString stringWithFormat:@"\
+                              <html><head>\
+                              <style type=\"text/css\">\
+                              body {\
+                              background-color: transparent;\
+                              color: blue;\
+                              }\
+                              </style>\
+                              </head><body style=\"margin:0\">\
+                              <iframe height=\"%d\" width=\"%d\" src=\"http://www.youtube.com/embed/%@\"></iframe>\
+                              </body></html>", height, width, extension];
+    [self.detailViewController.player loadHTMLString:embedHTML baseURL:nil];
+    
+    self.detailViewController.player.frame = CGRectMake(0, 0, self.detailViewController.player.bounds.size.height, self.detailViewController.player.bounds.size.width);
+    [self.detailViewController.player sizeToFit];
+    self.detailViewController.player.hidden = false;
 }
 @end
