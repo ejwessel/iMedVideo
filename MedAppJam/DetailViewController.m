@@ -41,7 +41,9 @@
     [super viewDidLoad];
     
     self.player.hidden = true;
-    self.player.scrollView.scrollEnabled = false;
+    //self.player.scrollView.scrollEnabled = false;
+    self.player.scrollView.bounces = false;
+    self.player.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     
     [self configureView];
 }

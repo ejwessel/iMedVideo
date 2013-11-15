@@ -14,7 +14,7 @@
 @property (strong, nonatomic) id detailItem;
 
 @property (strong, nonatomic) IBOutlet UIView *viewContainer;
-@property (strong, nonatomic) IBOutlet UIWebViewPlayer *player;
+@property (strong, nonatomic) IBOutlet UIWebView *player;
 @property (strong, nonatomic) IBOutlet UIScrollView *commentsScroller;
 
 @end

@@ -73,11 +73,11 @@
     NSString *labelText = l.text;
     NSLog(@"%@", labelText);
     
-    //search in hash here...
     
-    NSString *extension = [self.urlList objectForKey:labelText];
+    NSString *extension = [self.urlList objectForKey:labelText];            //obtain url for label name
     int height = self.detailViewController.player.bounds.size.height;
     int width = self.detailViewController.player.bounds.size.width;
+    
     NSString *embedHTML =[NSString stringWithFormat:@"\
                               <html><head>\
                               <style type=\"text/css\">\
@@ -87,15 +87,13 @@
                               }\
                               </style>\
                               </head><body style=\"margin:0\">\
-                              <iframe height=\"%d\" width=\"%d\" src=\"http://www.youtube.com/embed/%@\"></iframe>\
-                              </body></html>", height, width, extension];
+                              <iframe height=\"%d\" width=\"%d\" frameborder=\"0\" src=\"http://www.youtube.com/embed/%@\"></iframe>\
+                          </body></html>", height, width, extension];
+  
+    self.detailViewController.player.hidden = false;
     [self.detailViewController.player loadHTMLString:embedHTML baseURL:nil];
     
-    self.detailViewController.player.frame = CGRectMake(0, 0, self.detailViewController.player.bounds.size.height, self.detailViewController.player.bounds.size.width);
-    [self.detailViewController.player sizeToFit];
-    self.detailViewController.player.hidden = false;
-    
-    NSLog(@"size: %d, %d", height, width);
+    NSLog(@"%d, %d", height, width);
 
 }
 @end
