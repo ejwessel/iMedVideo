@@ -7,12 +7,14 @@
 //
 
 #import "MasterViewController.h"
+#import "DetailViewController.h"
+#import "FileContentLoader.h"
 
 @class DetailViewController;
 
 @interface SubMasterViewController : MasterViewController
 @property (strong, nonatomic) DetailViewController *detailViewController;
-
 @property (strong, nonatomic) NSMutableDictionary *urlList;
+@property (strong, nonatomic) FileContentLoader *fileLoader;
 
 @end

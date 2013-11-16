@@ -43,15 +43,15 @@
                                     <segment title="Quiz"/>
                                 </segments>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5t8-7D-SsE">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q4-mz-MgN" customClass="CommentsView">
+                                <rect key="frame" x="0.0" y="493" width="703" height="276"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.27285520019999998" green="0.1854269328" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5t8-7D-SsE" customClass="QuizView">
                                 <rect key="frame" x="0.0" y="492" width="703" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.017985486219999999" blue="0.89335980640000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lRe-Rq-y8D">
-                                <rect key="frame" x="0.0" y="492" width="703" height="276"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.27285520019999998" green="0.1854269328" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -60,7 +60,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Details" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="comments" destination="lRe-Rq-y8D" id="nOX-nr-H0i"/>
+                        <outlet property="comments" destination="6Q4-mz-MgN" id="on3-cx-L08"/>
                         <outlet property="player" destination="AQs-nE-aBo" id="qkP-a0-JFe"/>
                         <outlet property="quiz" destination="5t8-7D-SsE" id="NTZ-dR-dSF"/>
                         <outlet property="tabControl" destination="5wE-AI-oUK" id="LjH-ql-pCh"/>

@@ -49,11 +49,12 @@
     self.tabControl.hidden = true;
     [self.tabControl addTarget:self action:@selector(changeView) forControlEvents:UIControlEventValueChanged];
     
+    
     [self configureView];
 }
 
 - (void)changeView{
-    NSLog(@"touched");
+    NSLog(@"tab touched");
     if(self.tabControl.selectedSegmentIndex == 0){
         self.comments.hidden = false;
         self.quiz.hidden = true;

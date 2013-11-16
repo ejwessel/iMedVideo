@@ -1,16 +1,24 @@
 0 Comments and Quiz File Format
 0 Record descriptions:
 0      0 <code comment>
-0      1 <(doctor/patient)> <comment>
-0      2 <quiz question>
-0      3 <truth> <position> <quiz answer>
+0      1:<(doctor/patient)>:<comment>
+0      2:<quiz question>
+0      3:<truth>:<position>:<quiz answer>
+0      Resulting file name will be denoted by the first two words
+0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
 0
 0
-1 D Very good video demonstrating correct Insulin Inection
-1 P Video too complicated, got fingers stuck in garbage disposal
+1:D:Very good video demonstrating correct Insulin Injection
+1:P:Video too complicated, got fingers stuck in garbage disposal
 0
-2 Where is a good location to inject insulin into?
-3 F A Lower arm
-3 T B Thigh
-3 F C Back
-3 F D Fingers
+2:Where is a good location to inject insulin into?
+3:F:A:Lower arm
+3:T:B:Thigh
+3:F:C:Back
+3:F:D:Fingers
+0
+2:How long should you hold the needle in?
+3:F:A:1 second
+3:T:B:10 seconds
+3:F:C:1 minute
+3:D:D:Until you feel pain
