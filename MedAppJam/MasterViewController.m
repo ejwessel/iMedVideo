@@ -97,7 +97,9 @@
     [self.tableView reloadData];
 }
 
-
+- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller{
+    [self.tableView reloadData];
+}
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
    //need to searth through all the elements on this and lowe

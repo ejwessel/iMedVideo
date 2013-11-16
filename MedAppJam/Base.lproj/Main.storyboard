@@ -578,7 +578,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jk-ea-vV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="-2024"/>
+            <point key="canvasLocation" x="1616" y="-2004"/>
         </scene>
         <!--Sub Master View Controller - Diabetes-->
         <scene sceneID="Bnr-yX-f32">
