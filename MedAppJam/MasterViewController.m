@@ -196,8 +196,8 @@
     NSDate *object = _objects[indexPath.row];
     self.detailViewController.detailItem = object;
 
-    self.detailViewController.commentsScroller.hidden = true;
-    [self.detailViewController.commentsScroller setNeedsDisplay];
+    self.detailViewController.comments.hidden = true;
+    [self.detailViewController.comments setNeedsDisplay];
 
 }
 

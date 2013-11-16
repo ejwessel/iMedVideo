@@ -43,9 +43,27 @@
     //self.player.hidden = true;
     //self.player.scrollView.scrollEnabled = false;
     self.player.scrollView.bounces = false;
-    self.player.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.comments.hidden = true;
+    self.quiz.hidden = true;
+    
+    self.tabControl.hidden = true;
+    [self.tabControl addTarget:self action:@selector(changeView) forControlEvents:UIControlEventValueChanged];
     
     [self configureView];
+}
+
+- (void)changeView{
+    NSLog(@"touched");
+    if(self.tabControl.selectedSegmentIndex == 0){
+        self.comments.hidden = false;
+        self.quiz.hidden = true;
+        //load comments here...
+    }
+    else if(self.tabControl.selectedSegmentIndex == 1){
+        self.quiz.hidden = false;
+        self.comments.hidden = true;
+        //load quiz here...
+    }
 }
 
 - (void)didReceiveMemoryWarning

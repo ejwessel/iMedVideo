@@ -94,6 +94,9 @@
     [self.detailViewController.player loadHTMLString:embedHTML baseURL:nil];
     
     NSLog(@"%d, %d", height, width);
+    
+    self.detailViewController.tabControl.hidden = false;
+    self.detailViewController.comments.hidden = false;
 
 }
 @end

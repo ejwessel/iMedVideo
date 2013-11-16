@@ -35,11 +35,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="703" height="448"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </webView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzh-fc-8WD">
-                                <rect key="frame" x="17" y="496" width="668" height="252"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.27285520023744425" green="0.18542693282073031" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </scrollView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5wE-AI-oUK">
+                                <rect key="frame" x="195" y="456" width="313" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Comments"/>
+                                    <segment title="Quiz"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5t8-7D-SsE">
+                                <rect key="frame" x="0.0" y="492" width="703" height="276"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.017985486219999999" blue="0.89335980640000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lRe-Rq-y8D">
+                                <rect key="frame" x="0.0" y="492" width="703" height="276"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.27285520019999998" green="0.1854269328" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -47,8 +60,10 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Details" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="commentsScroller" destination="gzh-fc-8WD" id="m67-7H-TcI"/>
+                        <outlet property="comments" destination="lRe-Rq-y8D" id="nOX-nr-H0i"/>
                         <outlet property="player" destination="AQs-nE-aBo" id="qkP-a0-JFe"/>
+                        <outlet property="quiz" destination="5t8-7D-SsE" id="NTZ-dR-dSF"/>
+                        <outlet property="tabControl" destination="5wE-AI-oUK" id="LjH-ql-pCh"/>
                         <outlet property="viewContainer" destination="qG9-A4-Wr0" id="bdf-sT-dPn"/>
                     </connections>
                 </viewController>

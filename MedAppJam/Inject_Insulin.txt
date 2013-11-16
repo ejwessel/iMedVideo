@@ -1,0 +1,16 @@
+0 Comments and Quiz File Format
+0 Record descriptions:
+0      0 <code comment>
+0      1 <(doctor/patient)> <comment>
+0      2 <quiz question>
+0      3 <truth> <position> <quiz answer>
+0
+0
+1 D Very good video demonstrating correct Insulin Inection
+1 P Video too complicated, got fingers stuck in garbage disposal
+0
+2 Where is a good location to inject insulin into?
+3 F A Lower arm
+3 T B Thigh
+3 F C Back
+3 F D Fingers

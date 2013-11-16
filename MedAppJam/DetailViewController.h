@@ -15,6 +15,9 @@
 
 @property (strong, nonatomic) IBOutlet UIView *viewContainer;
 @property (strong, nonatomic) IBOutlet UIWebView *player;
-@property (strong, nonatomic) IBOutlet UIScrollView *commentsScroller;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *tabControl;
+@property (strong, nonatomic) IBOutlet UIView *comments;
+@property (strong, nonatomic) IBOutlet UIView *quiz;
+
 
 @end
