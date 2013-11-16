@@ -38,6 +38,7 @@
 //    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 
+    self.tableData = [[NSMutableArray alloc] init];
     [self.tableData addObject:@"Abdomen"];
     [self.tableData addObject:@"Diabetes"];
     [self.tableData addObject:@"Bones"];
@@ -102,22 +103,41 @@
    //need to searth through all the elements on this and lowe
     //read data from database? or read data off tableview?
     
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-    UILabel *l = [[cell.contentView subviews] objectAtIndex:0];
-    NSString *labelText = l.text;
     
-    NSLog(@"%@", labelText);
-    
-//    for (UITableViewCell *cell in self.tableView.visibleCells) {
-//        //should be able to get the
-//        
-//        NSLog(@"%@",[cell.subviews objectAtIndex:0]);
-//    }
 }
 
 
 #pragma mark - Table View
 
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    int rowCount;
+//    if(self.isFiltered)
+//        rowCount = self.filterData.count;
+//    else
+//        rowCount = self.tableData.count;
+//    
+//    return rowCount;
+//}
+
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    static NSString *CellIdentifier = @"Cell";
+//    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    if (cell == nil)
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+//    
+//    UITableViewCell *newCell;
+//    if(self.isFiltered)
+//        newCell = [self.filterData objectAtIndex:indexPath.row];
+//    else
+//        newCell = [self.tableData objectAtIndex:indexPath.row];
+//    
+//    // ... Set up the cell here...;
+//    
+//    return cell;
+//}
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 //{
 //    return 1;
