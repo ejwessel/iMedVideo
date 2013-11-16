@@ -108,7 +108,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="jKC-fE-ky1" kind="push" id="u18-TJ-uVS"/>
+                                            <segue destination="jKC-fE-ky1" kind="push" id="RJS-hv-DGr"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="4zy-II-Ebq">
@@ -578,7 +578,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jk-ea-vV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="-1788"/>
+            <point key="canvasLocation" x="844" y="-2024"/>
         </scene>
         <!--Sub Master View Controller - Diabetes-->
         <scene sceneID="Bnr-yX-f32">

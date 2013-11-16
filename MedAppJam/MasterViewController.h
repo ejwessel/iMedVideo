@@ -17,6 +17,8 @@
 @property (strong, nonatomic) DetailViewController *detailViewController;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UISearchDisplayController *searchController;
+@property (strong, nonatomic) NSMutableArray *tableData; //will contain all of the data
+@property (strong, nonatomic) NSMutableArray *filterData; //filtere data to display
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar;
 

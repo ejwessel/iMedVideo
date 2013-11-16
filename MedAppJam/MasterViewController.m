@@ -37,7 +37,43 @@
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+
+    [self.tableData addObject:@"Abdomen"];
+    [self.tableData addObject:@"Diabetes"];
+    [self.tableData addObject:@"Bones"];
+    [self.tableData addObject:@"Eyes"];
+    [self.tableData addObject:@"Heart"];
+    [self.tableData addObject:@"Lungs"];
+    [self.tableData addObject:@"Reproducitve"];
     
+    [self.tableData addObject:@"Appendix Surgery"];
+    [self.tableData addObject:@"Gall Bladdery Surgery"];
+    [self.tableData addObject:@"Hernia Repair"];
+    [self.tableData addObject:@"Ileostomy Bag Care"];
+    
+    [self.tableData addObject:@"Check Blood Sugar"];
+    [self.tableData addObject:@"Diet"];
+    [self.tableData addObject:@"Iject Insulin"];
+    
+    [self.tableData addObject:@"Cast Care"];
+    [self.tableData addObject:@"Hip Replacement"];
+    [self.tableData addObject:@"Knee Replacement"];
+    
+    [self.tableData addObject:@"Cataracts"];
+    [self.tableData addObject:@"Contacts"];
+    [self.tableData addObject:@"Eyes Drops"];
+    
+    [self.tableData addObject:@"Conary Artery Bypass"];
+    [self.tableData addObject:@"Conary Catherization"];
+    [self.tableData addObject:@"Heart Failure"];
+    
+    [self.tableData addObject:@"Lung Removal Surgery/Lobectomy"];
+    [self.tableData addObject:@"Pneumonia"];
+    
+    [self.tableData addObject:@"Breast Feeding"];
+    [self.tableData addObject:@"Cesarian Section"];
+    [self.tableData addObject:@"Uterus Removal/Hysterectomy"];
+
 }
 
 - (void)didReceiveMemoryWarning
