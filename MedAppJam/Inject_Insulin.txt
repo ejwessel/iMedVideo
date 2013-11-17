@@ -10,9 +10,13 @@
 0
 1:D:Very good video demonstrating correct Insulin Injection
 1:P:Video too complicated, got fingers stuck in garbage disposal
-1:P:Hi! Im just checking in to see whats going on
+1:P:Hi! I’m just checking in to see whats going on
 1:P:This helped my family immensely when I was diagnosed with diabetes!
 1:D:Pay close attention as this clearly demonstrates how well I’ve been alive for
+1:D:Pay close attention as this clearly demonstrates how well I’ve been alive fo
+1:P:Yo yo I am balla
+1:D:Hello World
+1:P:Dude where’s my car?
 0
 2:Where is a good location to inject insulin into?
 3:F:A:Lower arm
