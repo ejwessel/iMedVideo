@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "QuizObject.h"
 @interface QuizView : UIView
 
 @property (strong, nonatomic) NSMutableArray *quizData;
@@ -16,8 +16,12 @@
 @property (strong, nonatomic) UIButton *option2;
 @property (strong, nonatomic) UIButton *option3;
 @property (strong, nonatomic) UIButton *option4;
+@property int correctAnswer;
 
 @property int totalQuestions;
 @property int totalCorrect;
 
+- (void)addInitialQuizView;
+
+- (void)buttonClicked;
 @end

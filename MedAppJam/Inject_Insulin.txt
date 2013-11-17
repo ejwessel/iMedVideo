@@ -28,4 +28,4 @@
 3:F:A:1 second
 3:T:B:10 seconds
 3:F:C:1 minute
-3:D:D:Until you feel pain
+3:F:D:Until you feel pain

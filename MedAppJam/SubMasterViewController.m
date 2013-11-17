@@ -58,10 +58,23 @@
 }
 
 - (void)loadLines:(NSString *)labelText{
-    NSArray *fileChunks = [labelText componentsSeparatedByString:@" "];
-    //file name will be denoted by the first two portions of the text from the label
-    NSString *fileName = [[[[fileChunks objectAtIndex:0] stringByAppendingString:@"_"] stringByAppendingString:[fileChunks objectAtIndex:1]] stringByAppendingString:@".txt"];
+
+    NSString *f = labelText;
+    f = [f stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+    NSMutableString *fileName = [[NSMutableString alloc] initWithString:f];
+    [fileName appendString:@".txt"];
     self.fileLoader = [[FileContentLoader alloc] initWithFileName:fileName]; //this will contain lines in which we can use.
+    
+//    
+//
+//    //file name will be denoted by the first two portions of the text from the label
+//    if ([fileChunks count] == 1) {
+//        NSString *fileName = [fileChunks objectAtIndex:0];
+//    }
+//    else{
+//        NSString *fileName = [[[[fileChunks objectAtIndex:0] stringByAppendingString:@"_"] stringByAppendingString:[fileChunks objectAtIndex:1]] stringByAppendingString:@".txt"];
+//    }
+//     self.fileLoader = [[FileContentLoader alloc] initWithFileName:fileName]; //this will contain lines in which we can use.
 }
 
 - (void)loadEmbeddedVideo:(NSString *)labelText{
@@ -92,7 +105,13 @@
     
     CommentsView *comments = self.detailViewController.comments;
     comments.commentObjects = [[NSMutableArray alloc] init];
+    
     QuizView *quiz = self.detailViewController.quiz;
+    quiz.quizData = [[NSMutableArray alloc] init];
+    
+    QuizObject *tempQuiz;
+    tempQuiz.totalQuestions = 0; //need to reset
+
     
     CGFloat updatePos = 0;
     
@@ -138,23 +157,49 @@
                     [comments.commentObjects addObject:comment];
                 }
             }
-//            //if it is a question
-//            else if([[lineChunks objectAtIndex:0] isEqualToString:@"2"]){
-//                //grab question and place it into quiz object
-//            }
-//            //if it is a question answer
-//            else if([[lineChunks objectAtIndex:0] isEqualToString:@"3"]){
-//                //grab truth value and place it into quiz object
-//                //NSString *truthValue =
-//                //grab position and place it into quiz object
-//                //grab answer and place it into quiz object
-//            }
+            //if it is a question
+            else if([[lineChunks objectAtIndex:0] isEqualToString:@"2"]){
+                //grab question and place it into quiz object
+                tempQuiz = [[QuizObject alloc] init];
+                tempQuiz.question = [lineChunks objectAtIndex:1];
+                
+            }
+            //if it is a question answer
+            else if([[lineChunks objectAtIndex:0] isEqualToString:@"3"]){
+                
+                if([[lineChunks objectAtIndex:1] isEqualToString:@"T"]){
+                    tempQuiz.correctOption = [lineChunks objectAtIndex:2];
+                }
+                
+                if([[lineChunks objectAtIndex:2] isEqualToString:@"A"]){
+                    tempQuiz.option1 = [lineChunks objectAtIndex:3];
+                    tempQuiz.totalQuestions++;
+                }
+                else if([[lineChunks objectAtIndex:2] isEqualToString:@"B"]){
+                    tempQuiz.option2 = [lineChunks objectAtIndex:3];
+                    tempQuiz.totalQuestions++;
+                }
+                else if([[lineChunks objectAtIndex:2] isEqualToString:@"C"]){
+                    tempQuiz.option3 = [lineChunks objectAtIndex:3];
+                    tempQuiz.totalQuestions++;
+                }
+                else if([[lineChunks objectAtIndex:2] isEqualToString:@"D"]){
+                    tempQuiz.option4 = [lineChunks objectAtIndex:3];
+                    tempQuiz.totalQuestions++;
+                }
+            }
+            
+            //if we have max questions load in object
+            if(tempQuiz.totalQuestions == 4){
+                [quiz.quizData addObject:tempQuiz];
+                tempQuiz.totalQuestions = 0; //reset here
+            }
         }
-        
     }
     
     //after reading in all of the lines we will display the data on the view
-    [comments addCommentsToView];    
+    [comments addCommentsToView];
+    [quiz addInitialQuizView];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
