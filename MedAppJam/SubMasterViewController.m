@@ -45,7 +45,7 @@
     [self.urlList setObject:@"url" forKey:@"Coronary Artery Bypass"];
     [self.urlList setObject:@"url" forKey:@"Coronary Catheterization"];
     [self.urlList setObject:@"url" forKey:@"Heart Failure"];
-    [self.urlList setObject:@"url" forKey:@"Lung Removal Surgery / Lobectomy"];
+    [self.urlList setObject:@"url" forKey:@"Lung Removal Surgery/Lobectomy"];
     [self.urlList setObject:@"url" forKey:@"Pneumonia"];
     [self.urlList setObject:@"url" forKey:@"Breast Feeding"];
     [self.urlList setObject:@"url" forKey:@"Cesarian Section"];

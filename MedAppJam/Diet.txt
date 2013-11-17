@@ -1,0 +1,35 @@
+0 Comments and Quiz File Format
+0 Record descriptions:
+0      0 <code comment>
+0      1:<(doctor/patient)>:<comment>
+0      2:<quiz question>
+0      3:<truth>:<position>:<quiz answer>
+0      Resulting file name will be denoted by the first two words
+0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
+0
+0
+1:D:Very good video demonstrating correct Insulin Injection
+1:P:Video too complicated, got fingers stuck in garbage disposal
+1:P:Hi! I’m just checking in to see whats going on
+1:P:This helped my family immensely when I was diagnosed with diabetes!
+1:D:Pay close attention as this clearly demonstrates how well I’ve been alive for
+1:D:Pay close attention as this clearly demonstrates how well I’ve been alive fo
+1:P:Yo yo I am balla
+1:D:Hello World
+1:P:Dude where’s my car?
+0
+2:Which of the following meats was recommended?
+3:F:A:Bacon
+3:T:B:Chicken
+3:F:C:Sausage
+3:F:D:Hamburger
+0
+2:Sugars in fruits behave differently from other sugars so it is fine to have as much as you want.
+3:F:A:True
+3:T:B:False
+0
+2:Which of the following vegetables should you avoid?
+3:F:A:Peas
+3:T:B:Broccoli
+3:F:C:Squash
+3:F:D:Peppers
