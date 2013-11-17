@@ -21,6 +21,9 @@
 
 - (void) addCommentsToView{
     
+    //remove all prior subviews for comments and quizzes before we draw anything...
+    [[self subviews]makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
     //set up scrollview content size by getting first and last element positions
     CommentObject *objectFirst = [self.commentObjects objectAtIndex:0];
     int height = objectFirst.bounds.size.height;
@@ -31,13 +34,13 @@
     for (CommentObject *object in self.commentObjects) {
         object.hidden = false;
         
-        //NEED TO SET UP ICONS FOR DOCTOR AND PATIENT
-        if(object.isDoctor){
-            object.backgroundColor = [UIColor cyanColor];
-        }
-        else{
-            object.backgroundColor = [UIColor lightGrayColor];
-        }
+//        //NEED TO SET UP ICONS FOR DOCTOR AND PATIENT
+//        if(object.isDoctor){
+//            object.backgroundColor = [UIColor cyanColor];
+//        }
+//        else{
+//            object.backgroundColor = [UIColor lightGrayColor];
+//        }
         [self addSubview:object];
     }
     
@@ -45,6 +48,10 @@
     
     [self setNeedsDisplay];
 }
+
+//- (void) removeFromSuperview{
+//    
+//}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

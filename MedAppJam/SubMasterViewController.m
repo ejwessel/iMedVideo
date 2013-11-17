@@ -64,17 +64,6 @@
     NSMutableString *fileName = [[NSMutableString alloc] initWithString:f];
     [fileName appendString:@".txt"];
     self.fileLoader = [[FileContentLoader alloc] initWithFileName:fileName]; //this will contain lines in which we can use.
-    
-//    
-//
-//    //file name will be denoted by the first two portions of the text from the label
-//    if ([fileChunks count] == 1) {
-//        NSString *fileName = [fileChunks objectAtIndex:0];
-//    }
-//    else{
-//        NSString *fileName = [[[[fileChunks objectAtIndex:0] stringByAppendingString:@"_"] stringByAppendingString:[fileChunks objectAtIndex:1]] stringByAppendingString:@".txt"];
-//    }
-//     self.fileLoader = [[FileContentLoader alloc] initWithFileName:fileName]; //this will contain lines in which we can use.
 }
 
 - (void)loadEmbeddedVideo:(NSString *)labelText{
@@ -203,6 +192,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //need to clear out previous view that is being displayed, we will default on comments first
+    self.detailViewController.tabControl.selectedSegmentIndex = 0;
+    self.detailViewController.quiz.hidden = true;
+    
     //Obtain label text of video that we'll be searching from cell
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     UILabel *l = [[cell.contentView subviews] objectAtIndex:0];

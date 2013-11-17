@@ -20,6 +20,10 @@
 }
 
 -(void)addInitialQuizView{
+    
+    //remove all prior subviews for comments and quizzes before we draw anything...
+    [[self subviews]makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
     self.backgroundColor = [UIColor clearColor];
     QuizObject *q = [self.quizData objectAtIndex:0];
     
