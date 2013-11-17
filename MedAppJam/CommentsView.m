@@ -21,10 +21,14 @@
 
 - (void) addCommentsToView{
     
-    self.contentSize = self.superview.bounds.size; //will need to be changed.
+    //set up scrollview content size by getting first and last element positions
+    CommentObject *objectFirst = [self.commentObjects objectAtIndex:0];
+    CommentObject *objectLast = self.commentObjects.lastObject;
+    int height = objectFirst.bounds.size.height + objectLast.bounds.size.height;
+    self.contentSize = CGSizeMake(self.bounds.size.width, (height + 5) * self.commentObjects.count); //multiplier will need to be changed
+    
     
     self.backgroundColor = [UIColor clearColor];
-    
     for (CommentObject *object in self.commentObjects) {
         object.hidden = false;
         
@@ -38,7 +42,7 @@
         [self addSubview:object];
     }
     
-    //[self addSubview:v];
+    NSLog(@"%@", self.commentObjects);
     
     [self setNeedsDisplay];
 }

@@ -84,7 +84,7 @@
     
     self.detailViewController.player.hidden = false;
     [self.detailViewController.player loadHTMLString:embedHTML baseURL:nil];
-    NSLog(@"%d, %d", height, width);
+    NSLog(@"video size: %d, %d", height, width);
 
 }
 
@@ -93,6 +93,8 @@
     CommentsView *comments = self.detailViewController.comments;
     comments.commentObjects = [[NSMutableArray alloc] init];
     QuizView *quiz = self.detailViewController.quiz;
+    
+    CGFloat updatePos = 0;
     
     //read through lines and place into spots
     for (NSString *line in self.fileLoader.lines) {
@@ -113,22 +115,26 @@
                     frame = CGRectMake(0, 0, comments.bounds.size.width, 40);
                 }
                 else{
-                    CommentObject *prevObject = [comments.commentObjects objectAtIndex:comments.commentObjects.count - 1];
-                    CGFloat yPos = prevObject.bounds.origin.y + prevObject.bounds.size.height + 5;
-                    frame = CGRectMake(0, yPos, comments.bounds.size.width, 40);
+                    CommentObject *prevObject = comments.commentObjects.lastObject;//[comments.commentObjects objectAtIndex:comments.commentObjects.count - 1];
+                    updatePos = (updatePos + prevObject.bounds.size.height + 5);
+                    frame = CGRectMake(0, updatePos, comments.bounds.size.width, 40);
                 }
                 
                 //check if it is a doctor or patient comment
                 if([[lineChunks objectAtIndex:1] isEqualToString:@"D"]){
                     //grab DOCTOR and place into comment object
                     //create new comments object and place into subview of comments
-                    CommentObject *comment = [[CommentObject alloc] initWithFrame:frame withString:[lineChunks objectAtIndex:2] withIsDoctor:true];
+                    NSMutableString *text = [[NSMutableString alloc] initWithString:@"  "];
+                    [text appendString:[lineChunks objectAtIndex:2]];
+                    CommentObject *comment = [[CommentObject alloc] initWithFrame:frame withString:text withIsDoctor:true];
                     [comments.commentObjects addObject:comment];
                 }
                 else if([[lineChunks objectAtIndex:1] isEqualToString:@"P"]){
                     //grab PATIENT and place into comment object
                     //create new comments object and place into subview of comments
-                    CommentObject *comment = [[CommentObject alloc] initWithFrame:frame withString:[lineChunks objectAtIndex:2] withIsDoctor:false];
+                    NSMutableString *text = [[NSMutableString alloc] initWithString:@"  "];
+                    [text appendString:[lineChunks objectAtIndex:2]];
+                    CommentObject *comment = [[CommentObject alloc] initWithFrame:frame withString:text withIsDoctor:false];
                     [comments.commentObjects addObject:comment];
                 }
             }
@@ -156,7 +162,7 @@
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     UILabel *l = [[cell.contentView subviews] objectAtIndex:0];
     NSString *labelText = l.text;
-    NSLog(@"%@", labelText);
+    NSLog(@"label clicked: %@", labelText);
     
     [self loadEmbeddedVideo:labelText];
     
