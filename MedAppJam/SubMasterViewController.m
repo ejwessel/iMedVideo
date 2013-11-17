@@ -179,7 +179,7 @@
             }
             
             //if we have max questions load in object
-            if(tempQuiz.totalQuestions == 4){
+            if(tempQuiz.totalQuestions == 4){               //set number of questions to different size
                 [quiz.quizData addObject:tempQuiz];
                 tempQuiz.totalQuestions = 0; //reset here
             }
