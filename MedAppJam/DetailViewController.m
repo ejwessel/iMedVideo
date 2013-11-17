@@ -55,12 +55,10 @@
     if(self.tabControl.selectedSegmentIndex == 0){
         self.comments.hidden = false;
         self.quiz.hidden = true;
-        //load comments here...
     }
     else if(self.tabControl.selectedSegmentIndex == 1){
         self.quiz.hidden = false;
         self.comments.hidden = true;
-        //load quiz here...
     }
 }
 

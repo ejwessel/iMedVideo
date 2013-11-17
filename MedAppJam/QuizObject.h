@@ -17,5 +17,6 @@
 @property (strong, nonatomic) NSString *option4;
 @property (strong, nonatomic) NSString *correctOption;
 @property int totalQuestions;
+@property (strong, nonatomic) NSString *explanationTxt;
 
 @end

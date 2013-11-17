@@ -10,79 +10,141 @@
 
 @implementation QuizView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
     }
     return self;
 }
-
 -(void)addInitialQuizView{
     
-    //remove all prior subviews for comments and quizzes before we draw anything...
-    [[self subviews]makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
     self.backgroundColor = [UIColor clearColor];
-    QuizObject *q = [self.quizData objectAtIndex:0];
+    self.correctIncorrectLabel.hidden = true;
+    [self.correctIncorrectLabel.layer setCornerRadius:20];
+    [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
+    [self loadDataFromIndex:0]; //load from 0 initally
     
-    int yPos = 45;
-    
-    self.question = [[UILabel alloc] initWithFrame:CGRectMake(0, yPos*0, self.bounds.size.width, 40)];
-    self.question.text =  q.question;
-    
-    self.option1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.option1.frame = CGRectMake(0, yPos*1, self.bounds.size.width/2, 40);
-    [self.option1 setTitle:q.option1 forState:UIControlStateNormal];
-    [self.option1 addTarget:self
-                              action:@selector(buttonClicked)
-                    forControlEvents:UIControlEventTouchUpInside];
-    
-    self.option2 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.option2.frame = CGRectMake(0, yPos*2, self.bounds.size.width/2, 40);
-    [self.option2 setTitle:q.option2 forState:UIControlStateNormal];
-    [self.option2 addTarget:self
-                     action:@selector(buttonClicked)
-           forControlEvents:UIControlEventTouchUpInside];
-    
-    self.option3 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.option3.frame = CGRectMake(0, yPos*3, self.bounds.size.width/2, 40);
-    [self.option3 setTitle:q.option3 forState:UIControlStateNormal];
-    [self.option3 addTarget:self
-                     action:@selector(buttonClicked)
-           forControlEvents:UIControlEventTouchUpInside];
-    
-    self.option4 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.option4.frame = CGRectMake(0, yPos*4, self.bounds.size.width/2, 40);
-    [self.option4 setTitle:q.option4 forState:UIControlStateNormal];
-    [self.option4 addTarget:self
-                     action:@selector(buttonClicked)
-           forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    self.option1.backgroundColor = [UIColor lightGrayColor];
-    self.option2.backgroundColor = [UIColor lightGrayColor];
-    self.option3.backgroundColor = [UIColor lightGrayColor];
-    self.option4.backgroundColor = [UIColor lightGrayColor];
-    
-    [self addSubview:self.question];
-    [self addSubview:self.option1];
-    [self addSubview:self.option2];
-    [self addSubview:self.option3];
-    [self addSubview:self.option4];
-    
-    NSLog(@"%@", self.subviews);
-    
-    [self setNeedsDisplay];
+    [self.option1.layer setCornerRadius:5];
+    [self.option1.layer setBorderWidth:1];
+    [self.option2.layer setCornerRadius:5];
+    [self.option2.layer setBorderWidth:1];
+    [self.option3.layer setCornerRadius:5];
+    [self.option3.layer setBorderWidth:1];
+    [self.option4.layer setCornerRadius:5];
+    [self.option4.layer setBorderWidth:1];
+    [self.nextButton.layer setCornerRadius:5];
+    [self.nextButton.layer setBorderWidth:1];
 }
 
-- (void)buttonClicked{
+- (void)button1Clicked{
     
-    NSLog(@"Answer pressed");
-//    if () {
-//        <#statements#>
-//    }
+    NSLog(@"Answer 1 pressed");
+    if ([self isCorrect:@"A"]){
+        //true explain
+        NSLog(@"correct!");
+        self.correctIncorrectLabel.backgroundColor = [UIColor greenColor];
+        self.correctIncorrectLabel.hidden = false;
+        self.correctIncorrectLabel.text = @"CORRECT!";
+    }
+    else{
+        //false explain
+        NSLog(@"incorrect!");
+        self.correctIncorrectLabel.backgroundColor = [UIColor redColor];
+        self.correctIncorrectLabel.hidden = false;
+        self.correctIncorrectLabel.text = @"Incorrect";
+    }
+}
+- (void)button2Clicked{
+    
+    NSLog(@"Answer 2 pressed");
+    if ([self isCorrect:@"B"]){
+        //true explain
+        NSLog(@"correct!");
+        self.correctIncorrectLabel.backgroundColor = [UIColor greenColor];
+        self.correctIncorrectLabel.hidden = false;
+        self.correctIncorrectLabel.text = @"CORRECT!";
+    }
+    else{
+        //false explain
+        NSLog(@"incorrect!");
+        self.correctIncorrectLabel.backgroundColor = [UIColor redColor];
+        self.correctIncorrectLabel.hidden = false;
+        self.correctIncorrectLabel.text = @"Incorrect";
+    }
+}
+- (void)button3Clicked{
+    
+    NSLog(@"Answer 3 pressed");
+    if ([self isCorrect:@"C"]){
+        //true explain
+        NSLog(@"correct!");
+        self.correctIncorrectLabel.backgroundColor = [UIColor greenColor];
+        self.correctIncorrectLabel.hidden = false;
+        self.correctIncorrectLabel.text = @"CORRECT!";
+    }
+    else{
+        //false explain
+        NSLog(@"incorrect!");
+        self.correctIncorrectLabel.backgroundColor = [UIColor redColor];
+        self.correctIncorrectLabel.hidden = false;
+        self.correctIncorrectLabel.text = @"Incorrect";
+    }
+}
+- (void)button4Clicked{
+    
+    NSLog(@"Answer 4 pressed");
+    if ([self isCorrect:@"D"]){
+        //true explain
+        NSLog(@"correct!");
+        self.correctIncorrectLabel.backgroundColor = [UIColor greenColor];
+        self.correctIncorrectLabel.hidden = false;
+        self.correctIncorrectLabel.text = @"CORRECT!";
+    }
+    else{
+        //false explain
+        NSLog(@"incorrect!");
+        self.correctIncorrectLabel.backgroundColor = [UIColor redColor];
+        self.correctIncorrectLabel.hidden = false;
+        self.correctIncorrectLabel.text = @"Incorrect";
+    }
+}
+
+- (void)nextQuestion{
+    
+}
+
+- (void)loadDataFromIndex:(int) i{
+    QuizObject *q = [self.quizData objectAtIndex:0];
+    
+    [self.question setText:q.question];
+    self.correctAnswer = q.correctOption;
+    [self.option1 setTitle:q.option1 forState:UIControlStateNormal];
+    [self.option2 setTitle:q.option2 forState:UIControlStateNormal];
+    [self.option3 setTitle:q.option3 forState:UIControlStateNormal];
+    [self.option4 setTitle:q.option4 forState:UIControlStateNormal];
+    
+    [self.option1 addTarget:self
+                     action:@selector(button1Clicked)
+           forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.option2 addTarget:self
+                     action:@selector(button2Clicked)
+           forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.option3 addTarget:self
+                     action:@selector(button3Clicked)
+           forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.option4 addTarget:self
+                     action:@selector(button4Clicked)
+           forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (BOOL)isCorrect:(NSString *)s{
+    if([s isEqualToString:self.correctAnswer]){
+        return true;
+    }
+    return false;
 }
 
 /*

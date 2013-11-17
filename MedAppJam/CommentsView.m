@@ -21,9 +21,6 @@
 
 - (void) addCommentsToView{
     
-    //remove all prior subviews for comments and quizzes before we draw anything...
-    [[self subviews]makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
     //set up scrollview content size by getting first and last element positions
     CommentObject *objectFirst = [self.commentObjects objectAtIndex:0];
     int height = objectFirst.bounds.size.height;
