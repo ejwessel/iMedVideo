@@ -163,6 +163,7 @@
     //Setup respective comments and quiz data
     self.detailViewController.tabControl.hidden = false;
     self.detailViewController.comments.hidden = false;
+    self.detailViewController.addCommentView.hidden = false;
     
     [self loadLines:labelText]; //load in the lines
     [self loadDataIntoView];

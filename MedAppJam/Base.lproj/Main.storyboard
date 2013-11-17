@@ -17,7 +17,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="-630"/>
+            <point key="canvasLocation" x="332" y="-702"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="yUG-lL-AsK">
@@ -44,14 +44,47 @@
                                 </segments>
                             </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q4-mz-MgN" customClass="CommentsView">
-                                <rect key="frame" x="0.0" y="493" width="703" height="276"/>
+                                <rect key="frame" x="0.0" y="493" width="703" height="221"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.27285520019999998" green="0.1854269328" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5t8-7D-SsE" customClass="QuizView">
-                                <rect key="frame" x="0.0" y="492" width="703" height="276"/>
+                                <rect key="frame" x="0.0" y="492" width="703" height="275"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.017985486219999999" blue="0.89335980640000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N6t-8h-8Sa" customClass="AddCommentView">
+                                <rect key="frame" x="0.0" y="716" width="703" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uPL-sc-027">
+                                        <rect key="frame" x="191" y="10" width="387" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fB-nv-sjN">
+                                        <rect key="frame" x="20" y="14" width="181" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2y-GX-d4K">
+                                        <rect key="frame" x="620" y="10" width="58" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.36267113584492294" green="0.51366682900392902" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97692526155449666" green="1" blue="0.044265815656202356" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="addComment" destination="T2y-GX-d4K" id="cFX-1s-bmk"/>
+                                    <outlet property="addNewComment" destination="uPL-sc-027" id="M3i-aw-rD6"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -60,6 +93,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Details" id="mOI-FS-AaM"/>
                     <connections>
+                        <outlet property="addCommentView" destination="N6t-8h-8Sa" id="t68-RI-Hze"/>
                         <outlet property="comments" destination="6Q4-mz-MgN" id="on3-cx-L08"/>
                         <outlet property="player" destination="AQs-nE-aBo" id="qkP-a0-JFe"/>
                         <outlet property="quiz" destination="5t8-7D-SsE" id="NTZ-dR-dSF"/>
@@ -85,7 +119,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-687" y="-630"/>
+            <point key="canvasLocation" x="-1283" y="-738"/>
         </scene>
         <!--Master View Controller - Master-->
         <scene sceneID="smW-Zh-WAh">

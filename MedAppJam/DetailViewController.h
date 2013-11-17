@@ -11,6 +11,7 @@
 #import "CommentsView.h"
 #import "CommentObject.h"
 #import "QuizView.h"
+#import "AddCommentView.h"
 
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
 
@@ -21,6 +22,6 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *tabControl;
 @property (strong, nonatomic) IBOutlet CommentsView *comments;
 @property (strong, nonatomic) IBOutlet QuizView *quiz;
-
+@property (strong, nonatomic) IBOutlet AddCommentView *addCommentView;
 
 @end

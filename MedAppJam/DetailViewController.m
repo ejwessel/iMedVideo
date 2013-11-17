@@ -45,10 +45,10 @@
     self.player.scrollView.bounces = false;
     self.comments.hidden = true;
     self.quiz.hidden = true;
+    self.addCommentView.hidden = true;
     
     self.tabControl.hidden = true;
     [self.tabControl addTarget:self action:@selector(changeView) forControlEvents:UIControlEventValueChanged];
-    
     
     [self configureView];
 }
@@ -58,11 +58,14 @@
     if(self.tabControl.selectedSegmentIndex == 0){
         self.comments.hidden = false;
         self.quiz.hidden = true;
+        self.addCommentView.hidden = false; //
         //load comments here...
+        
     }
     else if(self.tabControl.selectedSegmentIndex == 1){
         self.quiz.hidden = false;
         self.comments.hidden = true;
+        self.addCommentView.hidden = true; //
         //load quiz here...
     }
 }
