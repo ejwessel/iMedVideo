@@ -34,13 +34,13 @@
     for (CommentObject *object in self.commentObjects) {
         object.hidden = false;
         
-//        //NEED TO SET UP ICONS FOR DOCTOR AND PATIENT
-//        if(object.isDoctor){
-//            object.backgroundColor = [UIColor cyanColor];
-//        }
-//        else{
-//            object.backgroundColor = [UIColor lightGrayColor];
-//        }
+        //NEED TO SET UP ICONS FOR DOCTOR AND PATIENT
+        if(object.isDoctor){
+            object.backgroundColor = [UIColor cyanColor];
+        }
+        else{
+            object.backgroundColor = [UIColor lightGrayColor];
+        }
         [self addSubview:object];
     }
     
