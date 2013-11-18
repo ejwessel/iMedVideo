@@ -13,6 +13,7 @@
 @interface CommentsView : UIScrollView
 
 @property (strong, nonatomic) NSMutableArray *commentObjects;
+@property (nonatomic, retain) UIImage *image;
 
 - (void) addCommentsToView;
 
