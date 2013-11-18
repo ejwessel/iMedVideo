@@ -19,6 +19,9 @@
 
 - (void)addInitialQuizView{
     
+    //clear any previous quiz that was being taken
+    [self resetView];
+    
     self.backgroundColor = [UIColor clearColor];
     self.correctIncorrectLabel.hidden = true;
     self.explanation.hidden = true;
@@ -144,31 +147,20 @@
 
 - (void)nextQuestion{
     
-    NSLog(@"next button clicked, %d, %d", self.currentIndex, self.totalQuestions);
+    NSLog(@"next button clicked, %d, %d", self.currentIndex, self.quizData.count);
     
-    //get next data
-    self.currentIndex++;
     
-    if(self.currentIndex > self.quizData.count){
+    if(self.currentIndex >= self.quizData.count){
+        NSLog(@"No more questions");
         //end the quiz
         //show scoring
         //send message to doctor
     }
     else{
         //load next question
+        self.currentIndex++;
         [self loadDataFromIndex:self.currentIndex];
-        
-        //need to reset view
-        self.option1.enabled = true;
-        self.option2.enabled = true;
-        self.option3.enabled = true;
-        self.option4.enabled = true;
-        self.correctIncorrectLabel.hidden = true;
-        self.explanation.hidden = true;
-        self.option1.backgroundColor = [UIColor clearColor];
-        self.option2.backgroundColor = [UIColor clearColor];
-        self.option3.backgroundColor = [UIColor clearColor];
-        self.option4.backgroundColor = [UIColor clearColor];
+        [self resetView];
     }
 }
 
@@ -211,6 +203,25 @@
         return true;
     }
     return false;
+}
+
+- (void)resetView{
+    //need to reset view
+    self.option1.enabled = true;
+    self.option2.enabled = true;
+    self.option3.enabled = true;
+    self.option4.enabled = true;
+    self.correctIncorrectLabel.hidden = true;
+    self.explanation.hidden = true;
+    self.option1.backgroundColor = [UIColor clearColor];
+    self.option2.backgroundColor = [UIColor clearColor];
+    self.option3.backgroundColor = [UIColor clearColor];
+    self.option4.backgroundColor = [UIColor clearColor];
+    
+    [self.option1 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    [self.option2 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    [self.option3 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    [self.option4 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 }
 
 /*
