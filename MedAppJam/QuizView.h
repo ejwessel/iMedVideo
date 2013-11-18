@@ -21,6 +21,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *nextButton;
 
 @property (strong, nonatomic) IBOutlet UITextView *explanation;
+@property (strong, nonatomic) IBOutlet UILabel *scoringText;
+@property (strong, nonatomic) IBOutlet UILabel *quizScore;
 
 @property (strong, nonatomic) NSString *correctAnswer;
 
@@ -29,4 +31,5 @@
 @property int totalCorrect;
 
 - (void)addInitialQuizView;
+
 @end

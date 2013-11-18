@@ -23,8 +23,14 @@
     [self resetView];
     
     self.backgroundColor = [UIColor clearColor];
+    self.totalQuestions = self.quizData.count;
     self.correctIncorrectLabel.hidden = true;
     self.explanation.hidden = true;
+    self.scoringText.hidden = true;
+    self.scoringText.text = @"Score:";
+    self.quizScore.hidden = true;
+    
+    
     [self.correctIncorrectLabel.layer setCornerRadius:20];
     [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
    
@@ -57,6 +63,7 @@
         self.correctIncorrectLabel.backgroundColor = [UIColor greenColor];
         self.correctIncorrectLabel.hidden = false;
         self.correctIncorrectLabel.text = @"CORRECT!";
+        self.totalCorrect++;
     }
     else{
         //false explain
@@ -80,6 +87,7 @@
         self.correctIncorrectLabel.backgroundColor = [UIColor greenColor];
         self.correctIncorrectLabel.hidden = false;
         self.correctIncorrectLabel.text = @"CORRECT!";
+        self.totalCorrect++;
     }
     else{
         //false explain
@@ -103,6 +111,7 @@
         self.correctIncorrectLabel.backgroundColor = [UIColor greenColor];
         self.correctIncorrectLabel.hidden = false;
         self.correctIncorrectLabel.text = @"CORRECT!";
+        self.totalCorrect++;
     }
     else{
         //false explain
@@ -126,6 +135,7 @@
         self.correctIncorrectLabel.backgroundColor = [UIColor greenColor];
         self.correctIncorrectLabel.hidden = false;
         self.correctIncorrectLabel.text = @"CORRECT!";
+        self.totalCorrect++;
     }
     else{
         //false explain
@@ -149,16 +159,33 @@
     
     NSLog(@"next button clicked, %d, %d", self.currentIndex, self.quizData.count);
     
+    self.currentIndex++;
     
     if(self.currentIndex >= self.quizData.count){
         NSLog(@"No more questions");
-        //end the quiz
-        //show scoring
+        self.question.hidden = true;
+        self.option1.hidden = true;
+        self.option2.hidden = true;
+        self.option3.hidden = true;
+        self.option4.hidden = true;
+        self.nextButton.hidden = true;
+        self.correctIncorrectLabel.hidden = true;
+        self.explanation.hidden = true;
+        
+        self.scoringText.hidden = false;
+        self.quizScore.hidden = false;
+        
+        NSString *s = [[NSString alloc] initWithFormat:@"%d / %d", self.totalCorrect, self.totalQuestions];
+        [self.quizScore setText:s];
+        
+        NSLog(@"%d / %d", self.totalCorrect, self.totalQuestions);
+
+        self.totalCorrect = 0;
+        
         //send message to doctor
     }
     else{
         //load next question
-        self.currentIndex++;
         [self loadDataFromIndex:self.currentIndex];
         [self resetView];
     }
@@ -169,7 +196,6 @@
     
     [self.question setText:q.question];
     self.correctAnswer = q.correctOption;
-    self.totalQuestions = q.totalAnswers;
     [self.option1 setTitle:q.option1 forState:UIControlStateNormal];
     [self.option2 setTitle:q.option2 forState:UIControlStateNormal];
     [self.option3 setTitle:q.option3 forState:UIControlStateNormal];
@@ -207,6 +233,13 @@
 
 - (void)resetView{
     //need to reset view
+    self.question.hidden = false;
+    self.option1.hidden = false;
+    self.option2.hidden = false;
+    self.option3.hidden = false;
+    self.option4.hidden = false;
+    self.nextButton.hidden = false;
+    
     self.option1.enabled = true;
     self.option2.enabled = true;
     self.option3.enabled = true;
