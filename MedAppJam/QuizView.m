@@ -20,23 +20,22 @@
 - (void)addInitialQuizView{
     
     //clear any previous quiz that was being taken
-    [self resetView];
+    [self resetQuiz];
     
     self.backgroundColor = [UIColor clearColor];
     self.totalQuestions = self.quizData.count;
     self.correctIncorrectLabel.hidden = true;
     self.explanation.hidden = true;
+    
     self.scoringText.hidden = true;
     self.scoringText.text = @"Score:";
-    self.quizScore.hidden = true;
     
+    self.quizScore.hidden = true;
     
     [self.correctIncorrectLabel.layer setCornerRadius:20];
     [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
-   
-    self.currentIndex = 0; //load from 0 initally
-    [self loadDataFromIndex:self.currentIndex];
-    
+
+    //set up desired look of buttons
     [self.option1.layer setCornerRadius:5];
     [self.option1.layer setBorderWidth:1];
     [self.option2.layer setCornerRadius:5];
@@ -45,10 +44,14 @@
     [self.option3.layer setBorderWidth:1];
     [self.option4.layer setCornerRadius:5];
     [self.option4.layer setBorderWidth:1];
-    
     [self.nextButton.layer setCornerRadius:5];
     [self.nextButton.layer setBorderWidth:1];
     [self.nextButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    
+    //Where data is actually loaded from the quiz data
+    self.currentIndex = 0; //load from 0 initally
+    [self updateQuizPositionLabel];
+    [self loadDataFromIndex:self.currentIndex];
 }
 
 - (void)button1Clicked{
@@ -157,11 +160,12 @@
 
 - (void)nextQuestion{
     
-    NSLog(@"next button clicked, %d, %d", self.currentIndex, self.quizData.count);
+    [self updateQuizPositionLabel];
     
     self.currentIndex++;
     
     if(self.currentIndex >= self.quizData.count){
+        [self updateQuizPositionLabel];
         NSLog(@"No more questions");
         self.question.hidden = true;
         self.option1.hidden = true;
@@ -186,9 +190,17 @@
     }
     else{
         //load next question
+        [self updateQuizPositionLabel];
         [self loadDataFromIndex:self.currentIndex];
-        [self resetView];
+        [self resetQuizView];
     }
+}
+
+- (void)updateQuizPositionLabel{
+    NSLog(@"next button clicked, %d, %d", self.currentIndex, self.quizData.count);
+    NSString *quizPositionText = [[NSString alloc] initWithFormat:@"%d of %d", self.currentIndex, self.quizData.count];
+    [self.quizPosition setText:quizPositionText];
+
 }
 
 - (void)loadDataFromIndex:(int) i{
@@ -231,7 +243,8 @@
     return false;
 }
 
-- (void)resetView{
+- (void)resetQuizView{
+    
     //need to reset view
     self.question.hidden = false;
     self.option1.hidden = false;
@@ -255,6 +268,12 @@
     [self.option2 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [self.option3 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [self.option4 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+}
+
+- (void)resetQuiz{
+    NSLog(@"Quiz was reset");
+    self.totalCorrect = 0;
+    [self resetQuizView];
 }
 
 /*

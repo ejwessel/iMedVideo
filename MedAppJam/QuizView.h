@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *explanation;
 @property (strong, nonatomic) IBOutlet UILabel *scoringText;
 @property (strong, nonatomic) IBOutlet UILabel *quizScore;
+@property (strong, nonatomic) IBOutlet UILabel *quizPosition;
 
 @property (strong, nonatomic) NSString *correctAnswer;
 
