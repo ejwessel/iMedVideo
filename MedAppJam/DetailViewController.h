@@ -11,6 +11,7 @@
 #import "CommentsView.h"
 #import "CommentObject.h"
 #import "QuizView.h"
+#import "QuizObject.h"
 #import "AddCommentView.h"
 
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
