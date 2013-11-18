@@ -22,6 +22,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.text = text;
+        self.font = [self.font fontWithSize:15];
+        self.adjustsFontSizeToFitWidth = true;
         self.isDoctor = value;
     }
     return self;

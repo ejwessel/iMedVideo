@@ -32,6 +32,9 @@
     
     self.quizScore.hidden = true;
     
+    self.question.font = [self.question.font fontWithSize:15];
+    self.question.adjustsFontSizeToFitWidth = true;
+    
     [self.correctIncorrectLabel.layer setCornerRadius:20];
     [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
 
@@ -164,9 +167,11 @@
     
     self.currentIndex++;
     
+    //the quiz is finished
     if(self.currentIndex >= self.quizData.count){
-        [self updateQuizPositionLabel];
+        
         NSLog(@"No more questions");
+        [self updateQuizPositionLabel];
         self.question.hidden = true;
         self.option1.hidden = true;
         self.option2.hidden = true;
@@ -186,7 +191,7 @@
 
         self.totalCorrect = 0;
         
-        //send message to doctor
+        //send message to doctor and save results to account?
     }
     else{
         //load next question
@@ -207,6 +212,7 @@
     QuizObject *q = [self.quizData objectAtIndex:i];
     
     [self.question setText:q.question];
+    
     self.correctAnswer = q.correctOption;
     [self.option1 setTitle:q.option1 forState:UIControlStateNormal];
     [self.option2 setTitle:q.option2 forState:UIControlStateNormal];

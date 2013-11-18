@@ -154,7 +154,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Details" id="mOI-FS-AaM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="woI-zh-3sf"/>
+                        <barButtonItem key="rightBarButtonItem" title="Account" id="woI-zh-3sf"/>
                     </navigationItem>
                     <connections>
                         <outlet property="accountButton" destination="woI-zh-3sf" id="Eks-bs-xzN"/>
