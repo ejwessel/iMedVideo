@@ -39,7 +39,7 @@
                                 </state>
                             </button>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQs-nE-aBo">
-                                <rect key="frame" x="0.0" y="0.0" width="703" height="448"/>
+                                <rect key="frame" x="0.0" y="64" width="703" height="384"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </webView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5wE-AI-oUK">
