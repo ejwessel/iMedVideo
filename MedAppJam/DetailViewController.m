@@ -66,6 +66,7 @@
                                            otherButtonTitles:@"Submit", nil];
     
     self.commentGrabber.alertViewStyle = UIAlertViewStylePlainTextInput;
+    self.commentGrabber.frame = CGRectMake(self.commentGrabber.frame.origin.x, self.commentGrabber.frame.origin.x, 400, 400);
     [self.commentGrabber show];
 
 }

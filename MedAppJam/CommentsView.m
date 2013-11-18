@@ -21,6 +21,9 @@
 
 - (void) addCommentsToView{
     
+    //need to clear the view before we can show any more comments
+    [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
     //set up scrollview content size by getting first and last element positions
     CommentObject *objectFirst = [self.commentObjects objectAtIndex:0];
     int height = objectFirst.bounds.size.height;
@@ -34,7 +37,7 @@
         if(object.isDoctor){
             UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, object.frame.origin.y, 15, 15)];
             UIImage *image = [UIImage imageNamed:@"doctorIcon.jpg"];
-            iconView.image = image;            
+            iconView.image = image;
             [self addSubview:iconView];
         }
         //else if patient add the Patient Icon

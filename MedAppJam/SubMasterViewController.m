@@ -129,11 +129,6 @@
                     frame = CGRectMake(commentXPos, updatePos, comments.bounds.size.width - commentXPos, commentHeight);
                 }
                 
-//                UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, frame.origin.y, 15, 15)];
-//                UIImage *image = [UIImage imageNamed:@"doctorIcon.jpg"];
-//                iconView.image = image;
-//                [comments addSubview:iconView];
-                
                 //check if it is a doctor or patient comment
                 if([[lineChunks objectAtIndex:1] isEqualToString:@"D"]){
                     //grab DOCTOR and place into comment object

@@ -25,5 +25,6 @@
 //@property (strong, nonatomic) IBOutlet AddCommentView *addCommentView;
 @property (strong, nonatomic) IBOutlet UIButton *addCommentButton;
 @property (strong, nonatomic) UIAlertView *commentGrabber;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *accountButton;
 
 @end
