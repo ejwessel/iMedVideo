@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddCommentView : UIView
+@interface AddCommentView : UIView <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *addNewComment;
 @property (strong, nonatomic) IBOutlet UIButton *addComment;

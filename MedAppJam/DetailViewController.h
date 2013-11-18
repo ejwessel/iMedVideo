@@ -17,12 +17,13 @@
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
-
 @property (strong, nonatomic) IBOutlet UIView *viewContainer;
 @property (strong, nonatomic) IBOutlet UIWebView *player;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *tabControl;
 @property (strong, nonatomic) IBOutlet CommentsView *comments;
 @property (strong, nonatomic) IBOutlet QuizView *quiz;
-@property (strong, nonatomic) IBOutlet AddCommentView *addCommentView;
+//@property (strong, nonatomic) IBOutlet AddCommentView *addCommentView;
+@property (strong, nonatomic) IBOutlet UIButton *addCommentButton;
+@property (strong, nonatomic) UIAlertView *commentGrabber;
 
 @end

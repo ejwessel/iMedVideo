@@ -37,12 +37,20 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name: UIKeyboardDidShowNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (keyboardDidHide:) name: UIKeyboardDidHideNotification object:nil];
+    
     //self.player.hidden = true;
     //self.player.scrollView.scrollEnabled = false;
     self.player.scrollView.bounces = false;
     self.comments.hidden = true;
     self.quiz.hidden = true;
-    self.addCommentView.hidden = true;
+    
+    self.addCommentButton.hidden = true;
+    [self.addCommentButton setTitle:@"Add Comment" forState:UIControlStateNormal];
+    [self.addCommentButton.layer setBorderWidth:1];
+    [self.addCommentButton.layer setCornerRadius:10];
+    [self.addCommentButton addTarget:self action:@selector(grabText) forControlEvents:UIControlEventTouchUpInside];
     
     self.tabControl.hidden = true;
     [self.tabControl addTarget:self action:@selector(changeView) forControlEvents:UIControlEventValueChanged];
@@ -50,19 +58,31 @@
     [self configureView];
 }
 
+- (void)grabText{
+    self.commentGrabber = [[UIAlertView alloc] initWithTitle:@""
+                                                     message:@""
+                                                    delegate:self
+                                           cancelButtonTitle:@"Cancel"
+                                           otherButtonTitles:@"Submit", nil];
+    
+    self.commentGrabber.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [self.commentGrabber show];
+
+}
+
 - (void)changeView{
     NSLog(@"tab touched");
     if(self.tabControl.selectedSegmentIndex == 0){
         self.comments.hidden = false;
         self.quiz.hidden = true;
-        self.addCommentView.hidden = false; //
+        self.addCommentButton.hidden = false; //
         //load comments here...
         
     }
     else if(self.tabControl.selectedSegmentIndex == 1){
         self.quiz.hidden = false;
         self.comments.hidden = true;
-        self.addCommentView.hidden = true; //
+        self.addCommentButton.hidden = true; //
         //load quiz here...
     }
 }
@@ -71,6 +91,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//- (void)keyboardDidShow:(NSNotification *)notification{
+//    NSLog(@"keyboard show");
+//    
+//    self.commentGrabber = [[UIAlertView alloc] initWithTitle:@""
+//                                                     message:@""
+//                                                    delegate:self
+//                                           cancelButtonTitle:@"Cancel"
+//                                           otherButtonTitles:@"Submit", nil];
+//    
+//    self.commentGrabber.alertViewStyle = UIAlertViewStylePlainTextInput;
+//    [self.commentGrabber setFrame:CGRectMake(0, 0, 400, 400)];
+//    [self.commentGrabber show];
+//}
+//
+//- (void)keyboardDidHide:(NSNotification *)notification{
+//    NSLog(@"keyboard hidden");
+//}
+
 
 #pragma mark - Split view
 
