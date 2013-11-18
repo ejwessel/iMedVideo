@@ -33,7 +33,15 @@
         
         //NEED TO SET UP ICONS FOR DOCTOR AND PATIENT
         if(object.isDoctor){
-            object.backgroundColor = [UIColor cyanColor];
+            
+            UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(5,5,50,50)];
+            UIImage *image = [UIImage imageNamed:@"doctorIcon.jpg"];
+            iconView.image = image;
+            [object addSubview:iconView];
+            //object.backgroundColor = [UIColor cyanColor];
+            
+            // Add image
+            // UIImage *img = [UIImage imageNamed:(NSString *)];
         }
         else{
             object.backgroundColor = [UIColor lightGrayColor];
