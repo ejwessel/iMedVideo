@@ -115,22 +115,30 @@
             //if it is a video comment
             if([[lineChunks objectAtIndex:0] isEqualToString:@"1"]){
                 
+                int commentXPos = 20;
+                int commentHeight = 20;
+                
                 //set up new frame for positioning
                 CGRect frame;
                 if(comments.commentObjects.count == 0){
-                    frame = CGRectMake(0, 0, comments.bounds.size.width, 40);
+                    frame = CGRectMake(commentXPos, 0, comments.bounds.size.width - commentXPos, commentHeight);
                 }
                 else{
                     CommentObject *prevObject = comments.commentObjects.lastObject;//[comments.commentObjects objectAtIndex:comments.commentObjects.count - 1];
                     updatePos = (updatePos + prevObject.bounds.size.height + 5);
-                    frame = CGRectMake(0, updatePos, comments.bounds.size.width, 40);
+                    frame = CGRectMake(commentXPos, updatePos, comments.bounds.size.width - commentXPos, commentHeight);
                 }
+                
+//                UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, frame.origin.y, 15, 15)];
+//                UIImage *image = [UIImage imageNamed:@"doctorIcon.jpg"];
+//                iconView.image = image;
+//                [comments addSubview:iconView];
                 
                 //check if it is a doctor or patient comment
                 if([[lineChunks objectAtIndex:1] isEqualToString:@"D"]){
                     //grab DOCTOR and place into comment object
                     //create new comments object and place into subview of comments
-                    NSMutableString *text = [[NSMutableString alloc] initWithString:@"  "];
+                    NSMutableString *text = [[NSMutableString alloc] initWithString:@""];
                     [text appendString:[lineChunks objectAtIndex:2]];
                     CommentObject *comment = [[CommentObject alloc] initWithFrame:frame withString:text withIsDoctor:true];
                     [comments.commentObjects addObject:comment];
@@ -138,7 +146,7 @@
                 else if([[lineChunks objectAtIndex:1] isEqualToString:@"P"]){
                     //grab PATIENT and place into comment object
                     //create new comments object and place into subview of comments
-                    NSMutableString *text = [[NSMutableString alloc] initWithString:@"  "];
+                    NSMutableString *text = [[NSMutableString alloc] initWithString:@""];
                     [text appendString:[lineChunks objectAtIndex:2]];
                     CommentObject *comment = [[CommentObject alloc] initWithFrame:frame withString:text withIsDoctor:false];
                     [comments.commentObjects addObject:comment];

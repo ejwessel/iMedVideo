@@ -26,23 +26,18 @@
     int height = objectFirst.bounds.size.height;
     self.contentSize = CGSizeMake(self.bounds.size.width, (height + 5) * self.commentObjects.count); //multiplier will need to be changed
     
-    
     self.backgroundColor = [UIColor clearColor];
     for (CommentObject *object in self.commentObjects) {
         object.hidden = false;
         
-        //NEED TO SET UP ICONS FOR DOCTOR AND PATIENT
+        //If doctor add the Doctor Icon
         if(object.isDoctor){
-            
-            UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(5,5,50,50)];
+            UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, object.frame.origin.y, 15, 15)];
             UIImage *image = [UIImage imageNamed:@"doctorIcon.jpg"];
-            iconView.image = image;
-            [object addSubview:iconView];
-            //object.backgroundColor = [UIColor cyanColor];
-            
-            // Add image
-            // UIImage *img = [UIImage imageNamed:(NSString *)];
+            iconView.image = image;            
+            [self addSubview:iconView];
         }
+        //else if patient add the Patient Icon
         else{
             object.backgroundColor = [UIColor lightGrayColor];
         }
