@@ -12,14 +12,19 @@
 
 @property (strong, nonatomic) NSMutableArray *quizData;
 @property (strong, nonatomic) IBOutlet UILabel *question;
+@property (strong, nonatomic) IBOutlet UILabel *correctIncorrectLabel;
+
 @property (strong, nonatomic) IBOutlet UIButton *option1;
 @property (strong, nonatomic) IBOutlet UIButton *option2;
 @property (strong, nonatomic) IBOutlet UIButton *option3;
 @property (strong, nonatomic) IBOutlet UIButton *option4;
 @property (strong, nonatomic) IBOutlet UIButton *nextButton;
-@property (strong, nonatomic) NSString *correctAnswer;
-@property (strong, nonatomic) IBOutlet UILabel *correctIncorrectLabel;
 
+@property (strong, nonatomic) IBOutlet UITextView *explanation;
+
+@property (strong, nonatomic) NSString *correctAnswer;
+
+@property int currentIndex;
 @property int totalQuestions;
 @property int totalCorrect;
 

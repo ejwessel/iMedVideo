@@ -16,13 +16,17 @@
     }
     return self;
 }
--(void)addInitialQuizView{
+
+- (void)addInitialQuizView{
     
     self.backgroundColor = [UIColor clearColor];
     self.correctIncorrectLabel.hidden = true;
+    self.explanation.hidden = true;
     [self.correctIncorrectLabel.layer setCornerRadius:20];
     [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
-    [self loadDataFromIndex:0]; //load from 0 initally
+   
+    self.currentIndex = 0; //load from 0 initally
+    [self loadDataFromIndex:self.currentIndex];
     
     [self.option1.layer setCornerRadius:5];
     [self.option1.layer setBorderWidth:1];
@@ -32,11 +36,16 @@
     [self.option3.layer setBorderWidth:1];
     [self.option4.layer setCornerRadius:5];
     [self.option4.layer setBorderWidth:1];
+    
     [self.nextButton.layer setCornerRadius:5];
     [self.nextButton.layer setBorderWidth:1];
+    [self.nextButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
 }
 
 - (void)button1Clicked{
+    
+    self.option1.backgroundColor = self.tintColor;
+    [self.option1 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     
     NSLog(@"Answer 1 pressed");
     if ([self isCorrect:@"A"]){
@@ -53,8 +62,13 @@
         self.correctIncorrectLabel.hidden = false;
         self.correctIncorrectLabel.text = @"Incorrect";
     }
+    [self questionAnswered];
 }
+
 - (void)button2Clicked{
+    
+    self.option2.backgroundColor = self.tintColor;
+    [self.option2 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     
     NSLog(@"Answer 2 pressed");
     if ([self isCorrect:@"B"]){
@@ -71,8 +85,13 @@
         self.correctIncorrectLabel.hidden = false;
         self.correctIncorrectLabel.text = @"Incorrect";
     }
+    [self questionAnswered];
 }
+
 - (void)button3Clicked{
+    
+    self.option3.backgroundColor = self.tintColor;
+    [self.option3 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     
     NSLog(@"Answer 3 pressed");
     if ([self isCorrect:@"C"]){
@@ -89,8 +108,13 @@
         self.correctIncorrectLabel.hidden = false;
         self.correctIncorrectLabel.text = @"Incorrect";
     }
+    [self questionAnswered];
 }
+
 - (void)button4Clicked{
+    
+    self.option4.backgroundColor = self.tintColor;
+    [self.option4 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     
     NSLog(@"Answer 4 pressed");
     if ([self isCorrect:@"D"]){
@@ -107,17 +131,53 @@
         self.correctIncorrectLabel.hidden = false;
         self.correctIncorrectLabel.text = @"Incorrect";
     }
+    [self questionAnswered];
+}
+
+- (void)questionAnswered{
+    self.option1.enabled = false;
+    self.option2.enabled = false;
+    self.option3.enabled = false;
+    self.option4.enabled = false;
+    self.explanation.hidden = false;
 }
 
 - (void)nextQuestion{
     
+    NSLog(@"next button clicked, %d, %d", self.currentIndex, self.totalQuestions);
+    
+    //get next data
+    self.currentIndex++;
+    
+    if(self.currentIndex > self.quizData.count){
+        //end the quiz
+        //show scoring
+        //send message to doctor
+    }
+    else{
+        //load next question
+        [self loadDataFromIndex:self.currentIndex];
+        
+        //need to reset view
+        self.option1.enabled = true;
+        self.option2.enabled = true;
+        self.option3.enabled = true;
+        self.option4.enabled = true;
+        self.correctIncorrectLabel.hidden = true;
+        self.explanation.hidden = true;
+        self.option1.backgroundColor = [UIColor clearColor];
+        self.option2.backgroundColor = [UIColor clearColor];
+        self.option3.backgroundColor = [UIColor clearColor];
+        self.option4.backgroundColor = [UIColor clearColor];
+    }
 }
 
 - (void)loadDataFromIndex:(int) i{
-    QuizObject *q = [self.quizData objectAtIndex:0];
+    QuizObject *q = [self.quizData objectAtIndex:i];
     
     [self.question setText:q.question];
     self.correctAnswer = q.correctOption;
+    self.totalQuestions = q.totalAnswers;
     [self.option1 setTitle:q.option1 forState:UIControlStateNormal];
     [self.option2 setTitle:q.option2 forState:UIControlStateNormal];
     [self.option3 setTitle:q.option3 forState:UIControlStateNormal];
@@ -138,6 +198,12 @@
     [self.option4 addTarget:self
                      action:@selector(button4Clicked)
            forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.nextButton addTarget:self
+                    action:@selector(nextQuestion)
+            forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.explanation setText:q.explanationTxt];
 }
 
 - (BOOL)isCorrect:(NSString *)s{

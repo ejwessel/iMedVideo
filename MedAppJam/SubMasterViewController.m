@@ -99,8 +99,6 @@
     quiz.quizData = [[NSMutableArray alloc] init];
     
     QuizObject *tempQuiz;
-    tempQuiz.totalQuestions = 0; //need to reset
-
     
     CGFloat updatePos = 0;
     
@@ -151,6 +149,7 @@
                 //grab question and place it into quiz object
                 tempQuiz = [[QuizObject alloc] init];
                 tempQuiz.question = [lineChunks objectAtIndex:1];
+                tempQuiz.totalAnswers = 0;
                 
             }
             //if it is a question answer
@@ -162,26 +161,27 @@
                 
                 if([[lineChunks objectAtIndex:2] isEqualToString:@"A"]){
                     tempQuiz.option1 = [lineChunks objectAtIndex:3];
-                    tempQuiz.totalQuestions++;
+                    tempQuiz.totalAnswers++;
                 }
                 else if([[lineChunks objectAtIndex:2] isEqualToString:@"B"]){
                     tempQuiz.option2 = [lineChunks objectAtIndex:3];
-                    tempQuiz.totalQuestions++;
+                    tempQuiz.totalAnswers++;
                 }
                 else if([[lineChunks objectAtIndex:2] isEqualToString:@"C"]){
                     tempQuiz.option3 = [lineChunks objectAtIndex:3];
-                    tempQuiz.totalQuestions++;
+                    tempQuiz.totalAnswers++;
                 }
                 else if([[lineChunks objectAtIndex:2] isEqualToString:@"D"]){
                     tempQuiz.option4 = [lineChunks objectAtIndex:3];
-                    tempQuiz.totalQuestions++;
+                    tempQuiz.totalAnswers++;
                 }
             }
             
-            //if we have max questions load in object
-            if(tempQuiz.totalQuestions == 4){               //set number of questions to different size
+            else if ([[lineChunks objectAtIndex:0] isEqualToString:@"4"]){
+                tempQuiz.explanationTxt = [lineChunks objectAtIndex:1];
+             
+                //once we have explanation we can input object
                 [quiz.quizData addObject:tempQuiz];
-                tempQuiz.totalQuestions = 0; //reset here
             }
         }
     }
