@@ -28,6 +28,8 @@
 @property (strong, nonatomic) NSString *correctAnswer;
 
 @property int currentIndex;
+@property int totalOptions;
+
 @property int totalQuestions;
 @property int totalCorrect;
 

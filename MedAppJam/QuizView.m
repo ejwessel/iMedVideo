@@ -55,6 +55,7 @@
     self.currentIndex = 0; //load from 0 initally
     [self updateQuizPositionLabel];
     [self loadDataFromIndex:self.currentIndex];
+    [self resetQuizView];
 }
 
 - (void)button1Clicked{
@@ -163,15 +164,12 @@
 
 - (void)nextQuestion{
     
-    [self updateQuizPositionLabel];
-    
     self.currentIndex++;
     
     //the quiz is finished
     if(self.currentIndex >= self.quizData.count){
         
         NSLog(@"No more questions");
-        [self updateQuizPositionLabel];
         self.question.hidden = true;
         self.option1.hidden = true;
         self.option2.hidden = true;
@@ -202,8 +200,9 @@
 }
 
 - (void)updateQuizPositionLabel{
-    NSLog(@"next button clicked, %d, %d", self.currentIndex, self.quizData.count);
-    NSString *quizPositionText = [[NSString alloc] initWithFormat:@"%d of %d", self.currentIndex, self.quizData.count];
+    int displayIndex = self.currentIndex + 1;
+    NSLog(@"next button clicked, %d, %d", displayIndex, self.quizData.count);
+    NSString *quizPositionText = [[NSString alloc] initWithFormat:@"%d of %d", displayIndex, self.quizData.count];
     [self.quizPosition setText:quizPositionText];
 
 }
@@ -212,8 +211,8 @@
     QuizObject *q = [self.quizData objectAtIndex:i];
     
     [self.question setText:q.question];
-    
     self.correctAnswer = q.correctOption;
+    self.totalOptions = q.totalNumOptions;
     [self.option1 setTitle:q.option1 forState:UIControlStateNormal];
     [self.option2 setTitle:q.option2 forState:UIControlStateNormal];
     [self.option3 setTitle:q.option3 forState:UIControlStateNormal];
@@ -253,27 +252,37 @@
     
     //need to reset view
     self.question.hidden = false;
-    self.option1.hidden = false;
-    self.option2.hidden = false;
-    self.option3.hidden = false;
-    self.option4.hidden = false;
-    self.nextButton.hidden = false;
+    self.option3.hidden = true;
+    self.option4.hidden = true;
     
+    self.option1.hidden = false;
     self.option1.enabled = true;
+    self.option1.backgroundColor = [UIColor clearColor];
+    [self.option1 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+
+    self.option2.hidden = false;
     self.option2.enabled = true;
-    self.option3.enabled = true;
-    self.option4.enabled = true;
+    self.option2.backgroundColor = [UIColor clearColor];
+    [self.option2 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    
+    //will reset and show option 3 if number of options permit
+    if(self.totalOptions > 2){
+        self.option3.hidden = false;
+        self.option3.enabled = true;
+        self.option3.backgroundColor = [UIColor clearColor];
+        [self.option3 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    }
+    
+    //wil reset and show option 4 is number of options permit
+    if(self.totalOptions > 3){
+        self.option4.hidden = false;
+        self.option4.enabled = true;
+        self.option4.backgroundColor = [UIColor clearColor];
+        [self.option4 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    }
+    self.nextButton.hidden = false;
     self.correctIncorrectLabel.hidden = true;
     self.explanation.hidden = true;
-    self.option1.backgroundColor = [UIColor clearColor];
-    self.option2.backgroundColor = [UIColor clearColor];
-    self.option3.backgroundColor = [UIColor clearColor];
-    self.option4.backgroundColor = [UIColor clearColor];
-    
-    [self.option1 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
-    [self.option2 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
-    [self.option3 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
-    [self.option4 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 }
 
 - (void)resetQuiz{

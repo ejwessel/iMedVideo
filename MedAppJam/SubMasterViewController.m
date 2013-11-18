@@ -152,7 +152,7 @@
                 //grab question and place it into quiz object
                 tempQuiz = [[QuizObject alloc] init];
                 tempQuiz.question = [lineChunks objectAtIndex:1];
-                tempQuiz.totalAnswers = 0;
+                tempQuiz.totalNumOptions = 0;
                 
             }
             //if it is a question answer
@@ -164,19 +164,19 @@
                 
                 if([[lineChunks objectAtIndex:2] isEqualToString:@"A"]){
                     tempQuiz.option1 = [lineChunks objectAtIndex:3];
-                    tempQuiz.totalAnswers++;
+                    tempQuiz.totalNumOptions++;
                 }
                 else if([[lineChunks objectAtIndex:2] isEqualToString:@"B"]){
                     tempQuiz.option2 = [lineChunks objectAtIndex:3];
-                    tempQuiz.totalAnswers++;
+                    tempQuiz.totalNumOptions++;
                 }
                 else if([[lineChunks objectAtIndex:2] isEqualToString:@"C"]){
                     tempQuiz.option3 = [lineChunks objectAtIndex:3];
-                    tempQuiz.totalAnswers++;
+                    tempQuiz.totalNumOptions++;
                 }
                 else if([[lineChunks objectAtIndex:2] isEqualToString:@"D"]){
                     tempQuiz.option4 = [lineChunks objectAtIndex:3];
-                    tempQuiz.totalAnswers++;
+                    tempQuiz.totalNumOptions++;
                 }
             }
             
