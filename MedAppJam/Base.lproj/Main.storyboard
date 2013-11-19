@@ -31,13 +31,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shk-tm-flg">
-                                <rect key="frame" x="221" y="725" width="259" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add Comment" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9w0-ej-VM6">
+                                <rect key="frame" x="195" y="725" width="313" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQs-nE-aBo">
                                 <rect key="frame" x="0.0" y="64" width="703" height="384"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +157,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="accountButton" destination="woI-zh-3sf" id="Eks-bs-xzN"/>
-                        <outlet property="addCommentButton" destination="shk-tm-flg" id="rNV-i7-nM5"/>
+                        <outlet property="commentField" destination="9w0-ej-VM6" id="MTZ-GG-e4p"/>
                         <outlet property="comments" destination="6Q4-mz-MgN" id="on3-cx-L08"/>
                         <outlet property="player" destination="AQs-nE-aBo" id="qkP-a0-JFe"/>
                         <outlet property="quiz" destination="5t8-7D-SsE" id="NTZ-dR-dSF"/>

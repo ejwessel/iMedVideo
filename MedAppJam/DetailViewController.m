@@ -37,11 +37,8 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name: UIKeyboardDidShowNotification object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (keyboardDidHide:) name: UIKeyboardDidHideNotification object:nil];
+    [self setupComment];
     
-    //self.player.hidden = true;
-    //self.player.scrollView.scrollEnabled = false;
     self.player.scrollView.bounces = false;
     self.comments.hidden = true;
     self.quiz.hidden = true;
@@ -59,16 +56,18 @@
 }
 
 - (void)grabText{
-    self.commentGrabber = [[UIAlertView alloc] initWithTitle:@""
-                                                     message:@""
-                                                    delegate:self
-                                           cancelButtonTitle:@"Cancel"
-                                           otherButtonTitles:@"Submit", nil];
-    
-    self.commentGrabber.alertViewStyle = UIAlertViewStylePlainTextInput;
-    self.commentGrabber.frame = CGRectMake(self.commentGrabber.frame.origin.x, self.commentGrabber.frame.origin.x, 400, 400);
-    [self.commentGrabber show];
-
+//    self.commentGrabber = [[UIAlertView alloc] initWithTitle:@"Add Comment"
+//                                                     message:@""
+//                                                    delegate:self
+//                                           cancelButtonTitle:@"Cancel"
+//                                           otherButtonTitles:@"Submit", nil];
+//    
+//    //self.commentGrabber.alertViewStyle = UIAlertViewStylePlainTextInput;
+//    [self.commentGrabber setFrame:CGRectMake(0, 0, 500, 500)];
+//    
+//    //= CGRectMake(self.commentGrabber.frame.origin.x, self.commentGrabber.frame.origin.x, 400, 400);
+//
+//    [self.commentGrabber show];
 }
 
 - (void)changeView{
@@ -93,24 +92,40 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (void)keyboardDidShow:(NSNotification *)notification{
-//    NSLog(@"keyboard show");
-//    
-//    self.commentGrabber = [[UIAlertView alloc] initWithTitle:@""
-//                                                     message:@""
-//                                                    delegate:self
-//                                           cancelButtonTitle:@"Cancel"
-//                                           otherButtonTitles:@"Submit", nil];
-//    
-//    self.commentGrabber.alertViewStyle = UIAlertViewStylePlainTextInput;
-//    [self.commentGrabber setFrame:CGRectMake(0, 0, 400, 400)];
-//    [self.commentGrabber show];
-//}
-//
-//- (void)keyboardDidHide:(NSNotification *)notification{
-//    NSLog(@"keyboard hidden");
-//}
+- (void)setupComment{
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(open)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(hide)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+    self.accView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 45)];
+    self.t = [[UITextField alloc] initWithFrame:CGRectMake(320, 0, 620, 45)];
+    self.t.backgroundColor = [UIColor greenColor];
 
+    UIButton *b = [[UIButton alloc] initWithFrame:CGRectMake(940, 0, 80, 45)];
+    b.backgroundColor = [UIColor blueColor];
+    [b setTitle:@"Submit" forState:UIControlStateNormal];
+    
+    [self.accView addSubview:self.t];
+    [self.accView addSubview:b];
+    
+    self.commentField.clearsOnBeginEditing = true;
+    self.commentField.inputAccessoryView = self.accView;
+}
+
+- (void)open{
+    [self.t becomeFirstResponder]; //will return TRUE;
+}
+
+- (void)hide{
+    self.commentField.text = self.t.text;
+}
 
 #pragma mark - Split view
 

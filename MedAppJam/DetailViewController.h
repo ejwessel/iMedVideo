@@ -14,7 +14,7 @@
 #import "QuizObject.h"
 #import "AddCommentView.h"
 
-@interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface DetailViewController : UIViewController <UISplitViewControllerDelegate, UITextViewDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) IBOutlet UIView *viewContainer;
@@ -22,9 +22,13 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *tabControl;
 @property (strong, nonatomic) IBOutlet CommentsView *comments;
 @property (strong, nonatomic) IBOutlet QuizView *quiz;
-//@property (strong, nonatomic) IBOutlet AddCommentView *addCommentView;
+@property (strong, nonatomic) IBOutlet AddCommentView *addCommentView;
 @property (strong, nonatomic) IBOutlet UIButton *addCommentButton;
 @property (strong, nonatomic) UIAlertView *commentGrabber;
+@property (strong, nonatomic) UIView *accView;
+@property (strong, nonatomic) UITextField *t;
+
+@property (strong, nonatomic) IBOutlet UITextField *commentField;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *accountButton;
 
 @end
