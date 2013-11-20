@@ -6,6 +6,8 @@
 0      3:<truth>:<position>:<quiz answer>
 0      Resulting file name will be denoted by the first two words
 0      4:<explanation>
+0      5:<time>
+0      6:<video link>
 0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
 0
 0
@@ -19,6 +21,7 @@
 1:D:Hello World
 1:P:Dude where’s my car?
 0
+6:PqgKFsK7f-Q
 2:Where is a good location to inject insulin into?
 3:F:A:Lower arm
 3:T:B:Thigh

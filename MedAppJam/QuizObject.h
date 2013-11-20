@@ -18,5 +18,5 @@
 @property (strong, nonatomic) NSString *correctOption;
 @property int totalNumOptions;
 @property (strong, nonatomic) NSString *explanationTxt;
-
+@property (strong, nonatomic) NSString *videoTime;
 @end

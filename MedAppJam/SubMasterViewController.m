@@ -97,6 +97,7 @@
     
     QuizView *quiz = self.detailViewController.quiz;
     quiz.quizData = [[NSMutableArray alloc] init];
+    quiz.link = @"";
     
     QuizObject *tempQuiz;
     
@@ -179,12 +180,17 @@
                     tempQuiz.totalNumOptions++;
                 }
             }
-            
-            else if ([[lineChunks objectAtIndex:0] isEqualToString:@"4"]){
+            else if([[lineChunks objectAtIndex:0] isEqualToString:@"4"]){
                 tempQuiz.explanationTxt = [lineChunks objectAtIndex:1];
-             
+            }
+            else if([[lineChunks objectAtIndex:0] isEqualToString:@"5"]){
+                tempQuiz.videoTime = [lineChunks objectAtIndex:1];
                 //once we have explanation we can input object
                 [quiz.quizData addObject:tempQuiz];
+
+            }
+            else if([[lineChunks objectAtIndex:0] isEqualToString:@"6"]){
+                quiz.link = [lineChunks objectAtIndex:1];
             }
         }
     }

@@ -125,12 +125,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="questionPosition" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSn-uT-vam">
-                                        <rect key="frame" x="502" y="235" width="97" height="21"/>
+                                        <rect key="frame" x="532" y="235" width="75" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvd-cx-Isi">
+                                        <rect key="frame" x="386" y="231" width="115" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Video Answer">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpa-8Z-tGD">
                                         <rect key="frame" x="267" y="156" width="169" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -148,11 +155,13 @@
                                     <outlet property="option2" destination="2kG-Ad-1Gh" id="yW9-QL-rww"/>
                                     <outlet property="option3" destination="Wh3-fJ-308" id="Dpv-IN-GPn"/>
                                     <outlet property="option4" destination="L2b-ZV-rzw" id="w5b-kb-bZV"/>
+                                    <outlet property="player" destination="AQs-nE-aBo" id="7gc-fU-xjF"/>
                                     <outlet property="question" destination="RoZ-qv-5qz" id="VRf-P2-nj6"/>
                                     <outlet property="quizPosition" destination="LSn-uT-vam" id="0zJ-fh-jZQ"/>
                                     <outlet property="quizScore" destination="321-PC-caj" id="nUa-mK-5iu"/>
                                     <outlet property="reviewButton" destination="hpa-8Z-tGD" id="5Dn-Jl-Z1s"/>
                                     <outlet property="scoringText" destination="mrN-gu-OGg" id="Rz4-ya-4qR"/>
+                                    <outlet property="videoAns" destination="fvd-cx-Isi" id="dIh-LX-bFx"/>
                                 </connections>
                             </view>
                         </subviews>

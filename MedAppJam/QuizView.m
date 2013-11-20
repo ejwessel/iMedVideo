@@ -31,6 +31,9 @@
     self.question.font = [self.question.font fontWithSize:15];
     self.question.adjustsFontSizeToFitWidth = true;
     
+    self.quizPosition.font = [self.question.font fontWithSize:15];
+    self.quizPosition.adjustsFontSizeToFitWidth = true;
+    
     [self.correctIncorrectLabel.layer setCornerRadius:20];
     [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
     
@@ -48,6 +51,10 @@
     [self.nextButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     [self.reviewButton.layer setCornerRadius:5];
     [self.reviewButton.layer setBorderWidth:1];
+    [self.videoAns.layer setCornerRadius:5];
+    [self.videoAns.layer setBorderWidth:1];
+    [self.explanation.layer setCornerRadius:5];
+    [self.explanation.layer setBorderWidth:1];
 }
 
 - (void)addInitialQuizView{
@@ -76,6 +83,7 @@
     [self.option1 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     
     [self.answerChosen replaceObjectAtIndex:self.currentIndex withObject:@"A"];
+    self.videoAns.hidden = false;
     
     NSLog(@"Answer 1 pressed");
     if ([self isCorrect:@"A"]){
@@ -102,6 +110,7 @@
     [self.option2 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     
     [self.answerChosen replaceObjectAtIndex:self.currentIndex withObject:@"B"];
+    self.videoAns.hidden = false;
     
     NSLog(@"Answer 2 pressed");
     if ([self isCorrect:@"B"]){
@@ -128,6 +137,7 @@
     [self.option3 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     
     [self.answerChosen replaceObjectAtIndex:self.currentIndex withObject:@"C"];
+    self.videoAns.hidden = false;
     
     NSLog(@"Answer 3 pressed");
     if ([self isCorrect:@"C"]){
@@ -154,6 +164,7 @@
     [self.option4 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     
     [self.answerChosen replaceObjectAtIndex:self.currentIndex withObject:@"D"];
+    self.videoAns.hidden = false;
     
     NSLog(@"Answer 4 pressed");
     if ([self isCorrect:@"D"]){
@@ -233,6 +244,34 @@
     
 }
 
+- (void)videoLink{
+    //convert string video time to actual time
+    
+    NSArray *chunks = [self.videoTime componentsSeparatedByString:@"m"];
+    int firstNum = [[chunks objectAtIndex:0] integerValue];
+    chunks = [[chunks objectAtIndex:1] componentsSeparatedByString:@"s"];
+    int secondNum = [[chunks objectAtIndex:0] integerValue];
+    
+    int startTime = firstNum * 60 + secondNum;
+    
+    int height = self.player.bounds.size.height;
+    int width = self.player.bounds.size.width;
+    
+    NSString *embedHTML =[NSString stringWithFormat:@"\
+                          <html><head>\
+                          <style type=\"text/css\">\
+                          body {\
+                          background-color: transparent;\
+                          color: blue;\
+                          }\
+                          </style>\
+                          </head><body style=\"margin:0\">\
+                          <iframe height=\"%d\" width=\"%d\" frameborder=\"0\" src=\"http://www.youtube.com/embed/%@?start=%d&rel=0\"></iframe>\
+                          </body></html>", height, width, self.link, startTime];
+    
+    [self.player loadHTMLString:embedHTML baseURL:nil];
+}
+
 - (void)setupReviewView{
     self.scoringText.hidden = true;
     self.quizScore.hidden = true;
@@ -306,6 +345,7 @@
     [self.question setText:q.question];
     self.correctAnswer = q.correctOption;
     self.totalOptions = q.totalNumOptions;
+    self.videoTime = q.videoTime;
     [self.option1 setTitle:q.option1 forState:UIControlStateNormal];
     [self.option2 setTitle:q.option2 forState:UIControlStateNormal];
     [self.option3 setTitle:q.option3 forState:UIControlStateNormal];
@@ -335,6 +375,10 @@
                           action:@selector(reviewButtonClicked)
                 forControlEvents:UIControlEventTouchUpInside];
     
+    [self.videoAns addTarget:self
+                      action:@selector(videoLink)
+            forControlEvents:UIControlEventTouchUpInside];
+    
     [self.explanation setText:q.explanationTxt];
 }
 
@@ -351,6 +395,8 @@
     self.question.hidden = false;   //show question
     self.option3.hidden = true;     //assume option 3 and option 4 are non existent initially
     self.option4.hidden = true;
+    
+    self.videoAns.hidden = true;
     
     self.option1.hidden = false;
     self.option1.enabled = true;

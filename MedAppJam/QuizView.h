@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *option3;
 @property (strong, nonatomic) IBOutlet UIButton *option4;
 @property (strong, nonatomic) IBOutlet UIButton *nextButton;
+@property (strong, nonatomic) IBOutlet UIButton *videoAns;
 
 @property (strong, nonatomic) IBOutlet UITextView *explanation;
 @property (strong, nonatomic) IBOutlet UILabel *scoringText;
@@ -30,6 +31,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *quizPosition;
 
 @property (strong, nonatomic) NSString *correctAnswer;
+
+@property (strong, nonatomic) NSString *videoTime;
+@property (strong, nonatomic) IBOutlet UIWebView *player;
+@property (strong, nonatomic) NSString *link;
 
 @property int currentIndex;
 @property int totalOptions;
