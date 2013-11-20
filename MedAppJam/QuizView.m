@@ -17,11 +17,7 @@
     return self;
 }
 
-- (void)addInitialQuizView{
-    
-    //clear any previous quiz that was being taken
-    [self resetQuiz];
-    
+- (void)setupInitial{
     self.backgroundColor = [UIColor clearColor];
     self.totalQuestions = self.quizData.count;
     self.correctIncorrectLabel.hidden = true;
@@ -37,7 +33,7 @@
     
     [self.correctIncorrectLabel.layer setCornerRadius:20];
     [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
-
+    
     //set up desired look of buttons
     [self.option1.layer setCornerRadius:5];
     [self.option1.layer setBorderWidth:1];
@@ -50,18 +46,36 @@
     [self.nextButton.layer setCornerRadius:5];
     [self.nextButton.layer setBorderWidth:1];
     [self.nextButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    [self.reviewButton.layer setCornerRadius:5];
+    [self.reviewButton.layer setBorderWidth:1];
+}
+
+- (void)addInitialQuizView{
     
-    //Where data is actually loaded from the quiz data
-    self.currentIndex = 0; //load from 0 initally
-    [self updateQuizPositionLabel];
+    //clear any previous quiz that was being taken
+    [self resetQuiz];
+    
+    [self setupInitial];
+    
+    [self updateQuizPositionLabel];     //tells us what question we are on.
+
     [self loadDataFromIndex:self.currentIndex];
-    [self resetQuizView];
+    
+    //setup answer choices to all skipped.
+    self.answerChosen = [[NSMutableArray alloc] init];
+    for (int i = 0; i < self.totalQuestions; i++) {
+        [self.answerChosen addObject:@"N"];
+    }
+    
+    [self resetQuizView];       //need this here because it adjusts view accordingly
 }
 
 - (void)button1Clicked{
     
     self.option1.backgroundColor = self.tintColor;
     [self.option1 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
+    
+    [self.answerChosen replaceObjectAtIndex:self.currentIndex withObject:@"A"];
     
     NSLog(@"Answer 1 pressed");
     if ([self isCorrect:@"A"]){
@@ -87,6 +101,8 @@
     self.option2.backgroundColor = self.tintColor;
     [self.option2 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     
+    [self.answerChosen replaceObjectAtIndex:self.currentIndex withObject:@"B"];
+    
     NSLog(@"Answer 2 pressed");
     if ([self isCorrect:@"B"]){
         //true explain
@@ -111,6 +127,8 @@
     self.option3.backgroundColor = self.tintColor;
     [self.option3 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     
+    [self.answerChosen replaceObjectAtIndex:self.currentIndex withObject:@"C"];
+    
     NSLog(@"Answer 3 pressed");
     if ([self isCorrect:@"C"]){
         //true explain
@@ -134,6 +152,8 @@
     
     self.option4.backgroundColor = self.tintColor;
     [self.option4 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
+    
+    [self.answerChosen replaceObjectAtIndex:self.currentIndex withObject:@"D"];
     
     NSLog(@"Answer 4 pressed");
     if ([self isCorrect:@"D"]){
@@ -170,6 +190,7 @@
     if(self.currentIndex >= self.quizData.count){
         
         NSLog(@"No more questions");
+        NSLog(@"Answers: %@", self.answerChosen);
         self.question.hidden = true;
         self.option1.hidden = true;
         self.option2.hidden = true;
@@ -187,9 +208,16 @@
         
         NSLog(@"%d / %d", self.totalCorrect, self.totalQuestions);
 
-        self.totalCorrect = 0;
+        //self.totalCorrect = 0;
         
+        self.quizFinished = true;
+        self.reviewButton.hidden = false;
+        self.reviewFinished = false;
+        self.currentIndex = 0;
         //send message to doctor and save results to account?
+    }
+    else if(self.quizFinished){
+        [self reviewButtonClicked];
     }
     else{
         //load next question
@@ -197,6 +225,71 @@
         [self loadDataFromIndex:self.currentIndex];
         [self resetQuizView];
     }
+}
+
+- (void)reviewButtonClicked{
+    NSLog(@"quiz ended, review in progress");
+    [self setupReviewView];
+    
+}
+
+- (void)setupReviewView{
+    self.scoringText.hidden = true;
+    self.quizScore.hidden = true;
+    self.reviewButton.hidden = true;
+    
+    //reset quiz position and show first quiz
+    [self loadDataFromIndex:self.currentIndex];
+    
+    //display review
+    [self resetQuizView];
+    
+    //check here and hide accordingly
+    NSString *chosen = [self.answerChosen objectAtIndex:self.currentIndex];
+    QuizObject *q = [self.quizData objectAtIndex:self.currentIndex];
+    NSString *realAnswer = q.correctOption;
+    
+    self.correctIncorrectLabel.hidden = false;
+    //compare to show correct or incorrect
+    if([chosen isEqualToString:realAnswer]){
+        self.correctIncorrectLabel.backgroundColor = [UIColor greenColor];
+        self.correctIncorrectLabel.text = @"CORRECT!";
+    }
+    else if([chosen isEqualToString:@"N"]){
+        self.correctIncorrectLabel.backgroundColor = [UIColor lightGrayColor];
+        self.correctIncorrectLabel.text = @"SKIPPED";
+    }
+    else{
+        self.correctIncorrectLabel.backgroundColor = [UIColor redColor];
+        self.correctIncorrectLabel.text = @"INCORRECT!";
+    }
+    
+    //hide all other choices except chosen
+    self.option1.enabled = false;
+    self.option2.enabled = false;
+    self.option3.enabled = false;
+    self.option4.enabled = false;
+    
+    if([chosen isEqualToString:@"A"]){
+        self.option1.backgroundColor = self.tintColor;
+        [self.option1 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
+    }
+    else if ([chosen isEqualToString:@"B"]){
+        self.option2.backgroundColor = self.tintColor;
+        [self.option2 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
+    }
+    else if ([chosen isEqualToString:@"C"]){
+        self.option3.backgroundColor = self.tintColor;
+        [self.option3 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
+    }
+    else if ([chosen isEqualToString:@"D"]){
+        self.option4.backgroundColor = self.tintColor;
+        [self.option4 setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
+    }
+    
+    self.explanation.hidden = false;
+    NSString *pos = [[NSString alloc] initWithFormat:@"%d of %d", self.currentIndex + 1, self.totalQuestions];
+    self.quizPosition.text = pos;
 }
 
 - (void)updateQuizPositionLabel{
@@ -238,6 +331,10 @@
                     action:@selector(nextQuestion)
             forControlEvents:UIControlEventTouchUpInside];
     
+    [self.reviewButton addTarget:self
+                          action:@selector(reviewButtonClicked)
+                forControlEvents:UIControlEventTouchUpInside];
+    
     [self.explanation setText:q.explanationTxt];
 }
 
@@ -251,8 +348,8 @@
 - (void)resetQuizView{
     
     //need to reset view
-    self.question.hidden = false;
-    self.option3.hidden = true;
+    self.question.hidden = false;   //show question
+    self.option3.hidden = true;     //assume option 3 and option 4 are non existent initially
     self.option4.hidden = true;
     
     self.option1.hidden = false;
@@ -280,6 +377,7 @@
         self.option4.backgroundColor = [UIColor clearColor];
         [self.option4 setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     }
+    self.reviewButton.hidden = true;
     self.nextButton.hidden = false;
     self.correctIncorrectLabel.hidden = true;
     self.explanation.hidden = true;
@@ -288,6 +386,8 @@
 - (void)resetQuiz{
     NSLog(@"Quiz was reset");
     self.totalCorrect = 0;
+    self.currentIndex = 0;
+    self.quizFinished = false;
     [self resetQuizView];
 }
 
