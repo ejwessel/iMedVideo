@@ -206,6 +206,8 @@
     NSString *labelText = l.text;
     NSLog(@"label clicked: %@", labelText);
     
+    [self loadLines:labelText]; //load in the lines
+    [self loadDataIntoView];
     [self loadEmbeddedVideo:labelText];
     
     //Setup respective comments and quiz data
@@ -213,9 +215,7 @@
     self.detailViewController.comments.hidden = false;
     //self.detailViewController.addCommentButton.hidden = false;
     self.detailViewController.commentField.hidden = false;
-    
-    [self loadLines:labelText]; //load in the lines
-    [self loadDataIntoView];
+
 }
 
 
