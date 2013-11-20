@@ -43,7 +43,11 @@
         //else if patient add the Patient Icon
         else{
             object.backgroundColor = [UIColor lightGrayColor];
-        }
+            UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, object.frame.origin.y, 15, 15)];
+            UIImage *image = [UIImage imageNamed:@"patientIcon.jpg"];
+            iconView.image = image;
+            [self addSubview:iconView];
+                    }
         [self addSubview:object];
     }
     
