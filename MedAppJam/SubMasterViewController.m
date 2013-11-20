@@ -205,8 +205,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //need to clear out previous view that is being displayed, we will default on comments first
-    self.detailViewController.tabControl.selectedSegmentIndex = 1;
-    self.detailViewController.quiz.hidden = true;
+    self.detailViewController.tabControl.hidden = false;
+    self.detailViewController.tabControl.selectedSegmentIndex = 0;
+    self.detailViewController.quiz.hidden = false;
+    self.detailViewController.comments.hidden = true;
+    self.detailViewController.commentField.hidden = true;
+
     
     //Obtain label text of video that we'll be searching from cell
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
@@ -217,13 +221,6 @@
     [self loadLines:labelText]; //load in the lines
     [self loadDataIntoView];
     [self loadEmbeddedVideo:labelText];
-    
-    //Setup respective comments and quiz data
-    self.detailViewController.tabControl.hidden = false;
-    self.detailViewController.comments.hidden = false;
-    //self.detailViewController.addCommentButton.hidden = false;
-    self.detailViewController.commentField.hidden = false;
-
 }
 
 

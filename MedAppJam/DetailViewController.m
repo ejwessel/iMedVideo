@@ -75,19 +75,14 @@
 - (void)changeView{
     NSLog(@"tab touched");
     if(self.tabControl.selectedSegmentIndex == 0){
-        self.comments.hidden = false;
-        self.quiz.hidden = true;
-        //self.addCommentButton.hidden = false;
-        self.commentField.hidden = false;
-        //load comments here...
-        
-    }
-    else if(self.tabControl.selectedSegmentIndex == 1){
         self.quiz.hidden = false;
         self.comments.hidden = true;
-        //self.addCommentButton.hidden = true;
         self.commentField.hidden = true;
-        //load quiz here...
+    }
+    else if(self.tabControl.selectedSegmentIndex == 1){
+        self.comments.hidden = false;
+        self.quiz.hidden = true;
+        self.commentField.hidden = false;
     }
 }
 
