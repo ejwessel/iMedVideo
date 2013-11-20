@@ -131,6 +131,13 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpa-8Z-tGD">
+                                        <rect key="frame" x="267" y="156" width="169" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Review Quiz">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.017985486219999999" blue="0.89335980640000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -144,6 +151,7 @@
                                     <outlet property="question" destination="RoZ-qv-5qz" id="VRf-P2-nj6"/>
                                     <outlet property="quizPosition" destination="LSn-uT-vam" id="0zJ-fh-jZQ"/>
                                     <outlet property="quizScore" destination="321-PC-caj" id="nUa-mK-5iu"/>
+                                    <outlet property="reviewButton" destination="hpa-8Z-tGD" id="5Dn-Jl-Z1s"/>
                                     <outlet property="scoringText" destination="mrN-gu-OGg" id="Rz4-ya-4qR"/>
                                 </connections>
                             </view>

@@ -22,9 +22,9 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *tabControl;
 @property (strong, nonatomic) IBOutlet CommentsView *comments;
 @property (strong, nonatomic) IBOutlet QuizView *quiz;
-@property (strong, nonatomic) IBOutlet AddCommentView *addCommentView;
-@property (strong, nonatomic) IBOutlet UIButton *addCommentButton;
-@property (strong, nonatomic) UIAlertView *commentGrabber;
+//@property (strong, nonatomic) IBOutlet AddCommentView *addCommentView;
+//@property (strong, nonatomic) IBOutlet UIButton *addCommentButton;
+//@property (strong, nonatomic) UIAlertView *commentGrabber;
 @property (strong, nonatomic) UIView *accView;
 @property (strong, nonatomic) UITextField *t;
 

@@ -11,6 +11,10 @@
 @interface QuizView : UIView
 
 @property (strong, nonatomic) NSMutableArray *quizData;
+@property (strong, nonatomic) NSMutableArray *answerChosen;
+@property (strong, nonatomic) IBOutlet UIButton *reviewButton;
+@property BOOL quizFinished;
+@property BOOL reviewFinished;
 @property (strong, nonatomic) IBOutlet UILabel *question;
 @property (strong, nonatomic) IBOutlet UILabel *correctIncorrectLabel;
 

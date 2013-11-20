@@ -43,11 +43,12 @@
     self.comments.hidden = true;
     self.quiz.hidden = true;
     
-    self.addCommentButton.hidden = true;
-    [self.addCommentButton setTitle:@"Add Comment" forState:UIControlStateNormal];
-    [self.addCommentButton.layer setBorderWidth:1];
-    [self.addCommentButton.layer setCornerRadius:10];
-    [self.addCommentButton addTarget:self action:@selector(grabText) forControlEvents:UIControlEventTouchUpInside];
+    self.commentField.hidden = true;
+//    self.addCommentButton.hidden = true;
+//    [self.addCommentButton setTitle:@"Add Comment" forState:UIControlStateNormal];
+//    [self.addCommentButton.layer setBorderWidth:1];
+//    [self.addCommentButton.layer setCornerRadius:10];
+//    [self.addCommentButton addTarget:self action:@selector(grabText) forControlEvents:UIControlEventTouchUpInside];
     
     self.tabControl.hidden = true;
     [self.tabControl addTarget:self action:@selector(changeView) forControlEvents:UIControlEventValueChanged];
@@ -75,14 +76,16 @@
     if(self.tabControl.selectedSegmentIndex == 0){
         self.comments.hidden = false;
         self.quiz.hidden = true;
-        self.addCommentButton.hidden = false; //
+        //self.addCommentButton.hidden = false;
+        self.commentField.hidden = false;
         //load comments here...
         
     }
     else if(self.tabControl.selectedSegmentIndex == 1){
         self.quiz.hidden = false;
         self.comments.hidden = true;
-        self.addCommentButton.hidden = true; //
+        //self.addCommentButton.hidden = true;
+        self.commentField.hidden = true;
         //load quiz here...
     }
 }
@@ -115,7 +118,7 @@
     [self.accView addSubview:self.t];
     [self.accView addSubview:b];
     
-    self.commentField.clearsOnBeginEditing = true;
+    //self.commentField.clearsOnBeginEditing = true;
     self.commentField.inputAccessoryView = self.accView;
 }
 
@@ -124,7 +127,7 @@
 }
 
 - (void)hide{
-    self.commentField.text = self.t.text;
+    self.commentField.text = @"Add Comment";
 }
 
 #pragma mark - Split view
