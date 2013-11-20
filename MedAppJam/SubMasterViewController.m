@@ -28,28 +28,28 @@
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     //setup the dictionary
-    self.urlList = [[NSMutableDictionary alloc] init];
-    [self.urlList setObject:@"BALLA" forKey:@"Appendix Surgery"];
-    [self.urlList setObject:@"url" forKey:@"Gall Bladder Surgery"];
-    [self.urlList setObject:@"url" forKey:@"Hernia Repair"];
-    [self.urlList setObject:@"url" forKey:@"Ileostomy Bag Care"];
-    [self.urlList setObject:@"rMMpeLLgdgY" forKey:@"Check Blood Sugar"];
-    [self.urlList setObject:@"KSoFIyQq8o8" forKey:@"Diet"];
-    [self.urlList setObject:@"PqgKFsK7f-Q" forKey:@"Inject Insulin"];
-    [self.urlList setObject:@"url" forKey:@"Cast Care"];
-    [self.urlList setObject:@"url" forKey:@"Hip Replacement"];
-    [self.urlList setObject:@"url" forKey:@"Knee Replacement"];
-    [self.urlList setObject:@"url" forKey:@"Cataracts"];
-    [self.urlList setObject:@"url" forKey:@"Contacts"];
-    [self.urlList setObject:@"url" forKey:@"Eye Drops"];
-    [self.urlList setObject:@"url" forKey:@"Coronary Artery Bypass"];
-    [self.urlList setObject:@"url" forKey:@"Coronary Catheterization"];
-    [self.urlList setObject:@"url" forKey:@"Heart Failure"];
-    [self.urlList setObject:@"url" forKey:@"Lung Removal Surgery/Lobectomy"];
-    [self.urlList setObject:@"url" forKey:@"Pneumonia"];
-    [self.urlList setObject:@"url" forKey:@"Breast Feeding"];
-    [self.urlList setObject:@"url" forKey:@"Cesarian Section"];
-    [self.urlList setObject:@"url" forKey:@"Uterus Removal/Hysterectomy"];
+//    self.urlList = [[NSMutableDictionary alloc] init];
+//    [self.urlList setObject:@"BALLA" forKey:@"Appendix Surgery"];
+//    [self.urlList setObject:@"url" forKey:@"Gall Bladder Surgery"];
+//    [self.urlList setObject:@"url" forKey:@"Hernia Repair"];
+//    [self.urlList setObject:@"url" forKey:@"Ileostomy Bag Care"];
+//    [self.urlList setObject:@"rMMpeLLgdgY" forKey:@"Check Blood Sugar"];
+//    [self.urlList setObject:@"KSoFIyQq8o8" forKey:@"Diet"];
+//    [self.urlList setObject:@"PqgKFsK7f-Q" forKey:@"Inject Insulin"];
+//    [self.urlList setObject:@"url" forKey:@"Cast Care"];
+//    [self.urlList setObject:@"url" forKey:@"Hip Replacement"];
+//    [self.urlList setObject:@"url" forKey:@"Knee Replacement"];
+//    [self.urlList setObject:@"url" forKey:@"Cataracts"];
+//    [self.urlList setObject:@"url" forKey:@"Contacts"];
+//    [self.urlList setObject:@"url" forKey:@"Eye Drops"];
+//    [self.urlList setObject:@"url" forKey:@"Coronary Artery Bypass"];
+//    [self.urlList setObject:@"url" forKey:@"Coronary Catheterization"];
+//    [self.urlList setObject:@"url" forKey:@"Heart Failure"];
+//    [self.urlList setObject:@"url" forKey:@"Lung Removal Surgery/Lobectomy"];
+//    [self.urlList setObject:@"url" forKey:@"Pneumonia"];
+//    [self.urlList setObject:@"url" forKey:@"Breast Feeding"];
+//    [self.urlList setObject:@"url" forKey:@"Cesarian Section"];
+//    [self.urlList setObject:@"url" forKey:@"Uterus Removal/Hysterectomy"];
 }
 
 - (void)didReceiveMemoryWarning{
@@ -68,7 +68,8 @@
 
 - (void)loadEmbeddedVideo:(NSString *)labelText{
     //Load in the html embedded video
-    NSString *extension = [self.urlList objectForKey:labelText];            //obtain url for label name
+
+    //NSString *extension = [self.urlList objectForKey:labelText];            //obtain url for label name from hash table
     int height = self.detailViewController.player.bounds.size.height;
     int width = self.detailViewController.player.bounds.size.width;
     
@@ -82,7 +83,7 @@
                           </style>\
                           </head><body style=\"margin:0\">\
                           <iframe height=\"%d\" width=\"%d\" frameborder=\"0\" src=\"http://www.youtube.com/embed/%@\"></iframe>\
-                          </body></html>", height, width, extension];
+                          </body></html>", height, width, self.linkExtension];
     
     self.detailViewController.player.hidden = false;
     [self.detailViewController.player loadHTMLString:embedHTML baseURL:nil];
@@ -190,6 +191,7 @@
 
             }
             else if([[lineChunks objectAtIndex:0] isEqualToString:@"6"]){
+                self.linkExtension = [lineChunks objectAtIndex:1];
                 quiz.link = [lineChunks objectAtIndex:1];
             }
         }
@@ -203,7 +205,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //need to clear out previous view that is being displayed, we will default on comments first
-    self.detailViewController.tabControl.selectedSegmentIndex = 0;
+    self.detailViewController.tabControl.selectedSegmentIndex = 1;
     self.detailViewController.quiz.hidden = true;
     
     //Obtain label text of video that we'll be searching from cell

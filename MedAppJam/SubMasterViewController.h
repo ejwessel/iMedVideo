@@ -14,7 +14,7 @@
 
 @interface SubMasterViewController : MasterViewController
 @property (strong, nonatomic) DetailViewController *detailViewController;
-@property (strong, nonatomic) NSMutableDictionary *urlList;
+//@property (strong, nonatomic) NSMutableDictionary *urlList;
 @property (strong, nonatomic) FileContentLoader *fileLoader;
-
+@property (strong, nonatomic) NSString *linkExtension;
 @end

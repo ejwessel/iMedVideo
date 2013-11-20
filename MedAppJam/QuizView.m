@@ -210,6 +210,7 @@
         self.nextButton.hidden = true;
         self.correctIncorrectLabel.hidden = true;
         self.explanation.hidden = true;
+        self.videoAns.hidden = true;
         
         self.scoringText.hidden = false;
         self.quizScore.hidden = false;
@@ -302,7 +303,8 @@
         self.correctIncorrectLabel.backgroundColor = [UIColor redColor];
         self.correctIncorrectLabel.text = @"INCORRECT!";
     }
-    
+
+    self.videoAns.hidden = false;
     //hide all other choices except chosen
     self.option1.enabled = false;
     self.option2.enabled = false;
