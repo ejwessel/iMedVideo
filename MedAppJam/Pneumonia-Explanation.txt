@@ -15,7 +15,7 @@
 3:T:C:Inflammation of the lungs
 3:F:D:Air around the lungs 
 4:Inflammation of the that may be caused by bacterial, viral, or fungal infection.  
-5:&t=0m14s
+5:0m14s
 0
 2:Where does oxygen enter the blood stream?
 3:F:A:Bronchi
@@ -23,7 +23,7 @@
 3:F:C:Trachea
 3:T:D: Alveoli
 4:Alveoli are the end pockets of the lung tissue where oxygen enters the blood stream. 
-5:&t=0m25s
+5:0m25s
 0
 2: What are some symptoms of pneumonia?
 3:F:A:Difficulty breathing
@@ -32,4 +32,4 @@
 3:T:D:All of the above
 3:F:E:None of the above
 4:These are all symptoms of pneumonia.  
-5:&t=2m55s
+5:2m55s
