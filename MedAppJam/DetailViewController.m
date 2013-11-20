@@ -44,6 +44,7 @@
     self.quiz.hidden = true;
     
     self.commentField.hidden = true;
+    self.commentField.textColor = self.tabControl.tintColor;
 //    self.addCommentButton.hidden = true;
 //    [self.addCommentButton setTitle:@"Add Comment" forState:UIControlStateNormal];
 //    [self.addCommentButton.layer setBorderWidth:1];
