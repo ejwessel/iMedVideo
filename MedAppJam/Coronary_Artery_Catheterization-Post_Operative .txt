@@ -13,13 +13,13 @@
 3:T:A:True
 3:F:B:False
 4:True. You need to keep the bed flat for a minimum of 2 hours with a preferred period of 3-6 hours. This is to prevent your blood pressure from rising and causing the injury site to open. 
-5:&t=0m0s
+5:0m0s
 0
 2:Typically, when you sneeze or cough, you should cover the picture site?
 3:T:A:True
 3:F:B:False
 4:To prevent the puncture site from opening, please put pressure on the site.
-5:&t=1m25s
+5:1m25s
 0
 2: When should you call for your nurse?
 3:F:A: If you feel a warm sensation on your leg
@@ -28,4 +28,4 @@
 3:T:D: All of the above
 3:F:E: None of the above
 4:These are some common warning signs that the test site has broken open. Please alert your nurse immediately to take care of the problem. 
-5:&t=1m30s
+5:1m30s

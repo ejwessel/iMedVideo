@@ -15,13 +15,13 @@
 3:F:C:When you turn 21
 3:T:D:When LDL fats start to build up on the artery
 4:The start of Coronary Artery Disease begins when LDL lipids start to form a plaque on the walls of the coronary arteries. 
-5:&t=0m0s
+5:0m0s
 0
 2:Stable Angina is defined as chest pain without exertion?
 3:F:A:True
 3:T:B:False 
 4:Stable angina is defined as chest pain with exertion. 
-5:&t=1m0s
+5:1m0s
 0
 2: With complete occlusion of the coronary artery, you get which of the following diseases?
 3:F:A:Stable angina
@@ -29,4 +29,4 @@
 3:F:C:Non-ST segment elevated MI
 3:T:D:ST segment elevated MI
 4:With complete occlusion of the coronary artery, you get ST segment MI. 
-5:&t=1m50s
+5:1m50s

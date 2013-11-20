@@ -33,8 +33,8 @@
     [self.urlList setObject:@"url" forKey:@"Gall Bladder Surgery"];
     [self.urlList setObject:@"url" forKey:@"Hernia Repair"];
     [self.urlList setObject:@"url" forKey:@"Ileostomy Bag Care"];
-    [self.urlList setObject:@"url" forKey:@"Check Blood Sugar"];
-    [self.urlList setObject:@"url" forKey:@"Diet"];
+    [self.urlList setObject:@"rMMpeLLgdgY" forKey:@"Check Blood Sugar"];
+    [self.urlList setObject:@"KSoFIyQq8o8" forKey:@"Diet"];
     [self.urlList setObject:@"PqgKFsK7f-Q" forKey:@"Inject Insulin"];
     [self.urlList setObject:@"url" forKey:@"Cast Care"];
     [self.urlList setObject:@"url" forKey:@"Hip Replacement"];

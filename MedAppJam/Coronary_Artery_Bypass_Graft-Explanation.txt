@@ -15,7 +15,7 @@
 3:F:C:External Illiac artery
 3:F:D:Brachial vein
 4:The Saphenous vein is the vein that runs along the leg. It is a strong vessel that is commonly used for the CABG procedure. Another vessel is the Internal Mammary artery that runs along the anterior portion of the chest. 
-5:&t=0m56s . 
+5:0m56s
 0
 2:How long is the post operative stay after a CABG?
 3:F:A:1 Day
@@ -23,7 +23,7 @@
 3:T:C:4-6 Days
 3:F:D:7-10 Days
 4:The average stay after a CABG is around 4-6 days. 
-5:&t=1m19s 
+5:1m19s
 0
 2: What is/are common symptoms of Coronary artery disease?
 3:F:A:Leg pains
@@ -31,4 +31,4 @@
 3:F:C:Eye pains
 3:T:D:Pain in the left arm
 4:Common symptoms of Coronary Artery disease are chest pain with or without exertion, pain in the left arm or up the left side of the neck, and stomach aches. 
-5:&t=0m31s
+5:0m31s

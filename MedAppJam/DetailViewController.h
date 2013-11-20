@@ -31,4 +31,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *commentField;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *accountButton;
 
+// Takes text from Comment and submit
+@property(nonatomic, readonly) UIButtonType UIButtonTypeCustom;
+@property (strong, nonatomic) UIButton *submitButton;
+
 @end

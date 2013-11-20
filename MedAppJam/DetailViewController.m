@@ -112,17 +112,38 @@
     self.t = [[UITextField alloc] initWithFrame:CGRectMake(320, 0, 620, 45)];
     self.t.backgroundColor = [UIColor greenColor];
 
-    UIButton *b = [[UIButton alloc] initWithFrame:CGRectMake(940, 0, 80, 45)];
-    b.backgroundColor = [UIColor blueColor];
-    [b setTitle:@"Submit" forState:UIControlStateNormal];
+    // Create object with size
+    self.submitButton = [[UIButton alloc] initWithFrame:CGRectMake(940, 0, 80, 45)];
+    
+    self.submitButton.backgroundColor = [UIColor blueColor];
+    [self.submitButton setTitle:@"Submit" forState:UIControlStateNormal];
     
     [self.accView addSubview:self.t];
-    [self.accView addSubview:b];
+    [self.accView addSubview:self.submitButton];
+    
+    // Add functionality to button
+    [self.submitButton addTarget:self
+                          action:@selector(submit)
+                forControlEvents:UIControlEventTouchUpInside];
     
     //self.commentField.clearsOnBeginEditing = true;
     self.commentField.inputAccessoryView = self.accView;
 }
 
+- (void) submit{
+    NSLog(@"submitButtonClicked");
+    
+    // Save to Inject_Insulin.txt
+    //if(submitButtonClicked){
+    NSString *addedText = self.t.text; // Text from text field
+    NSString *strPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    strPath = [strPath stringByAppendingPathComponent:@"Inject_Insulin.txt"];
+    [addedText writeToFile:strPath
+            atomically:NO
+              encoding:NSStringEncodingConversionAllowLossy
+                     error:nil];
+    //}
+}
 - (void)open{
     [self.t becomeFirstResponder]; //will return TRUE;
 }
