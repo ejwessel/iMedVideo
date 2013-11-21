@@ -46,11 +46,11 @@
             UIImage *image = [UIImage imageNamed:@"patientIcon.jpg"];
             iconView.image = image;
             [self addSubview:iconView];
-                    }
+        }
         [self addSubview:object];
-    }
+        object.hidden = false;    }
     
-    NSLog(@"%@", self.commentObjects);
+    //NSLog(@"%@", self.commentObjects);
     
     [self setNeedsDisplay];
 }

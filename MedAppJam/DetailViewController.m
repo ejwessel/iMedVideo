@@ -151,14 +151,16 @@
     self.commentField.inputAccessoryView = self.accView;
 }
 
-- (void) submit{
+- (void)submit{
     NSLog(@"submitButtonClicked");
     
     // Here you set your text.
-    NSString *yourAppendingText = [[NSString alloc] initWithFormat:@"1:D:%@", self.t.text];
+    //assume everybody is a patient at first
+    NSString *yourAppendingText = [[NSString alloc] initWithFormat:@"\n1:P:%@", self.t.text];
     
     // Here you get access to the file in Documents directory of your application bundle.
     NSString *documentDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    //need file name
     NSString *documentFile = [documentDir stringByAppendingPathComponent:@"Diet.txt"];
     
     // Here you read current existing text from that file
@@ -167,7 +169,7 @@
     // Here you append new text to the existing one if it is
     if(textFromFile){
         NSLog(@"appending");
-        NSString *textToFile = [textFromFile stringByAppendingString:[NSString stringWithFormat:@" %@",yourAppendingText]];
+        NSString *textToFile = [textFromFile stringByAppendingString:[NSString stringWithFormat:@"%@",yourAppendingText]];
         
         // Here you save the updated text to that file
         [textToFile writeToFile:documentFile
@@ -175,16 +177,24 @@
                        encoding:NSUTF8StringEncoding
                           error:nil];
         
+        NSLog(@"%@", textToFile);
     }
-    //Here will append to newly created file if it doesn't already exist
-    else{
-        
-//        NSLog(@"not appending");
-//        [yourAppendingText writeToFile:documentFile
-//                            atomically:YES
-//                              encoding:NSUTF8StringEncoding
-//                                 error:nil];
-    }
+ 
+//    CommentObject *prevObject = comments.commentObjects.lastObject;//[comments.commentObjects objectAtIndex:comments.commentObjects.count - 1];
+//    updatePos = (updatePos + prevObject.bounds.size.height + 5);
+//    frame = CGRectMake(commentXPos, updatePos, comments.bounds.size.width - commentXPos, commentHeight);
+//    //need to add to commentView list of objects
+
+    
+    CommentObject *lastObject = self.comments.commentObjects.lastObject;
+    CGRect frame = CGRectMake(lastObject.frame.origin.x, lastObject.frame.size.height + lastObject.frame.origin.y + 5, lastObject.frame.size.width, lastObject.frame.size.height);
+    CommentObject *newObject = [[CommentObject alloc] initWithFrame:frame withString:self.t.text withIsDoctor:false];
+    
+    [self.comments.commentObjects addObject:newObject];
+    [self.comments addCommentsToView];
+    
+    //clear any previous text placed
+    self.t.text = @"";
 }
 
 - (void)open{

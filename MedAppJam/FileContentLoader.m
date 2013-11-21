@@ -19,9 +19,12 @@
         NSArray *chunks = [fileName componentsSeparatedByString:@"."];
         NSString *name = [chunks objectAtIndex:0];
         NSString *type = [chunks objectAtIndex:1];
-                
+        
+        NSString *documentDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSString *txtPath = [[documentDir stringByAppendingString:@"/"] stringByAppendingString:fileName];
+        
         self.path = [[NSBundle mainBundle] pathForResource:name ofType:type];
-        NSString *content = [NSString stringWithContentsOfFile:self.path encoding:NSUTF8StringEncoding error:nil]; //obtains contents of file
+        NSString *content = [NSString stringWithContentsOfFile:txtPath encoding:NSUTF8StringEncoding error:nil]; //obtains contents of file
     
         if(content == nil){
             NSLog(@"File was not loaded correctly");
