@@ -1,0 +1,38 @@
+0 Comments and Quiz File Format
+0 Record descriptions:
+0      0 <code comment>
+0      1:<(doctor/patient)>:<comment>
+0      2:<quiz question>
+0      3:<truth>:<position>:<quiz answer>
+0      Resulting file name will be denoted by the first two words
+0      4:<explanation>
+0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
+0
+2: What are some risk factors for Gall Stones?
+3:F:A:Age > 40
+3:F:B:Female
+3:F:C:Fertility
+3:F:D:Obesity
+3:T:E: All of the above
+4:The medical student pneumonic for Gall stones is the 4 F?s. Fat, Fertile, Female, and and greater than 40 years old.   
+5:2m09s
+6:JNsuViKkiTY
+0
+0
+2: What is/are symptoms of gall bladder illness?
+3:F:A:Right upper quadrant pain after eating
+3:F:B:Nausea and vomitting
+3:F:C:Fever 
+3:T:D:All of the above
+4:All of the above are symptoms of gall bladder disease.  
+5:1m30s
+6:JNsuViKkiTY 
+0
+2: Bonus Question: How is the diagnosis of gallstones made?
+3:T:A:X-ray
+3:F:B:CT scan
+3:F:C:Ultrasound
+3:F:D:MRI
+4:Ultrasound is used to diagnose Gallstones, but a HIDA scan is an x-ray scan that can be helpful in diagnosing gall stones. 
+0
+
