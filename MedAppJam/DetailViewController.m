@@ -62,6 +62,7 @@
 - (void)copyTxtFilesToDocuments{
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error;
+    
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
     //obtain all bundle files
@@ -71,14 +72,15 @@
     NSArray *extensions = [[NSArray alloc] initWithObjects:@"txt", nil];
     NSArray *txtFiles = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:resourcePath error:&error] pathsMatchingExtensions:extensions];
     
-    
-    
-    NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"txtFile.txt"];
-    
-    if ([fileManager fileExistsAtPath:txtPath] == NO) {
-        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"txtFile" ofType:@"txt"];
-        [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&error];
+    //copy files form bundle to documents folder
+    for (NSString *s in txtFiles) {
+        NSString *itemAtPath = [[resourcePath stringByAppendingString:@"/"] stringByAppendingString:s];
+        NSString *itemToPath = [[documentsDirectory stringByAppendingString:@"/"] stringByAppendingString:s];
+        [fileManager copyItemAtPath:itemAtPath toPath:itemToPath error:&error];
     }
+    
+    //NSArray *txtFilesCopied = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectory error:&error];
+    //ALL TEXT FILES ARE COPIED into Documents directory
 }
 
 - (void)grabText{
