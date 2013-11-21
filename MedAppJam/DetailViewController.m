@@ -194,9 +194,16 @@
 
     
     CommentObject *lastObject = self.comments.commentObjects.lastObject;
-    CGRect frame = CGRectMake(lastObject.frame.origin.x, lastObject.frame.size.height + lastObject.frame.origin.y + 5, lastObject.frame.size.width, lastObject.frame.size.height);
-    CommentObject *newObject = [[CommentObject alloc] initWithFrame:frame withString:self.t.text withIsDoctor:false];
-    
+    CGRect frame;
+    CommentObject *newObject;
+    if(lastObject != nil){
+        frame = CGRectMake(lastObject.frame.origin.x, lastObject.frame.size.height + lastObject.frame.origin.y + 5, lastObject.frame.size.width, lastObject.frame.size.height);
+        newObject = [[CommentObject alloc] initWithFrame:frame withString:self.t.text withIsDoctor:false];
+    }
+    else{
+        frame = CGRectMake(20, 0, self.comments.bounds.size.width, 20);
+        newObject = [[CommentObject alloc] initWithFrame:frame withString:self.t.text withIsDoctor:false];
+    }
     [self.comments.commentObjects addObject:newObject];
     [self.comments addCommentsToView];
     
