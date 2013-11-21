@@ -160,8 +160,9 @@
     
     // Here you get access to the file in Documents directory of your application bundle.
     NSString *documentDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
     //need file name
-    NSString *documentFile = [documentDir stringByAppendingPathComponent:@"Diet.txt"];
+    NSString *documentFile = [documentDir stringByAppendingPathComponent:self.tableLastClickedName];
     
     // Here you read current existing text from that file
     NSString *textFromFile = [NSString stringWithContentsOfFile:documentFile encoding:NSUTF8StringEncoding error:nil];

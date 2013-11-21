@@ -62,6 +62,7 @@
     NSString *f = labelText;
     f = [f stringByReplacingOccurrencesOfString:@" " withString:@"_"];
     NSMutableString *fileName = [[NSMutableString alloc] initWithString:f];
+    self.detailViewController.tableLastClickedName = fileName;
     [fileName appendString:@".txt"];
     self.fileLoader = [[FileContentLoader alloc] initWithFileName:fileName]; //this will contain lines in which we can use.
 }

@@ -35,5 +35,6 @@
 // Takes text from Comment and submit
 @property(nonatomic, readonly) UIButtonType UIButtonTypeCustom;
 @property (strong, nonatomic) UIButton *submitButton;
+@property (strong, nonatomic) NSString *tableLastClickedName;
 
 @end
