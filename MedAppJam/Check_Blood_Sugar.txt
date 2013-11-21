@@ -7,6 +7,7 @@
 0      Resulting file name will be denoted by the first two words
 0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
 0
+6:rMMpeLLgdgY
 0
 1:D:Very good video demonstrating correct Insulin Injection
 1:P:Video too complicated, got fingers stuck in garbage disposal
@@ -17,8 +18,6 @@
 1:P:Yo yo I am balla
 1:D:Hello World
 1:P:Dude where’s my car?
-0
-6:rMMpeLLgdgY
 0
 2:Where should you prick your finger?
 3:F:A:Pad

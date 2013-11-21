@@ -7,6 +7,7 @@
 0      Resulting file name will be denoted by the first two words
 0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
 0
+6:KSoFIyQq8o8
 0
 1:P:Yo yo I am balla
 1:D:I'm p-diddy yo.
@@ -19,8 +20,6 @@
 1:P:This helped my family immensely when I was diagnosed with diabetes!
 1:D:Pay close attention as this clearly demonstrates how well I’ve been alive for
 1:D:Pay close attention as this clearly demonstrates how well I’ve been alive fo
-0
-6:KSoFIyQq8o8
 0
 2:Is this sentence true?
 3:T:B:OMG SO TRUE!
