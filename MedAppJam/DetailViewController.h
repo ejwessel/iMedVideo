@@ -13,6 +13,7 @@
 #import "QuizView.h"
 #import "QuizObject.h"
 #import "AddCommentView.h"
+#import "FileContentLoader.h"
 
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate, UITextViewDelegate, UITextFieldDelegate>
 

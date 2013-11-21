@@ -45,8 +45,8 @@
                                 <rect key="frame" x="195" y="456" width="313" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Comments"/>
                                     <segment title="Quiz"/>
+                                    <segment title="Comments"/>
                                 </segments>
                             </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q4-mz-MgN" customClass="CommentsView">

@@ -54,7 +54,31 @@
     self.tabControl.hidden = true;
     [self.tabControl addTarget:self action:@selector(changeView) forControlEvents:UIControlEventValueChanged];
     
+    [self copyTxtFilesToDocuments];
+    
     [self configureView];
+}
+
+- (void)copyTxtFilesToDocuments{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    //obtain all bundle files
+    NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
+    
+    //obtain all text files
+    NSArray *extensions = [[NSArray alloc] initWithObjects:@"txt", nil];
+    NSArray *txtFiles = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:resourcePath error:&error] pathsMatchingExtensions:extensions];
+    
+    
+    
+    NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"txtFile.txt"];
+    
+    if ([fileManager fileExistsAtPath:txtPath] == NO) {
+        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"txtFile" ofType:@"txt"];
+        [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&error];
+    }
 }
 
 - (void)grabText{
@@ -128,17 +152,39 @@
 - (void) submit{
     NSLog(@"submitButtonClicked");
     
-    // Save to Inject_Insulin.txt
-    //if(submitButtonClicked){
-    NSString *addedText = self.t.text; // Text from text field
-    NSString *strPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    strPath = [strPath stringByAppendingPathComponent:@"Inject_Insulin.txt"];
-    [addedText writeToFile:strPath
-            atomically:NO
-              encoding:NSStringEncodingConversionAllowLossy
-                     error:nil];
-    //}
+    // Here you set your text.
+    NSString *yourAppendingText = [[NSString alloc] initWithFormat:@"1:D:%@", self.t.text];
+    
+    // Here you get access to the file in Documents directory of your application bundle.
+    NSString *documentDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentFile = [documentDir stringByAppendingPathComponent:@"Diet.txt"];
+    
+    // Here you read current existing text from that file
+    NSString *textFromFile = [NSString stringWithContentsOfFile:documentFile encoding:NSUTF8StringEncoding error:nil];
+    
+    // Here you append new text to the existing one if it is
+    if(textFromFile){
+        NSLog(@"appending");
+        NSString *textToFile = [textFromFile stringByAppendingString:[NSString stringWithFormat:@" %@",yourAppendingText]];
+        
+        // Here you save the updated text to that file
+        [textToFile writeToFile:documentFile
+                     atomically:YES
+                       encoding:NSUTF8StringEncoding
+                          error:nil];
+        
+    }
+    //Here will append to newly created file if it doesn't already exist
+    else{
+        
+//        NSLog(@"not appending");
+//        [yourAppendingText writeToFile:documentFile
+//                            atomically:YES
+//                              encoding:NSUTF8StringEncoding
+//                                 error:nil];
+    }
 }
+
 - (void)open{
     [self.t becomeFirstResponder]; //will return TRUE;
 }
