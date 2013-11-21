@@ -36,14 +36,14 @@
         //If doctor add the Doctor Icon
         if(object.isDoctor){
             UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, object.frame.origin.y, 15, 15)];
-            UIImage *image = [UIImage imageNamed:@"doctorIcon.jpg"];
+            UIImage *image = [UIImage imageNamed:@"newDoctorIcon.jpg"];
             iconView.image = image;
             [self addSubview:iconView];
         }
         //else if patient add the Patient Icon
         else{
             UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, object.frame.origin.y, 15, 15)];
-            UIImage *image = [UIImage imageNamed:@"patientIcon.jpg"];
+            UIImage *image = [UIImage imageNamed:@"newPatientIcon.jpg"];
             iconView.image = image;
             [self addSubview:iconView];
         }

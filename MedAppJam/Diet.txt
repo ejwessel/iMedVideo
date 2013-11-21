@@ -9,6 +9,18 @@
 0
 6:KSoFIyQq8o8
 0
+1:P:Yo yo I am balla
+1:D:I'm p-diddy yo.
+1:D:Hello World
+1:D:yo yo mah I see a ball. I cant stop but I seel like i've got it all, yo yeah, whats up girl I see from across the room like it aint no BOOM!
+1:P:Dude where’s my car?
+1:D:Very good video demonstrating correct Insulin Injection
+1:P:Video too complicated, got fingers stuck in garbage disposal
+1:P:Hi! I’m just checking in to see whats going on
+1:P:This helped my family immensely when I was diagnosed with diabetes!
+1:D:Pay close attention as this clearly demonstrates how well I’ve been alive for
+1:D:Pay close attention as this clearly demonstrates how well I’ve been alive fo
+0
 2:Is this sentence true?
 3:T:B:OMG SO TRUE!
 3:F:A:OMG NO duhhh...
@@ -36,15 +48,3 @@
 3:F:D:Peppers
 4:your life
 5:0m0s
-0
-1:P:Yo yo I am balla
-1:D:I'm p-diddy yo.
-1:D:Hello World
-1:D:yo yo mah I see a ball. I cant stop but I seel like i've got it all, yo yeah, whats up girl I see from across the room like it aint no BOOM!
-1:P:Dude where’s my car?
-1:D:Very good video demonstrating correct Insulin Injection
-1:P:Video too complicated, got fingers stuck in garbage disposal
-1:P:Hi! I’m just checking in to see whats going on
-1:P:This helped my family immensely when I was diagnosed with diabetes!
-1:D:Pay close attention as this clearly demonstrates how well I’ve been alive for
-1:D:Pay close attention as this clearly demonstrates how well I’ve been alive fo

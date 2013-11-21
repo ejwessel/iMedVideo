@@ -8,6 +8,7 @@
 0      4:<explanation>
 0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
 0
+6:MAppEy9Umcg
 0
 2: What is the treatment for appendicitis?
 3:F:A:Rest
@@ -17,7 +18,6 @@
 3:F:E:All of the above
 4:The definitive treatment for appendicitis is Surgery. Rest may help after the operation but will not prevent a rupture and perforation of the appendix. 
 5:0m30s
-6:MAppEy9Umcg
 0
 2: What are some benefits of laproscopic appendectomy?
 3:F:A:More pain
@@ -28,7 +28,7 @@
 3:T:F:None of the above
 4:Laproscopic surgery is faster, lower chance of infection, smaller incisions, and have a faster recovery time.  
 5:1m10s
-6:MAppEy9Umcg 
+0
 2: How many incision sites during the surgery?
 3:F:A:1
 3:F:B:2
@@ -37,6 +37,3 @@
 3:F:E:5
 4:Laproscopic surgery occurs through three small incision sites.
 5:1m20s
-6:MAppEy9Umcg 
-
-

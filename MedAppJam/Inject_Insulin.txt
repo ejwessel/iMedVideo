@@ -10,6 +10,7 @@
 0      6:<video link>
 0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
 0
+6:PqgKFsK7f-Q
 0
 1:D:Very good video demonstrating correct Insulin Injection
 1:P:Video too complicated, got fingers stuck in garbage disposal
@@ -21,7 +22,6 @@
 1:D:Hello World
 1:P:Dude where’s my car?
 0
-6:PqgKFsK7f-Q
 2:Where is a good location to inject insulin into?
 3:F:A:Lower arm
 3:T:B:Thigh
