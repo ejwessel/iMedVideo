@@ -131,12 +131,14 @@
     
     self.accView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 45)];
     self.t = [[UITextField alloc] initWithFrame:CGRectMake(320, 0, 620, 45)];
-    self.t.backgroundColor = [UIColor greenColor];
+    self.t.backgroundColor = [UIColor whiteColor];
+    [self.t.layer setCornerRadius:10];
 
     // Create object with size
-    self.submitButton = [[UIButton alloc] initWithFrame:CGRectMake(940, 0, 80, 45)];
+    self.submitButton = [[UIButton alloc] initWithFrame:CGRectMake(942, 0, 80, 45)];
     
-    self.submitButton.backgroundColor = [UIColor blueColor];
+    self.submitButton.backgroundColor = self.tabControl.tintColor;
+    [self.submitButton.layer setCornerRadius:10];
     [self.submitButton setTitle:@"Submit" forState:UIControlStateNormal];
     
     [self.accView addSubview:self.t];
@@ -154,10 +156,13 @@
 - (void)submit{
     NSLog(@"submitButtonClicked");
     
+    if(![self.t.text isEqualToString:@""]){
     // Here you set your text.
     //assume everybody is a patient at first
     NSString *yourAppendingText = [[NSString alloc] initWithFormat:@"\n1:P:%@", self.t.text];
     
+   
+
     // Here you get access to the file in Documents directory of your application bundle.
     NSString *documentDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
@@ -179,6 +184,7 @@
                           error:nil];
         
         NSLog(@"%@", textToFile);
+    
     }
  
 //    CommentObject *prevObject = comments.commentObjects.lastObject;//[comments.commentObjects objectAtIndex:comments.commentObjects.count - 1];
@@ -194,8 +200,12 @@
     [self.comments.commentObjects addObject:newObject];
     [self.comments addCommentsToView];
     
+        
+    }
     //clear any previous text placed
     self.t.text = @"";
+    [self.t resignFirstResponder];
+    [self.commentField resignFirstResponder];
 }
 
 - (void)open{

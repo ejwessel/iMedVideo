@@ -119,7 +119,7 @@
             if([[lineChunks objectAtIndex:0] isEqualToString:@"1"]){
                 
                 int commentXPos = 20;
-                int commentHeight = 20;
+                int commentHeight = 25; // original 20
                 
                 //set up new frame for positioning
                 CGRect frame;
