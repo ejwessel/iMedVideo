@@ -157,6 +157,7 @@
     [self.detailViewController.comments setNeedsDisplay];
     
     //hide keyboard if masterview is clicked
+    self.detailViewController.t.text = @"";
     [self.detailViewController.t resignFirstResponder];
     [self.detailViewController.commentField resignFirstResponder];
 

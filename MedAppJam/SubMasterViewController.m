@@ -206,6 +206,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //hide keyboard if subview is clicked
+    self.detailViewController.t.text = @"";
     [self.detailViewController.t resignFirstResponder];
     [self.detailViewController.commentField resignFirstResponder];
     
