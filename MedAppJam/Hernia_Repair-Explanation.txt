@@ -11,7 +11,7 @@
 6:R6pwlIVQPVA
 0
 2:What is an inguinal hernia?
-3:T:A:The protrusion of small intestine into a weakened section of abdominal wall
+3:T:A:protrusion of small intestine into abdominal wall
 3:F:B:The blockage of small intestine
 3:F:C:The infection of small intestine
 3:F:D:The rupture of abdominal wall
