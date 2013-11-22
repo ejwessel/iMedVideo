@@ -39,6 +39,10 @@
     
     [self setupComment];
     
+    self.userChoice = [[UIAlertView alloc] initWithTitle:@"Login" message:@"Choose your account" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Doctor", @"Medical Student", @"Patient", nil];
+    [self.userChoice show];
+
+    
     self.player.scrollView.bounces = false;
     self.comments.hidden = true;
     self.quiz.hidden = true;
@@ -156,10 +160,24 @@
 - (void)submit{
     NSLog(@"submitButtonClicked");
     
+    NSString *commentInitial;
+    BOOL isDoctor = YES;
+    
+    if ([self.user isEqualToString:@"Doctor"]) {
+        commentInitial = @"D";
+    }
+    else if([self.user isEqualToString:@"Medical Student"]){
+        commentInitial = @"D";
+    }
+    else if ([self.user isEqualToString:@"Patient"]){
+        commentInitial = @"P";
+        isDoctor = NO;
+    }
+    
     if(![self.t.text isEqualToString:@""]){
     // Here you set your text.
     //assume everybody is a patient at first
-    NSString *yourAppendingText = [[NSString alloc] initWithFormat:@"\n1:P:%@", self.t.text];
+    NSString *yourAppendingText = [[NSString alloc] initWithFormat:@"\n1:%@:%@", commentInitial, self.t.text];
 
     // Here you get access to the file in Documents directory of your application bundle.
     NSString *documentDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -191,11 +209,13 @@
     CommentObject *newObject;
     if(lastObject != nil){
         frame = CGRectMake(lastObject.frame.origin.x, lastObject.frame.size.height + lastObject.frame.origin.y + 5, lastObject.frame.size.width, lastObject.frame.size.height);
-        newObject = [[CommentObject alloc] initWithFrame:frame withString:self.t.text withIsDoctor:false];
+        //check if doctor or not
+        newObject = [[CommentObject alloc] initWithFrame:frame withString:self.t.text withIsDoctor:isDoctor];
     }
     else{
         frame = CGRectMake(20, 0, self.comments.bounds.size.width, 20);
-        newObject = [[CommentObject alloc] initWithFrame:frame withString:self.t.text withIsDoctor:false];
+        //check if doctor or not
+        newObject = [[CommentObject alloc] initWithFrame:frame withString:self.t.text withIsDoctor:isDoctor];
     }
     [self.comments.commentObjects addObject:newObject];
     [self.comments addCommentsToView];
@@ -214,6 +234,32 @@
 
 - (void)hide{
     self.commentField.text = @"Add Comment";
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    if([title isEqualToString:@"Doctor"])
+    {
+        NSLog(@"Doctor was selected.");
+        self.user = @"Doctor";
+        NSLog(@"%@", self.user);
+        self.accountButton.title = self.user;
+    }
+    else if([title isEqualToString:@"Medical Student"])
+    {
+        NSLog(@"Medical Student was selected.");
+        self.user = @"Medical Student";
+        NSLog(@"%@", self.user);
+        self.accountButton.title = self.user;
+    }
+    else if([title isEqualToString:@"Patient"])
+    {
+        NSLog(@"Patient was selected.");
+        self.user = @"Patient";
+        NSLog(@"%@", self.user);
+        self.accountButton.title = self.user;
+    }
 }
 
 #pragma mark - Split view

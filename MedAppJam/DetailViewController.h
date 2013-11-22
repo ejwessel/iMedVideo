@@ -37,4 +37,8 @@
 @property (strong, nonatomic) UIButton *submitButton;
 @property (strong, nonatomic) NSString *tableLastClickedName;
 
+@property (strong, nonatomic) NSString *user;
+@property (strong, nonatomic) UIAlertView *userChoice;
+
+
 @end
