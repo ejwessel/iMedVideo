@@ -26,6 +26,8 @@
         self.path = [[NSBundle mainBundle] pathForResource:name ofType:type];
         NSString *content = [NSString stringWithContentsOfFile:txtPath encoding:NSUTF8StringEncoding error:nil]; //obtains contents of file
     
+        NSLog(@"%@", content);
+        
         if(content == nil){
             NSLog(@"File was not loaded correctly");
             exit(0);

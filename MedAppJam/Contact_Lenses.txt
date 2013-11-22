@@ -1,0 +1,36 @@
+0 Comments and Quiz File Format
+0 Record descriptions:
+0      0 <code comment>
+0      1:<(doctor/patient)>:<comment>
+0      2:<quiz question>
+0      3:<truth>:<position>:<quiz answer>
+0      Resulting file name will be denoted by the first two words
+0      4:<explanation>
+0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
+0
+0
+6:7gSltoRSFCU
+0
+2:Which lens should you put on first?
+3:F:A:Left
+3:F:B:Right
+3:T:C:Either or, it doesn't matter
+4:Make sure to have a system that you use everytime. If you put it on the right eye, put it on your right eye every time. 
+5:0m38s
+0
+2:Where should you put your lens?
+3:F:A:On the top of your eye
+3:T:B:On the bottom or directly on the eye
+3:F:C:On the side away from your nose
+3:F:D:On the side closest to your nose
+4:Place the contact lens on the bottom of your eye or directly on your eye itself.
+5:1m09s
+0
+2:How do you take out the contact lens?
+3:F:Blink really hard 
+3:F:Drag the lens to the bottom of your eye
+3:F:Put water in your eye
+3:T:Put contact solution in your eye
+4:To take out the contact lens, drag it to the bottom of your eye, and then pinch it between your thumb and forefinger.  
+5:1m46s
+
