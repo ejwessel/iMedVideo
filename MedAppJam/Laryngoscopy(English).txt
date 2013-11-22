@@ -33,5 +33,5 @@
 3:T:B:2
 3:F:C:3
 3:F:D:4
-4:The spray is an anesthetic. It is used to make your nose and throat numb, and it makes it much easier to pass the camera through your nose.
+4:You have 2 vocal cords. When they open you can breath. They vibrate together to make noise which you hear as your voice. 
 5:1m14s
