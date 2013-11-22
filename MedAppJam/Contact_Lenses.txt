@@ -14,7 +14,7 @@
 2:Which lens should you put on first?
 3:F:A:Left
 3:F:B:Right
-3:T:C:Whichever, but do it the same every single time
+3:T:C:Either or, it doesn't matter
 4:Make sure to have a system that you use everytime. If you put it on the right eye, put it on your right eye every time. 
 5:0m38s
 0
