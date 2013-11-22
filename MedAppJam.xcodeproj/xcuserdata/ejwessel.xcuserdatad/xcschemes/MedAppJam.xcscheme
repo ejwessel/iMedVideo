@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2361BF9B182DE45D00E4A9B3"
-               BuildableName = "MedAppJam.app"
+               BuildableName = "iMedVideo.app"
                BlueprintName = "MedAppJam"
                ReferencedContainer = "container:MedAppJam.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2361BF9B182DE45D00E4A9B3"
-            BuildableName = "MedAppJam.app"
+            BuildableName = "iMedVideo.app"
             BlueprintName = "MedAppJam"
             ReferencedContainer = "container:MedAppJam.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2361BF9B182DE45D00E4A9B3"
-            BuildableName = "MedAppJam.app"
+            BuildableName = "iMedVideo.app"
             BlueprintName = "MedAppJam"
             ReferencedContainer = "container:MedAppJam.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2361BF9B182DE45D00E4A9B3"
-            BuildableName = "MedAppJam.app"
+            BuildableName = "iMedVideo.app"
             BlueprintName = "MedAppJam"
             ReferencedContainer = "container:MedAppJam.xcodeproj">
          </BuildableReference>

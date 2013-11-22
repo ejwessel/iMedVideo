@@ -36,8 +36,8 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
-    self.instructionView = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.player.frame.origin.y, 703, 500)];
+
+    self.instructionView = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.player.frame.origin.y, 703, 768)];
     UIImage *instructionImage = [UIImage imageNamed:@"intro_screen_instructions.png"];
     self.instructionView.image = instructionImage;
     
