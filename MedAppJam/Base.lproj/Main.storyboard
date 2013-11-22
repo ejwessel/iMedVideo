@@ -998,7 +998,7 @@
             </objects>
             <point key="canvasLocation" x="1760" y="-51"/>
         </scene>
-        <!--Sub Master View Controller - Heart-->
+        <!--Sub Master View Controller - Coronary Artery Bypass-->
         <scene sceneID="jP5-Dn-yWI">
             <objects>
                 <tableViewController id="8Au-Sg-YXi" customClass="SubMasterViewController" sceneMemberID="viewController">
@@ -1066,13 +1066,13 @@
                             <outlet property="delegate" destination="8Au-Sg-YXi" id="4FM-2p-Ytt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Heart" id="vMr-9A-hkB"/>
+                    <navigationItem key="navigationItem" title="Coronary Artery Bypass" id="vMr-9A-hkB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVH-0n-rvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3764" y="-839"/>
         </scene>
-        <!--Sub Master View Controller - Heart-->
+        <!--Sub Master View Controller - Coronary Artery Catheterization-->
         <scene sceneID="7fl-cA-fOx">
             <objects>
                 <tableViewController id="nlu-3E-W1R" customClass="SubMasterViewController" sceneMemberID="viewController">
@@ -1140,13 +1140,13 @@
                             <outlet property="delegate" destination="nlu-3E-W1R" id="hBT-gF-Vuz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Heart" id="nGP-Ou-8Wz"/>
+                    <navigationItem key="navigationItem" title="Coronary Artery Catheterization" id="nGP-Ou-8Wz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMh-cu-Url" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3552" y="21"/>
+            <point key="canvasLocation" x="3744" y="-623"/>
         </scene>
-        <!--Sub Master View Controller - Heart-->
+        <!--Sub Master View Controller - Congestive Heart Failure-->
         <scene sceneID="ghs-XF-zyY">
             <objects>
                 <tableViewController id="VaV-q8-tvX" customClass="SubMasterViewController" sceneMemberID="viewController">
@@ -1198,13 +1198,13 @@
                             <outlet property="delegate" destination="VaV-q8-tvX" id="OV7-E0-F3C"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Heart" id="2HI-Uy-1SV"/>
+                    <navigationItem key="navigationItem" title="Congestive Heart Failure" id="2HI-Uy-1SV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PpW-F6-JAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3220" y="279"/>
+            <point key="canvasLocation" x="3608" y="-353"/>
         </scene>
-        <!--Sub Master View Controller - Diabetes-->
+        <!--Sub Master View Controller - Ears, Nose, Throat-->
         <scene sceneID="vku-VW-z1e">
             <objects>
                 <tableViewController id="XqL-PT-p3f" customClass="SubMasterViewController" sceneMemberID="viewController">
@@ -1272,11 +1272,11 @@
                             <outlet property="delegate" destination="XqL-PT-p3f" id="jvq-HK-fOa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Diabetes" id="dqD-1m-vYE"/>
+                    <navigationItem key="navigationItem" title="Ears, Nose, Throat" id="dqD-1m-vYE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHU-mp-KP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788" y="-1418"/>
+            <point key="canvasLocation" x="1804" y="-2243"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
