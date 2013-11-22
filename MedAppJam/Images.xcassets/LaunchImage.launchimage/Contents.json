@@ -12,7 +12,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "1024-start-up.png",
+      "filename" : "med-app-jam-logo-opening-screen-update-1024-768.png",
       "scale" : "1x"
     },
     {
@@ -27,7 +27,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "2048-1536-startup.png",
+      "filename" : "med-app-jam-logo-opening-screen-update.png",
       "scale" : "2x"
     }
   ],
