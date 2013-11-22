@@ -19,7 +19,7 @@
 5:0m0s
 0
 2:What are some complications of an inguinal hernia?
-3:F:A:Expulsion of abdominal contents into the inguinal canal
+3:F:A:Expulsion of abdominal contents
 3:F:B:Strangulation of the small bowel
 3:F:C:Necrosis and possible perforation
 3:T:D:None of the above

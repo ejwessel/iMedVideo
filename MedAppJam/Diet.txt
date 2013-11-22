@@ -21,10 +21,10 @@
 1:D:Pay close attention as this clearly demonstrates how well I’ve been alive for
 1:D:Pay close attention as this clearly demonstrates how well I’ve been alive fo
 0
-2:Is this sentence true?
-3:T:B:OMG SO TRUE!
-3:F:A:OMG NO duhhh...
-4:DUDE IF YOU GOT THIS WRONG JUST LEAVE...
+2:Is this sentence a true sentence?
+3:T:B:Yes, so true
+3:F:A:No...
+4:How did you get this incorrect?
 5:0m0s
 0
 2:Which of the following meats was recommended?

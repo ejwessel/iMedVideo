@@ -27,10 +27,10 @@
 5:1m09s
 0
 2:How do you take out the contact lens?
-3:F:Blink really hard 
-3:F:Drag the lens to the bottom of your eye
-3:F:Put water in your eye
-3:T:Put contact solution in your eye
+3:F:A:Blink really hard
+3:F:B:Drag the lens to the bottom of your eye
+3:F:C:Put water in your eye
+3:T:D:Put contact solution in your eye
 4:To take out the contact lens, drag it to the bottom of your eye, and then pinch it between your thumb and forefinger.  
 5:1m46s
 

@@ -22,7 +22,7 @@
 3:T:A:The hernia sack is tied off
 3:F:B:The hernia sack is closed off
 3:F:C:The abdominal wall is closed up
-3:F:D:The abdominal contents are reexamined for necrosis
+3:F:D:The abdominal wall is reexamined for necrosis
 4:The hernia sack is tied off and then the sack is closed up. 
 5:3m40s
 0

@@ -13,7 +13,7 @@
 3:F:A:To break down the clot
 3:T:B:To push the block out of the way
 3:F:C:To bypass the clot
-3:F:D:To remove the old artery and replace it with a new one. 
+3:F:D:To remove and replace the old artery 
 4:The purpose of the CABG is to bypass the clot. The time to break down or move the clot out of the way has passed, and you will need a more aggressive treatment. 
 5:0m0s
 0
