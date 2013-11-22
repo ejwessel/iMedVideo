@@ -169,7 +169,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Details" id="mOI-FS-AaM">
+                    <navigationItem key="navigationItem" title="Directions" id="mOI-FS-AaM">
                         <barButtonItem key="rightBarButtonItem" title="Account" id="woI-zh-3sf"/>
                     </navigationItem>
                     <connections>
