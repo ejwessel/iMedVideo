@@ -8,8 +8,9 @@
 0      4:<explanation>
 0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
 0
+6:aKduNgfePLU
 0
-2: What is pneumonia?
+2:What is pneumonia?
 3:F:A:Loss of blood to the lungs
 3:F:B:Loss of air to the lungs
 3:T:C:Inflammation of the lungs
@@ -21,7 +22,7 @@
 3:F:A:Bronchi
 3:F:B:Bronchioles
 3:F:C:Trachea
-3:T:D: Alveoli
+3:T:D:Alveoli
 4:Alveoli are the end pockets of the lung tissue where oxygen enters the blood stream. 
 5:0m25s
 0
