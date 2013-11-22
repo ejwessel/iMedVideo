@@ -31,6 +31,5 @@
 3:F:B:Chest Pain
 3:F:C:Fever
 3:T:D:All of the above
-3:F:E:None of the above
 4:These are all symptoms of pneumonia.  
 5:2m55s
