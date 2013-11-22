@@ -39,6 +39,7 @@
 
 @property (strong, nonatomic) NSString *user;
 @property (strong, nonatomic) UIAlertView *userChoice;
+@property (strong, nonatomic) UIImageView *instructionView;
 
 
 @end

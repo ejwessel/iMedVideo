@@ -224,6 +224,7 @@
     NSString *labelText = l.text;
     NSLog(@"label clicked: %@", labelText);
     
+    self.detailViewController.instructionView.hidden = true;
     self.detailViewController.title = labelText;
     
     [self loadLines:labelText]; //load in the lines
