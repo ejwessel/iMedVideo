@@ -1,0 +1,43 @@
+0 Comments and Quiz File Format
+0 Record descriptions:
+0      0 <code comment>
+0      1:<(doctor/patient)>:<comment>
+0      2:<quiz question>
+0      3:<truth>:<position>:<quiz answer>
+0      Resulting file name will be denoted by the first two words
+0      4:<explanation>
+0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
+0
+6:ft6MKpV_wHc
+0
+2:When should you go home after a CABG?
+3:F:A:4 days
+3:F:B:5 days
+3:F:C:6-7 days
+3:T:D:When you are ready.
+4:The purpose of the CABG is to bypass the clot. It takes a significant amount of time to recover.
+5:0m59s
+0
+2:How long does it take to fully recover from a CABG?
+3:F:A:2 weeks
+3:F:B:3 weeks
+3:T:C:4-6 weeks
+3:F:D:4 months
+4:The average recovery period after a CABG is around 4-6 weeks.
+5:1m12s
+0
+2:What is recommended form of exercise after a CABG?
+3:F:A:Push ups
+3:F:B:Sit ups
+3:F:C:Running
+3:T:D:Walking
+4:After a CABG, you don’t want to put undo pressure on the breast bone. Try to stay away from upper body exercise. The recommended form of exercise is walking.
+5:1m58s
+0
+2:When is it recommended that you visit your cardiologist after a CABG?
+3:F:A:Never
+3:F:B:After 10 years
+3:F:C:After 5 years
+3:T:D:Within a year
+4:After a CABG, it is recommended that you visit your cardiologist within a year to continue to monitor your illness.
+5:2m25s
