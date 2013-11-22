@@ -205,6 +205,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    //hide keyboard if subview is clicked
+    [self.detailViewController.t resignFirstResponder];
+    [self.detailViewController.commentField resignFirstResponder];
+    
     //need to clear out previous view that is being displayed, we will default on comments first
     self.detailViewController.tabControl.hidden = false;
     self.detailViewController.tabControl.selectedSegmentIndex = 0;
@@ -218,6 +222,8 @@
     UILabel *l = [[cell.contentView subviews] objectAtIndex:0];
     NSString *labelText = l.text;
     NSLog(@"label clicked: %@", labelText);
+    
+    self.detailViewController.title = labelText;
     
     [self loadLines:labelText]; //load in the lines
     [self loadDataIntoView];

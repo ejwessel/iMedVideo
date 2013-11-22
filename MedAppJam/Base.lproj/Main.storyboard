@@ -211,19 +211,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="zdM-3U-Uhw">
-                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="7bK-jq-Zjz" id="Hls-PZ-Nde"/>
-                            </connections>
-                        </searchBar>
                         <sections>
                             <tableViewSection id="wr2-kU-Sc1">
                                 <cells>
                                     <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="cli-pQ-iqW">
-                                        <rect key="frame" x="0.0" y="108" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cli-pQ-iqW" id="4an-ZT-4Of">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -242,7 +234,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="4zy-II-Ebq">
-                                        <rect key="frame" x="0.0" y="152" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4zy-II-Ebq" id="QdE-mj-hRE">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -261,7 +253,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="UDf-4u-tuo">
-                                        <rect key="frame" x="0.0" y="196" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="152" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UDf-4u-tuo" id="sfc-dY-r7c">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -280,7 +272,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell tag="3" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="tES-Mn-E0z">
-                                        <rect key="frame" x="0.0" y="240" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="196" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tES-Mn-E0z" id="GFB-Ig-X7m">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -299,7 +291,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell tag="3" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="RoC-5T-0If">
-                                        <rect key="frame" x="0.0" y="284" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="240" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RoC-5T-0If" id="o93-N9-St1">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -318,7 +310,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell tag="4" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="AbV-8w-kDH">
-                                        <rect key="frame" x="0.0" y="328" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="284" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AbV-8w-kDH" id="nr9-bh-2aG">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -337,7 +329,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell tag="4" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="9I7-ua-665">
-                                        <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="328" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9I7-ua-665" id="qBV-J0-yZS">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -365,7 +357,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Categories" id="Zdf-7t-Un8"/>
                     <connections>
-                        <outlet property="searchBar" destination="zdM-3U-Uhw" id="716-4T-eVu"/>
                         <outlet property="searchController" destination="Gk2-J7-Uoi" id="egg-9x-gtD"/>
                         <outlet property="searchDisplayController" destination="Gk2-J7-Uoi" id="emE-Jd-kj8"/>
                     </connections>
@@ -374,7 +365,6 @@
                 <searchDisplayController id="Gk2-J7-Uoi">
                     <connections>
                         <outlet property="delegate" destination="7bK-jq-Zjz" id="XyZ-7t-q7w"/>
-                        <outlet property="searchBar" destination="zdM-3U-Uhw" id="n8S-Nl-Egx"/>
                         <outlet property="searchContentsController" destination="7bK-jq-Zjz" id="Acc-mW-7Bg"/>
                         <outlet property="searchResultsDataSource" destination="7bK-jq-Zjz" id="Ij7-N0-aAn"/>
                         <outlet property="searchResultsDelegate" destination="7bK-jq-Zjz" id="wPX-Jl-Lzj"/>

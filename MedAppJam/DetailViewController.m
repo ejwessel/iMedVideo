@@ -160,8 +160,6 @@
     // Here you set your text.
     //assume everybody is a patient at first
     NSString *yourAppendingText = [[NSString alloc] initWithFormat:@"\n1:P:%@", self.t.text];
-    
-   
 
     // Here you get access to the file in Documents directory of your application bundle.
     NSString *documentDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -187,12 +185,7 @@
     
     }
  
-//    CommentObject *prevObject = comments.commentObjects.lastObject;//[comments.commentObjects objectAtIndex:comments.commentObjects.count - 1];
-//    updatePos = (updatePos + prevObject.bounds.size.height + 5);
-//    frame = CGRectMake(commentXPos, updatePos, comments.bounds.size.width - commentXPos, commentHeight);
-//    //need to add to commentView list of objects
-
-    
+    //Handles comments being added
     CommentObject *lastObject = self.comments.commentObjects.lastObject;
     CGRect frame;
     CommentObject *newObject;

@@ -15,13 +15,10 @@
 @interface MasterViewController : UITableViewController <UIScrollViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
-@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+//@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UISearchDisplayController *searchController;
-@property (strong, nonatomic) NSMutableArray *tableData; //will contain all of the data
-@property (strong, nonatomic) NSMutableArray *filterData; //filtere data to display
+@property (strong, nonatomic) NSMutableArray *allTableData; //will contain all of the data
+@property (strong, nonatomic) NSMutableArray *filteredTableData; //filtere data to display
 @property BOOL isFiltered;
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar;
-
 
 @end
