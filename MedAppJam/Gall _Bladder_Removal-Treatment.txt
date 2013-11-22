@@ -10,22 +10,19 @@
 0
 6:ECmwbwIrBI8
 0
-2: What is the treatment for appendicitis?
+2:What is the treatment for appendicitis?
 3:F:A:Rest
 3:T:B:Surgery
 3:F:C:Running
-3:F:D:Shalong tea
-3:F:E:All of the above
+3:F:D:All of the above
 4:The definitive treatment for gallstones is Surgery. Rest may help after the operation but will not prevent a rupture and perforation of the appendix. 
 5:0m30s
 0
-2: What are some benefits of laproscopic appendectomy?
-3:F:A:More pain
-3:F:B:Longer recovery time
-3:F:C:Bigger incisions
-3:F:D:Higher incidence of infection
-3:F:E:All of the above
-3:T:F:None of the above
+2:What are some benefits of laproscopic appendectomy?
+3:F:A:Longer recovery time
+3:F:B:Bigger incisions
+3:F:C:Higher incidence of infection
+3:T:D:None of the above
 4:Laproscopic surgery is faster, lower chance of infection, smaller incisions, and have a faster recovery time.  
 5:0m45s
 0
@@ -34,6 +31,5 @@
 3:F:B:2
 3:T:C:3
 3:F:D:4
-3:F:E:5
 4:Laproscopic surgery occurs through three small incision sites.
 5:1m37s
