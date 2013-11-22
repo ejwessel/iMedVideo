@@ -10,7 +10,8 @@
 0
 0
 6:7gSltoRSFCU
-2:Which lens should you put on first? 
+0
+2:Which lens should you put on first?
 3:F:A:Left
 3:F:B:Right
 3:T:C:Whichever, but do it the same every single time

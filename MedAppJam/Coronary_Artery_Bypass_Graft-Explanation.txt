@@ -8,6 +8,7 @@
 0      4:<explanation>
 0      Ex: If label is "Check Blood Sugar" > Check_Blood.txt
 0
+6:QCeLEa95cEs
 0
 2:Which of the following vessels is use in Coronary artery bypass surgery?
 3:F:A:Carotid artery
@@ -25,7 +26,7 @@
 4:The average stay after a CABG is around 4-6 days. 
 5:1m19s
 0
-2: What is/are common symptoms of Coronary artery disease?
+2:What is/are common symptoms of Coronary artery disease?
 3:F:A:Leg pains
 3:F:B:Numbness and tingling in the fingertips
 3:F:C:Eye pains
