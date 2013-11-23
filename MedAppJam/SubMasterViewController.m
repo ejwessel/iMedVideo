@@ -86,6 +86,8 @@
                           <iframe height=\"%d\" width=\"%d\" frameborder=\"0\" src=\"http://www.youtube.com/embed/%@\"></iframe>\
                           </body></html>", height, width, self.linkExtension];
     
+    //&rel=0 to get rid of related videos
+    
     self.detailViewController.player.hidden = false;
     [self.detailViewController.player loadHTMLString:embedHTML baseURL:nil];
     NSLog(@"video size: %d, %d", height, width);
