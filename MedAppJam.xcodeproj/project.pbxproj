@@ -17,11 +17,56 @@
 		2361BFB6182DE45D00E4A9B3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2361BFB5182DE45D00E4A9B3 /* MasterViewController.m */; };
 		2361BFB9182DE45D00E4A9B3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2361BFB8182DE45D00E4A9B3 /* DetailViewController.m */; };
 		2361BFBB182DE45D00E4A9B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2361BFBA182DE45D00E4A9B3 /* Images.xcassets */; };
-		2361BFC2182DE45D00E4A9B3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2361BFC1182DE45D00E4A9B3 /* XCTest.framework */; };
 		2361BFC3182DE45D00E4A9B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2361BF9F182DE45D00E4A9B3 /* Foundation.framework */; };
 		2361BFC4182DE45D00E4A9B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2361BFA3182DE45D00E4A9B3 /* UIKit.framework */; };
 		2361BFCC182DE45D00E4A9B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2361BFCA182DE45D00E4A9B3 /* InfoPlist.strings */; };
 		2361BFCE182DE45D00E4A9B3 /* MedAppJamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2361BFCD182DE45D00E4A9B3 /* MedAppJamTests.m */; };
+		23F45D9B1A19D76300B83DDF /* AddCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F45D901A19D76300B83DDF /* AddCommentView.m */; };
+		23F45D9C1A19D76300B83DDF /* CommentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F45D921A19D76300B83DDF /* CommentObject.m */; };
+		23F45D9D1A19D76300B83DDF /* CommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F45D941A19D76300B83DDF /* CommentsView.m */; };
+		23F45D9E1A19D76300B83DDF /* FileContentLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F45D961A19D76300B83DDF /* FileContentLoader.m */; };
+		23F45D9F1A19D76300B83DDF /* QuizObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F45D981A19D76300B83DDF /* QuizObject.m */; };
+		23F45DA01A19D76300B83DDF /* QuizView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F45D9A1A19D76300B83DDF /* QuizView.m */; };
+		23F45DC81A19D94100B83DDF /* Appendicitis-Explanation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DA11A19D94100B83DDF /* Appendicitis-Explanation.txt */; };
+		23F45DC91A19D94100B83DDF /* Appendicitis-Treatment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DA21A19D94100B83DDF /* Appendicitis-Treatment.txt */; };
+		23F45DCA1A19D94100B83DDF /* Appendix_Surgery.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DA31A19D94100B83DDF /* Appendix_Surgery.txt */; };
+		23F45DCB1A19D94100B83DDF /* Breast_Feeding.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DA41A19D94100B83DDF /* Breast_Feeding.txt */; };
+		23F45DCC1A19D94100B83DDF /* Cast_Care.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DA51A19D94100B83DDF /* Cast_Care.txt */; };
+		23F45DCD1A19D94100B83DDF /* Cataracts.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DA61A19D94100B83DDF /* Cataracts.txt */; };
+		23F45DCE1A19D94100B83DDF /* Catheterization-Explanation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DA71A19D94100B83DDF /* Catheterization-Explanation.txt */; };
+		23F45DCF1A19D94100B83DDF /* Catheterization-Post_Operative.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DA81A19D94100B83DDF /* Catheterization-Post_Operative.txt */; };
+		23F45DD01A19D94100B83DDF /* Catheterization-Treatment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DA91A19D94100B83DDF /* Catheterization-Treatment.txt */; };
+		23F45DD11A19D94100B83DDF /* Cesarian_Section.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DAA1A19D94100B83DDF /* Cesarian_Section.txt */; };
+		23F45DD21A19D94100B83DDF /* Check_Blood_Sugar.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DAB1A19D94100B83DDF /* Check_Blood_Sugar.txt */; };
+		23F45DD31A19D94100B83DDF /* Colostomy_Bag.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DAC1A19D94100B83DDF /* Colostomy_Bag.txt */; };
+		23F45DD41A19D94100B83DDF /* Contact_Lenses.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DAD1A19D94100B83DDF /* Contact_Lenses.txt */; };
+		23F45DD51A19D94100B83DDF /* Coronary_Catheterization.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DAE1A19D94100B83DDF /* Coronary_Catheterization.txt */; };
+		23F45DD61A19D94100B83DDF /* Diet.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DAF1A19D94100B83DDF /* Diet.txt */; };
+		23F45DD71A19D94100B83DDF /* Eye_Drops.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DB01A19D94100B83DDF /* Eye_Drops.txt */; };
+		23F45DD81A19D94100B83DDF /* Gall_Bladder_Removal-Explanation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DB11A19D94100B83DDF /* Gall_Bladder_Removal-Explanation.txt */; };
+		23F45DD91A19D94100B83DDF /* Gall_Bladder_Removal-Treatment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DB21A19D94100B83DDF /* Gall_Bladder_Removal-Treatment.txt */; };
+		23F45DDA1A19D94100B83DDF /* Gall_Bladder_Surgery.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DB31A19D94100B83DDF /* Gall_Bladder_Surgery.txt */; };
+		23F45DDB1A19D94100B83DDF /* Graft-Explanation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DB41A19D94100B83DDF /* Graft-Explanation.txt */; };
+		23F45DDC1A19D94100B83DDF /* Graft-Post_Operation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DB51A19D94100B83DDF /* Graft-Post_Operation.txt */; };
+		23F45DDD1A19D94100B83DDF /* Graft-Treatment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DB61A19D94100B83DDF /* Graft-Treatment.txt */; };
+		23F45DDE1A19D94100B83DDF /* Heart_Failure-Explanation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DB71A19D94100B83DDF /* Heart_Failure-Explanation.txt */; };
+		23F45DDF1A19D94100B83DDF /* Heart_Failure-Treatment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DB81A19D94100B83DDF /* Heart_Failure-Treatment.txt */; };
+		23F45DE01A19D94100B83DDF /* Heart_Failure.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DB91A19D94100B83DDF /* Heart_Failure.txt */; };
+		23F45DE11A19D94100B83DDF /* Hernia_Repair-Explanation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DBA1A19D94100B83DDF /* Hernia_Repair-Explanation.txt */; };
+		23F45DE21A19D94100B83DDF /* Hernia_Repair-Treatment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DBB1A19D94100B83DDF /* Hernia_Repair-Treatment.txt */; };
+		23F45DE31A19D94100B83DDF /* Hernia_Repair.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DBC1A19D94100B83DDF /* Hernia_Repair.txt */; };
+		23F45DE41A19D94100B83DDF /* Hip_Replacement.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DBD1A19D94100B83DDF /* Hip_Replacement.txt */; };
+		23F45DE51A19D94100B83DDF /* Ileostomy_Bag_Care.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DBE1A19D94100B83DDF /* Ileostomy_Bag_Care.txt */; };
+		23F45DE61A19D94100B83DDF /* Inject_Insulin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DBF1A19D94100B83DDF /* Inject_Insulin.txt */; };
+		23F45DE71A19D94100B83DDF /* Knee_Replacement.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DC01A19D94100B83DDF /* Knee_Replacement.txt */; };
+		23F45DE81A19D94100B83DDF /* Laryngoscopy(Chinese).txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DC11A19D94100B83DDF /* Laryngoscopy(Chinese).txt */; };
+		23F45DE91A19D94100B83DDF /* Laryngoscopy(English).txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DC21A19D94100B83DDF /* Laryngoscopy(English).txt */; };
+		23F45DEA1A19D94100B83DDF /* Laryngoscopy(Spanish).txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DC31A19D94100B83DDF /* Laryngoscopy(Spanish).txt */; };
+		23F45DEB1A19D94100B83DDF /* Lung_Removal_Surgery(Lobectomy).txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DC41A19D94100B83DDF /* Lung_Removal_Surgery(Lobectomy).txt */; };
+		23F45DEC1A19D94100B83DDF /* Pneumonia-Explanation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DC51A19D94100B83DDF /* Pneumonia-Explanation.txt */; };
+		23F45DED1A19D94100B83DDF /* Pneumonia-Treatment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DC61A19D94100B83DDF /* Pneumonia-Treatment.txt */; };
+		23F45DEE1A19D94100B83DDF /* Uterus_Removal(Hysterectomy).txt in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DC71A19D94100B83DDF /* Uterus_Removal(Hysterectomy).txt */; };
+		23F45DF21A19D9D700B83DDF /* intro_screen_instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F45DF11A19D9D700B83DDF /* intro_screen_instructions.png */; };
 		BA7B01261835C7B000DAAAD5 /* SubMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7B01231835C7B000DAAAD5 /* SubMasterViewController.m */; };
 		BA7B01271835C7B000DAAAD5 /* UIWebViewPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7B01251835C7B000DAAAD5 /* UIWebViewPlayer.m */; };
 /* End PBXBuildFile section */
@@ -54,10 +99,61 @@
 		2361BFB8182DE45D00E4A9B3 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		2361BFBA182DE45D00E4A9B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2361BFC0182DE45D00E4A9B3 /* MedAppJamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedAppJamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2361BFC1182DE45D00E4A9B3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2361BFC9182DE45D00E4A9B3 /* MedAppJamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MedAppJamTests-Info.plist"; sourceTree = "<group>"; };
 		2361BFCB182DE45D00E4A9B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2361BFCD182DE45D00E4A9B3 /* MedAppJamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedAppJamTests.m; sourceTree = "<group>"; };
+		23F45D8F1A19D76300B83DDF /* AddCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCommentView.h; sourceTree = "<group>"; };
+		23F45D901A19D76300B83DDF /* AddCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCommentView.m; sourceTree = "<group>"; };
+		23F45D911A19D76300B83DDF /* CommentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentObject.h; sourceTree = "<group>"; };
+		23F45D921A19D76300B83DDF /* CommentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentObject.m; sourceTree = "<group>"; };
+		23F45D931A19D76300B83DDF /* CommentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsView.h; sourceTree = "<group>"; };
+		23F45D941A19D76300B83DDF /* CommentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsView.m; sourceTree = "<group>"; };
+		23F45D951A19D76300B83DDF /* FileContentLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileContentLoader.h; sourceTree = "<group>"; };
+		23F45D961A19D76300B83DDF /* FileContentLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileContentLoader.m; sourceTree = "<group>"; };
+		23F45D971A19D76300B83DDF /* QuizObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizObject.h; sourceTree = "<group>"; };
+		23F45D981A19D76300B83DDF /* QuizObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizObject.m; sourceTree = "<group>"; };
+		23F45D991A19D76300B83DDF /* QuizView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizView.h; sourceTree = "<group>"; };
+		23F45D9A1A19D76300B83DDF /* QuizView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizView.m; sourceTree = "<group>"; };
+		23F45DA11A19D94100B83DDF /* Appendicitis-Explanation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Appendicitis-Explanation.txt"; sourceTree = "<group>"; };
+		23F45DA21A19D94100B83DDF /* Appendicitis-Treatment.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Appendicitis-Treatment.txt"; sourceTree = "<group>"; };
+		23F45DA31A19D94100B83DDF /* Appendix_Surgery.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appendix_Surgery.txt; sourceTree = "<group>"; };
+		23F45DA41A19D94100B83DDF /* Breast_Feeding.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Breast_Feeding.txt; sourceTree = "<group>"; };
+		23F45DA51A19D94100B83DDF /* Cast_Care.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cast_Care.txt; sourceTree = "<group>"; };
+		23F45DA61A19D94100B83DDF /* Cataracts.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cataracts.txt; sourceTree = "<group>"; };
+		23F45DA71A19D94100B83DDF /* Catheterization-Explanation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Catheterization-Explanation.txt"; sourceTree = "<group>"; };
+		23F45DA81A19D94100B83DDF /* Catheterization-Post_Operative.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Catheterization-Post_Operative.txt"; sourceTree = "<group>"; };
+		23F45DA91A19D94100B83DDF /* Catheterization-Treatment.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Catheterization-Treatment.txt"; sourceTree = "<group>"; };
+		23F45DAA1A19D94100B83DDF /* Cesarian_Section.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cesarian_Section.txt; sourceTree = "<group>"; };
+		23F45DAB1A19D94100B83DDF /* Check_Blood_Sugar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Check_Blood_Sugar.txt; sourceTree = "<group>"; };
+		23F45DAC1A19D94100B83DDF /* Colostomy_Bag.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Colostomy_Bag.txt; sourceTree = "<group>"; };
+		23F45DAD1A19D94100B83DDF /* Contact_Lenses.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Contact_Lenses.txt; sourceTree = "<group>"; };
+		23F45DAE1A19D94100B83DDF /* Coronary_Catheterization.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Coronary_Catheterization.txt; sourceTree = "<group>"; };
+		23F45DAF1A19D94100B83DDF /* Diet.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Diet.txt; sourceTree = "<group>"; };
+		23F45DB01A19D94100B83DDF /* Eye_Drops.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Eye_Drops.txt; sourceTree = "<group>"; };
+		23F45DB11A19D94100B83DDF /* Gall_Bladder_Removal-Explanation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Gall_Bladder_Removal-Explanation.txt"; sourceTree = "<group>"; };
+		23F45DB21A19D94100B83DDF /* Gall_Bladder_Removal-Treatment.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Gall_Bladder_Removal-Treatment.txt"; sourceTree = "<group>"; };
+		23F45DB31A19D94100B83DDF /* Gall_Bladder_Surgery.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gall_Bladder_Surgery.txt; sourceTree = "<group>"; };
+		23F45DB41A19D94100B83DDF /* Graft-Explanation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Graft-Explanation.txt"; sourceTree = "<group>"; };
+		23F45DB51A19D94100B83DDF /* Graft-Post_Operation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Graft-Post_Operation.txt"; sourceTree = "<group>"; };
+		23F45DB61A19D94100B83DDF /* Graft-Treatment.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Graft-Treatment.txt"; sourceTree = "<group>"; };
+		23F45DB71A19D94100B83DDF /* Heart_Failure-Explanation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Heart_Failure-Explanation.txt"; sourceTree = "<group>"; };
+		23F45DB81A19D94100B83DDF /* Heart_Failure-Treatment.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Heart_Failure-Treatment.txt"; sourceTree = "<group>"; };
+		23F45DB91A19D94100B83DDF /* Heart_Failure.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Heart_Failure.txt; sourceTree = "<group>"; };
+		23F45DBA1A19D94100B83DDF /* Hernia_Repair-Explanation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Hernia_Repair-Explanation.txt"; sourceTree = "<group>"; };
+		23F45DBB1A19D94100B83DDF /* Hernia_Repair-Treatment.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Hernia_Repair-Treatment.txt"; sourceTree = "<group>"; };
+		23F45DBC1A19D94100B83DDF /* Hernia_Repair.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Hernia_Repair.txt; sourceTree = "<group>"; };
+		23F45DBD1A19D94100B83DDF /* Hip_Replacement.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Hip_Replacement.txt; sourceTree = "<group>"; };
+		23F45DBE1A19D94100B83DDF /* Ileostomy_Bag_Care.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Ileostomy_Bag_Care.txt; sourceTree = "<group>"; };
+		23F45DBF1A19D94100B83DDF /* Inject_Insulin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Inject_Insulin.txt; sourceTree = "<group>"; };
+		23F45DC01A19D94100B83DDF /* Knee_Replacement.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Knee_Replacement.txt; sourceTree = "<group>"; };
+		23F45DC11A19D94100B83DDF /* Laryngoscopy(Chinese).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Laryngoscopy(Chinese).txt"; sourceTree = "<group>"; };
+		23F45DC21A19D94100B83DDF /* Laryngoscopy(English).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Laryngoscopy(English).txt"; sourceTree = "<group>"; };
+		23F45DC31A19D94100B83DDF /* Laryngoscopy(Spanish).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Laryngoscopy(Spanish).txt"; sourceTree = "<group>"; };
+		23F45DC41A19D94100B83DDF /* Lung_Removal_Surgery(Lobectomy).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Lung_Removal_Surgery(Lobectomy).txt"; sourceTree = "<group>"; };
+		23F45DC51A19D94100B83DDF /* Pneumonia-Explanation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Pneumonia-Explanation.txt"; sourceTree = "<group>"; };
+		23F45DC61A19D94100B83DDF /* Pneumonia-Treatment.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Pneumonia-Treatment.txt"; sourceTree = "<group>"; };
+		23F45DC71A19D94100B83DDF /* Uterus_Removal(Hysterectomy).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Uterus_Removal(Hysterectomy).txt"; sourceTree = "<group>"; };
+		23F45DF11A19D9D700B83DDF /* intro_screen_instructions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro_screen_instructions.png; sourceTree = "<group>"; };
 		BA7B01221835C7B000DAAAD5 /* SubMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubMasterViewController.h; sourceTree = "<group>"; };
 		BA7B01231835C7B000DAAAD5 /* SubMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubMasterViewController.m; sourceTree = "<group>"; };
 		BA7B01241835C7B000DAAAD5 /* UIWebViewPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewPlayer.h; sourceTree = "<group>"; };
@@ -79,7 +175,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2361BFC2182DE45D00E4A9B3 /* XCTest.framework in Frameworks */,
 				2361BFC4182DE45D00E4A9B3 /* UIKit.framework in Frameworks */,
 				2361BFC3182DE45D00E4A9B3 /* Foundation.framework in Frameworks */,
 			);
@@ -113,7 +208,6 @@
 				2361BF9F182DE45D00E4A9B3 /* Foundation.framework */,
 				2361BFA1182DE45D00E4A9B3 /* CoreGraphics.framework */,
 				2361BFA3182DE45D00E4A9B3 /* UIKit.framework */,
-				2361BFC1182DE45D00E4A9B3 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,6 +215,18 @@
 		2361BFA5182DE45D00E4A9B3 /* MedAppJam */ = {
 			isa = PBXGroup;
 			children = (
+				23F45D8F1A19D76300B83DDF /* AddCommentView.h */,
+				23F45D901A19D76300B83DDF /* AddCommentView.m */,
+				23F45D911A19D76300B83DDF /* CommentObject.h */,
+				23F45D921A19D76300B83DDF /* CommentObject.m */,
+				23F45D931A19D76300B83DDF /* CommentsView.h */,
+				23F45D941A19D76300B83DDF /* CommentsView.m */,
+				23F45D951A19D76300B83DDF /* FileContentLoader.h */,
+				23F45D961A19D76300B83DDF /* FileContentLoader.m */,
+				23F45D971A19D76300B83DDF /* QuizObject.h */,
+				23F45D981A19D76300B83DDF /* QuizObject.m */,
+				23F45D991A19D76300B83DDF /* QuizView.h */,
+				23F45D9A1A19D76300B83DDF /* QuizView.m */,
 				BA7B01221835C7B000DAAAD5 /* SubMasterViewController.h */,
 				BA7B01231835C7B000DAAAD5 /* SubMasterViewController.m */,
 				BA7B01241835C7B000DAAAD5 /* UIWebViewPlayer.h */,
@@ -141,6 +247,46 @@
 		2361BFA6182DE45D00E4A9B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				23F45DF11A19D9D700B83DDF /* intro_screen_instructions.png */,
+				23F45DA11A19D94100B83DDF /* Appendicitis-Explanation.txt */,
+				23F45DA21A19D94100B83DDF /* Appendicitis-Treatment.txt */,
+				23F45DA31A19D94100B83DDF /* Appendix_Surgery.txt */,
+				23F45DA41A19D94100B83DDF /* Breast_Feeding.txt */,
+				23F45DA51A19D94100B83DDF /* Cast_Care.txt */,
+				23F45DA61A19D94100B83DDF /* Cataracts.txt */,
+				23F45DA71A19D94100B83DDF /* Catheterization-Explanation.txt */,
+				23F45DA81A19D94100B83DDF /* Catheterization-Post_Operative.txt */,
+				23F45DA91A19D94100B83DDF /* Catheterization-Treatment.txt */,
+				23F45DAA1A19D94100B83DDF /* Cesarian_Section.txt */,
+				23F45DAB1A19D94100B83DDF /* Check_Blood_Sugar.txt */,
+				23F45DAC1A19D94100B83DDF /* Colostomy_Bag.txt */,
+				23F45DAD1A19D94100B83DDF /* Contact_Lenses.txt */,
+				23F45DAE1A19D94100B83DDF /* Coronary_Catheterization.txt */,
+				23F45DAF1A19D94100B83DDF /* Diet.txt */,
+				23F45DB01A19D94100B83DDF /* Eye_Drops.txt */,
+				23F45DB11A19D94100B83DDF /* Gall_Bladder_Removal-Explanation.txt */,
+				23F45DB21A19D94100B83DDF /* Gall_Bladder_Removal-Treatment.txt */,
+				23F45DB31A19D94100B83DDF /* Gall_Bladder_Surgery.txt */,
+				23F45DB41A19D94100B83DDF /* Graft-Explanation.txt */,
+				23F45DB51A19D94100B83DDF /* Graft-Post_Operation.txt */,
+				23F45DB61A19D94100B83DDF /* Graft-Treatment.txt */,
+				23F45DB71A19D94100B83DDF /* Heart_Failure-Explanation.txt */,
+				23F45DB81A19D94100B83DDF /* Heart_Failure-Treatment.txt */,
+				23F45DB91A19D94100B83DDF /* Heart_Failure.txt */,
+				23F45DBA1A19D94100B83DDF /* Hernia_Repair-Explanation.txt */,
+				23F45DBB1A19D94100B83DDF /* Hernia_Repair-Treatment.txt */,
+				23F45DBC1A19D94100B83DDF /* Hernia_Repair.txt */,
+				23F45DBD1A19D94100B83DDF /* Hip_Replacement.txt */,
+				23F45DBE1A19D94100B83DDF /* Ileostomy_Bag_Care.txt */,
+				23F45DBF1A19D94100B83DDF /* Inject_Insulin.txt */,
+				23F45DC01A19D94100B83DDF /* Knee_Replacement.txt */,
+				23F45DC11A19D94100B83DDF /* Laryngoscopy(Chinese).txt */,
+				23F45DC21A19D94100B83DDF /* Laryngoscopy(English).txt */,
+				23F45DC31A19D94100B83DDF /* Laryngoscopy(Spanish).txt */,
+				23F45DC41A19D94100B83DDF /* Lung_Removal_Surgery(Lobectomy).txt */,
+				23F45DC51A19D94100B83DDF /* Pneumonia-Explanation.txt */,
+				23F45DC61A19D94100B83DDF /* Pneumonia-Treatment.txt */,
+				23F45DC71A19D94100B83DDF /* Uterus_Removal(Hysterectomy).txt */,
 				2361BFA7182DE45D00E4A9B3 /* MedAppJam-Info.plist */,
 				2361BFA8182DE45D00E4A9B3 /* InfoPlist.strings */,
 				2361BFAB182DE45D00E4A9B3 /* main.m */,
@@ -211,7 +357,7 @@
 		2361BF94182DE45D00E4A9B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = test;
 				TargetAttributes = {
 					2361BFBF182DE45D00E4A9B3 = {
@@ -243,9 +389,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F45DF21A19D9D700B83DDF /* intro_screen_instructions.png in Resources */,
+				23F45DCF1A19D94100B83DDF /* Catheterization-Post_Operative.txt in Resources */,
+				23F45DCC1A19D94100B83DDF /* Cast_Care.txt in Resources */,
 				2361BFBB182DE45D00E4A9B3 /* Images.xcassets in Resources */,
+				23F45DE71A19D94100B83DDF /* Knee_Replacement.txt in Resources */,
+				23F45DED1A19D94100B83DDF /* Pneumonia-Treatment.txt in Resources */,
 				2361BFAA182DE45D00E4A9B3 /* InfoPlist.strings in Resources */,
+				23F45DD11A19D94100B83DDF /* Cesarian_Section.txt in Resources */,
+				23F45DDC1A19D94100B83DDF /* Graft-Post_Operation.txt in Resources */,
+				23F45DD41A19D94100B83DDF /* Contact_Lenses.txt in Resources */,
+				23F45DE91A19D94100B83DDF /* Laryngoscopy(English).txt in Resources */,
 				2361BFB3182DE45D00E4A9B3 /* Main.storyboard in Resources */,
+				23F45DEA1A19D94100B83DDF /* Laryngoscopy(Spanish).txt in Resources */,
+				23F45DDE1A19D94100B83DDF /* Heart_Failure-Explanation.txt in Resources */,
+				23F45DE11A19D94100B83DDF /* Hernia_Repair-Explanation.txt in Resources */,
+				23F45DCB1A19D94100B83DDF /* Breast_Feeding.txt in Resources */,
+				23F45DE31A19D94100B83DDF /* Hernia_Repair.txt in Resources */,
+				23F45DD91A19D94100B83DDF /* Gall_Bladder_Removal-Treatment.txt in Resources */,
+				23F45DDA1A19D94100B83DDF /* Gall_Bladder_Surgery.txt in Resources */,
+				23F45DCE1A19D94100B83DDF /* Catheterization-Explanation.txt in Resources */,
+				23F45DC81A19D94100B83DDF /* Appendicitis-Explanation.txt in Resources */,
+				23F45DC91A19D94100B83DDF /* Appendicitis-Treatment.txt in Resources */,
+				23F45DE41A19D94100B83DDF /* Hip_Replacement.txt in Resources */,
+				23F45DDF1A19D94100B83DDF /* Heart_Failure-Treatment.txt in Resources */,
+				23F45DCA1A19D94100B83DDF /* Appendix_Surgery.txt in Resources */,
+				23F45DD81A19D94100B83DDF /* Gall_Bladder_Removal-Explanation.txt in Resources */,
+				23F45DE21A19D94100B83DDF /* Hernia_Repair-Treatment.txt in Resources */,
+				23F45DD01A19D94100B83DDF /* Catheterization-Treatment.txt in Resources */,
+				23F45DCD1A19D94100B83DDF /* Cataracts.txt in Resources */,
+				23F45DEE1A19D94100B83DDF /* Uterus_Removal(Hysterectomy).txt in Resources */,
+				23F45DEB1A19D94100B83DDF /* Lung_Removal_Surgery(Lobectomy).txt in Resources */,
+				23F45DE81A19D94100B83DDF /* Laryngoscopy(Chinese).txt in Resources */,
+				23F45DD61A19D94100B83DDF /* Diet.txt in Resources */,
+				23F45DDD1A19D94100B83DDF /* Graft-Treatment.txt in Resources */,
+				23F45DDB1A19D94100B83DDF /* Graft-Explanation.txt in Resources */,
+				23F45DD51A19D94100B83DDF /* Coronary_Catheterization.txt in Resources */,
+				23F45DD31A19D94100B83DDF /* Colostomy_Bag.txt in Resources */,
+				23F45DD71A19D94100B83DDF /* Eye_Drops.txt in Resources */,
+				23F45DEC1A19D94100B83DDF /* Pneumonia-Explanation.txt in Resources */,
+				23F45DE61A19D94100B83DDF /* Inject_Insulin.txt in Resources */,
+				23F45DE51A19D94100B83DDF /* Ileostomy_Bag_Care.txt in Resources */,
+				23F45DE01A19D94100B83DDF /* Heart_Failure.txt in Resources */,
+				23F45DD21A19D94100B83DDF /* Check_Blood_Sugar.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,11 +451,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2361BFB0182DE45D00E4A9B3 /* AppDelegate.m in Sources */,
+				23F45DA01A19D76300B83DDF /* QuizView.m in Sources */,
 				2361BFB6182DE45D00E4A9B3 /* MasterViewController.m in Sources */,
+				23F45D9B1A19D76300B83DDF /* AddCommentView.m in Sources */,
 				2361BFAC182DE45D00E4A9B3 /* main.m in Sources */,
+				23F45D9E1A19D76300B83DDF /* FileContentLoader.m in Sources */,
+				23F45D9D1A19D76300B83DDF /* CommentsView.m in Sources */,
+				23F45D9C1A19D76300B83DDF /* CommentObject.m in Sources */,
 				BA7B01261835C7B000DAAAD5 /* SubMasterViewController.m in Sources */,
 				BA7B01271835C7B000DAAAD5 /* UIWebViewPlayer.m in Sources */,
 				2361BFB9182DE45D00E4A9B3 /* DetailViewController.m in Sources */,
+				23F45D9F1A19D76300B83DDF /* QuizObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +515,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -363,7 +554,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -422,7 +612,6 @@
 		2361BFD5182DE45D00E4A9B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MedAppJam.app/MedAppJam";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -445,7 +634,6 @@
 		2361BFD6182DE45D00E4A9B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MedAppJam.app/MedAppJam";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
