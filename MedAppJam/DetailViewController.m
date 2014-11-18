@@ -45,8 +45,8 @@
     
     [self setupComment];
     
-    self.userChoice = [[UIAlertView alloc] initWithTitle:@"Login" message:@"Choose your account" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Doctor", @"Medical Student", @"Patient", nil];
-    [self.userChoice show];
+//    self.userChoice = [[UIAlertView alloc] initWithTitle:@"Login" message:@"Choose your account" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Doctor", @"Medical Student", @"Patient", nil];
+//    [self.userChoice show];
 
     
     self.player.scrollView.bounces = false;

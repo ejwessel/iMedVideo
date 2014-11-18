@@ -38,43 +38,6 @@
     //self.searchBar.delegate = self;
     
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-    
-//    self.allTableData = [[NSMutableArray alloc] init];
-//    [self.allTableData addObject:@"Abdomen"];
-//    [self.allTableData addObject:@"Diabetes"];
-//    [self.allTableData addObject:@"Bones"];
-//    [self.allTableData addObject:@"Eyes"];
-//    [self.allTableData addObject:@"Heart"];
-//    [self.allTableData addObject:@"Lungs"];
-//    [self.allTableData addObject:@"Reproducitve"];
-//
-//    [self.allTableData addObject:@"Appendix Surgery"];
-//    [self.allTableData addObject:@"Gall Bladdery Surgery"];
-//    [self.allTableData addObject:@"Hernia Repair"];
-//    [self.allTableData addObject:@"Ileostomy Bag Care"];
-//    
-//    [self.allTableData addObject:@"Check Blood Sugar"];
-//    [self.allTableData addObject:@"Diet"];
-//    [self.allTableData addObject:@"Iject Insulin"];
-//    
-//    [self.allTableData addObject:@"Cast Care"];
-//    [self.allTableData addObject:@"Hip Replacement"];
-//    [self.allTableData addObject:@"Knee Replacement"];
-//    
-//    [self.allTableData addObject:@"Cataracts"];
-//    [self.allTableData addObject:@"Contacts"];
-//    [self.allTableData addObject:@"Eyes Drops"];
-//    
-//    [self.allTableData addObject:@"Conary Artery Bypass"];
-//    [self.allTableData addObject:@"Conary Catherization"];
-//    [self.allTableData addObject:@"Heart Failure"];
-//    
-//    [self.allTableData addObject:@"Lung Removal Surgery/Lobectomy"];
-//    [self.allTableData addObject:@"Pneumonia"];
-//    
-//    [self.allTableData addObject:@"Breast Feeding"];
-//    [self.allTableData addObject:@"Cesarian Section"];
-//    [self.allTableData addObject:@"Uterus Removal/Hysterectomy"];
 
 }
 
