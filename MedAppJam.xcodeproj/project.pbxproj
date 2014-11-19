@@ -255,6 +255,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = test;
 				TargetAttributes = {
+					2361BF9B182DE45D00E4A9B3 = {
+						DevelopmentTeam = 5376U5Y3CW;
+					};
 					2361BFBF182DE45D00E4A9B3 = {
 						TestTargetID = 2361BF9B182DE45D00E4A9B3;
 					};
@@ -448,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MedAppJam/MedAppJam-Prefix.pch";
 				INFOPLIST_FILE = "MedAppJam/MedAppJam-Info.plist";
@@ -461,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MedAppJam/MedAppJam-Prefix.pch";
 				INFOPLIST_FILE = "MedAppJam/MedAppJam-Info.plist";
